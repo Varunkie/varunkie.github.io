@@ -1,0 +1,18 @@
+{
+  "pages": {
+    "titles": {
+      "about": "Sobre mi",
+      "knowledge": "Conocimiento",
+      "experience": "Experiencia",
+      "education": "Educación",
+      "portfolio": "Portafolio",
+      "notfound": "Página no encontrada"
+    }
+  },
+
+  "footer": {
+    "content": {
+      "updated": "Actualizado en Mayo de 2023"
+    }
+  }
+}
