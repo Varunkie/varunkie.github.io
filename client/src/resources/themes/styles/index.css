@@ -35,14 +35,26 @@
 /* Components */
 @layer components {
   .tm-ct-100 {
-    @apply bg-blue-200 dark:bg-gray-800 dark:text-white;
+    @apply bg-gradient-to-b from-blue-300 to-blue-600 dark:from-gray-700 dark:to-gray-800 dark:text-white;
   }
 
   .tm-ct-200 {
-    @apply bg-gradient-to-b from-blue-500 to-blue-900 text-white dark:from-gray-900 dark:to-gray-950;
+    @apply bg-gradient-to-b from-blue-700 to-blue-950 text-white dark:from-gray-900 dark:to-gray-950;
+  }
+
+  .tm-ct-300 {
+    @apply bg-white dark:bg-gray-600 dark:text-white
   }
 
   .tm-hr-200 {
     @apply w-full h-1 mx-auto bg-white;
+  }
+
+  .tm-hr-300 {
+    @apply w-full h-1 bg-black dark:bg-white;
+  }
+  
+  .tm-border-300 {
+    @apply border-black dark:border-white
   }
 }

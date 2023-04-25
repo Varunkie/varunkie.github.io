@@ -1,0 +1,48 @@
+{
+  "titles": {
+    "experience": "Work experience"
+  },
+
+  "subtitles": {
+    
+  },
+
+  "contents": {
+    "dates": {
+      "first": "Mar 2018 - Sep 2019",
+      "second": "Sep 2019 - Apr 2021",
+      "third": "Aug 2021 - Oct 2022",
+      "fourth": "Aug 2021 - Oct 2022"
+    },
+    "items": {
+      "first": "Programmer, 3DAvenue",
+      "second": "Lead Programmer, 3DAvenue",
+      "third": "Srum Master, Coachteen",
+      "fourth": "Programmer, Coachteen"
+    },
+    "subitems": {
+      "first": {
+        "one": "Developing the internal physics of the video game´s project.",
+        "two": "Writing scripted behaviors to fulfill game play requirements and other complementary systems of the video game.",
+        "three": "Designing Unity's tools to facilitate design of the project.",
+        "four": "Ensuring Spectrum game’s performance and functionality between different platforms such as PC, PlayStation 4, Xbox One and Nintendo Switch."
+      },
+      "second": {
+        "one": "Providing technical support to the team of developers regarding software development and all creative aspects of the projects.",
+        "two": "Leading the technical development of the project using the SCRUM methodology.",
+        "three": "Assisting in establishing coding best practices and performing periodic code reviews.",
+        "four": "Establishing estimated time to complete the programming task and committing myself to meet it."
+      },
+      "third": {
+        "one": "Leading the technology department in setting up best practices such as git version control, work documentation and SCRUM methodology.",
+        "two": "Keeping the team organized, on track and focused on the processes by which they achieve their goals."
+      },
+      "fourth": {
+        "one": "Developing a new educational platform inspired by MOODLE using React.js, Express.js and MongoDB as primary technologies.",
+        "two": "Defining front-end and back-end structure following standards and guidelines to ensure an application secure, scalable and extensible.",
+        "three": "Localizating user interface and web layout designs into high quality components using Tailwind CSS framework.",
+        "four": "Building a RESTful API with effective security protocols, data protection measures and storage solutions."
+      }
+    }
+  }
+}

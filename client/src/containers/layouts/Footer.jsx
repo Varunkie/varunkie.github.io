@@ -10,7 +10,7 @@ const Footer = ({ className = "" }) => {
     <footer className={`${className} flex justify-between`}>
       { ready && <>
         <div>Eduardo Borges</div>
-        <div>{t("footer.content.updated")}</div>
+        <div>{t("footer.contents.updated")}</div>
       </>}
     </footer>
   );

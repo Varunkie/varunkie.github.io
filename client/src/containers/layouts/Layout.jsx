@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
   return (
     <Context className="hide-scroll">
       <Header className="tm-ct-200 px-8 py-2 h-14" dropdown="tm-ct-200 px-6 py-2 space-y-2 -right-8 translate-y-2"/>
-      <main className="tm-ct-100 px-8 py-2 grow hide-scroll">
+      <main className="tm-ct-100 p-6 lg:p-16 grow hide-scroll flex flex-col space-y-6 lg:space-y-12">
         <Suspense fallback="">
           {children}
         </Suspense>

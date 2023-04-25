@@ -15,7 +15,7 @@ const Header = ({ className = "", dropdown = "" }) => {
   const { pathname } = useLocation(); 
 
   return (
-    <nav className={`${className} sticky top-0 flex`}>
+    <nav className={`${className} sticky top-0 flex z-10`}>
       <div className="flex">
         <Link to={routes.about}>
           VARUNKIE
