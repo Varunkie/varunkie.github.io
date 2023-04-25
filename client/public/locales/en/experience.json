@@ -1,6 +1,7 @@
 {
   "titles": {
-    "experience": "Work experience"
+    "experience": "Work experience",
+    "education": "Education"
   },
 
   "subtitles": {
@@ -9,18 +10,21 @@
 
   "contents": {
     "dates": {
+      "university": "Sep 2014 - Jul 2018",
       "first": "Mar 2018 - Sep 2019",
       "second": "Sep 2019 - Apr 2021",
       "third": "Aug 2021 - Oct 2022",
       "fourth": "Aug 2021 - Oct 2022"
     },
     "items": {
+      "university": "Software Engineer",
       "first": "Programmer, 3DAvenue",
       "second": "Lead Programmer, 3DAvenue",
       "third": "Srum Master, Coachteen",
       "fourth": "Programmer, Coachteen"
     },
     "subitems": {
+      "university": "I studied at Universidad Dr. Rafael Belloso Chacín based in Maracaibo.\nIn this time, I learned about how to code in C++, Java, Visual Basic, Javascript and C#.",
       "first": {
         "one": "Developing the internal physics of the video game´s project.",
         "two": "Writing scripted behaviors to fulfill game play requirements and other complementary systems of the video game.",

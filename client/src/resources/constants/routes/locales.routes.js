@@ -1,7 +1,6 @@
 export const routes = {
   common: 'common',
   about: 'about',
-  education: 'education',
   experience: 'experience',
   knowledge: 'knowledge',
   portfolio: 'portfolio',

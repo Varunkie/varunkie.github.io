@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import React from "react";
 
 import Title from "../../components/layouts/PageTitle";
-import Skill from "../../components/common/SkillProgressBar";
+import Skill from "../../components/layouts/SkillProgress";
 
 const Knowledge = () => {
   const { t } = useTranslation(ns.knowledge);
@@ -30,7 +30,7 @@ const Knowledge = () => {
     <div className="tm-ct-300 p-6 md:p-10 rounded-3xl space-y-6">
       <section className="grid md:grid-cols-2 py-6 gap-y-14 gap-x-6">
         <div className="space-y-6">
-          <Title className="text-3xl">{t("subtitles.skills")}</Title>
+          <Title className="font-bold text-3xl">{t("subtitles.skills")}</Title>
           <div className="px-6 text-xl space-y-4">
             <Skill className="w-full h-12" 
               title={t("contents.skills.csharp")} value={100} showvalue={true} />
@@ -46,7 +46,7 @@ const Knowledge = () => {
         </div>
 
         <div className="space-y-6">
-          <Title className="text-3xl">{t("subtitles.languages")}</Title>
+          <Title className="font-bold text-3xl">{t("subtitles.languages")}</Title>
           <div className="px-6 text-xl space-y-4">
             <Skill className="w-full h-12" 
               title={t("contents.languages.spanish")} value={100} label={t("contents.levels.native")} />
@@ -58,7 +58,7 @@ const Knowledge = () => {
         </div>
 
         <div className="space-y-6">
-          <Title className="text-3xl">{t("subtitles.frameworks")}</Title>
+          <Title className="font-bold text-3xl">{t("subtitles.frameworks")}</Title>
           <div className="px-6 text-xl space-y-4">
             <Skill className="w-full h-12" 
               title={t("contents.frameworks.unity2d")} value={100} showvalue={true} />
@@ -72,7 +72,7 @@ const Knowledge = () => {
         </div>
 
         <div className="space-y-6">
-          <Title className="text-3xl">{t("subtitles.versions")}</Title>
+          <Title className="font-bold text-3xl">{t("subtitles.versions")}</Title>
           <div className="px-6 text-xl space-y-4">
             <Skill className="w-full h-12" 
               title={t("contents.versions.git")} value={80} showvalue={true} />

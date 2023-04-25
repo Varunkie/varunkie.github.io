@@ -29,26 +29,24 @@ const Header = ({ className = "", dropdown = "" }) => {
               <Element path={pathname} to={routes.about}>{t("pages.titles.about")}</Element>
               <Element path={pathname} to={routes.knowledge}>{t("pages.titles.knowledge")}</Element>
               <Element path={pathname} to={routes.experience}>{t("pages.titles.experience")}</Element>
-              <Element path={pathname} to={routes.education}>{t("pages.titles.education")}</Element>
               <Element path={pathname} to={routes.portfolio}>{t("pages.titles.portfolio")}</Element>
             </>}
           </div>
 
           <div className="flex justify-center items-center space-x-4">
-            { ready && <Language className="bg-transparent px-1 py-0.5 border-0 ring-0" /> }
-            { ready && <DarkMode className="bg-white dark:bg-purple-400 w-14 h-7" /> }
+            <Language className="bg-transparent px-1 py-0.5 border-0 ring-0" /> 
+            <DarkMode className="bg-white dark:bg-purple-400 w-14 h-7" /> 
           </div>
         </div>
 
         <div className="lg:hidden">
           <Dropdown className="flex items-center"
             render={({ onClose }) => !ready ? null :
-            <div className={`${dropdown} absolute flex flex-col items-center whitespace-nowrap`}>
+            <div className={`${dropdown} absolute flex flex-col items-center whitespace-nowrap text-xl`}>
               <Link to={routes.about} onClick={onClose}>{t("pages.titles.about")}</Link>
               <div className="tm-hr-200" />
               <Link to={routes.knowledge} onClick={onClose}>{t("pages.titles.knowledge")}</Link>
               <Link to={routes.experience} onClick={onClose}>{t("pages.titles.experience")}</Link>
-              <Link to={routes.education} onClick={onClose}>{t("pages.titles.education")}</Link>
               <div className="tm-hr-200" />
               <Link to={routes.portfolio} onClick={onClose}>{t("pages.titles.portfolio")}</Link>
             </div>}>
