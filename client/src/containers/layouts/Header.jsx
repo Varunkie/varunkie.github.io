@@ -17,8 +17,9 @@ const Header = ({ className = "", dropdown = "" }) => {
   return (
     <nav className={`${className} sticky top-0 flex z-20`}>
       <div className="flex">
-        <Link to={routes.about}>
-          VARUNKIE
+        <Link className="flex space-x-4 items-center" to={routes.about}>
+          <img className="h-full"
+            src="https://ik.imagekit.io/varunkie/logo-varunkie_1__10-971B6V.png" alt="logo" />
         </Link>
       </div>
 

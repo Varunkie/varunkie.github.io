@@ -16,7 +16,7 @@ const Knowledge = () => {
     <Group className="space-y-6">
       <Title className="font-bold text-3xl">{t("titles.knowledge")}</Title>
 
-      <section className="grid md:grid-cols-2 gap-6">
+      <section className="grid md:grid-cols-2 gap-y-6 gap-x-12">
         <Trait render={FaUnity} title={t("subtitles.unity")} 
           subtitle={t("contents.unity")} />
         <Trait render={FaReact} title={t("subtitles.frontend")} 
@@ -91,7 +91,7 @@ const Trait = ({ render: Icon, title = "", subtitle = "" }) => {
         { Icon && <Icon className="w-8 h-8 mx-4" /> }
         <h2 className="px-4 py-1 font-bold">{title}</h2>
       </div>
-      <p>{subtitle}</p>
+      <p className="text-justify">{subtitle}</p>
     </div>
   );
 };

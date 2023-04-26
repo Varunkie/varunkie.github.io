@@ -66,6 +66,10 @@ module.exports = {
         '90vh': '90vh',
       },
 
+      minWidth: {
+        "300px": "300px"
+      },
+
       backgroundImage: (theme) => ({
         sun: "url('/src/resources/images/styles/sun.png')",
         moon: "url('/src/resources/images/styles/moon.png')",

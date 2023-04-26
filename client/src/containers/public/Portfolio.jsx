@@ -3,7 +3,7 @@ import ns from '../../resources/constants/routes/locales.routes';
 import { FaArrowLeft, FaArrowRight, FaExternalLinkAlt, FaSteam, FaItchIo } from 'react-icons/fa';
 import { BsNintendoSwitch } from 'react-icons/bs';
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 
@@ -39,6 +39,10 @@ const Portfolio = () => {
   useEffect(() => {
     setTransitionStage(state => state.to !== -1 ? ({ to: -1, className: "fadeOut" }) : state);
   }, [location]);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [index]);
 
   return (<>
     { image && <Viewport image={image} setImage={setImage} /> }
@@ -79,7 +83,7 @@ const Portfolio = () => {
           <img className="w-full lg:h-72 cursor-pointer" onClick={handleZoom} 
             alt="sanctuary" src="https://ik.imagekit.io/varunkie/Cover_PcuCGpJBe.png" />
         </Gallery>
-        <p>{t("contents.itchio")}</p>
+        <p className="lg:px-20 whitespace-pre-line text-justify">{t("contents.itchio")}</p>
         <Controls index={index} setIndex={handleClick}>
           <Icon href="https://varunkie.itch.io">
             <FaItchIo className="w-full h-full" />
@@ -105,7 +109,7 @@ const Portfolio = () => {
           <img className="w-full lg:h-72 cursor-pointer" onClick={handleZoom} 
             alt="mechanism-system-2" src="https://ik.imagekit.io/varunkie/mechanism-system-pt2_Qhs_n2JpK.png" />
         </Gallery>
-        <p>{t("contents.unitytools")}</p>
+        <p className="lg:px-20 whitespace-pre-line text-justify">{t("contents.unitytools")}</p>
         <Controls index={index} setIndex={handleClick}>
 
         </Controls>
@@ -121,7 +125,7 @@ const Portfolio = () => {
           <img className="w-full lg:h-72 cursor-pointer" onClick={handleZoom} 
             alt="acolyte-game" src="https://ik.imagekit.io/varunkie/acolyte__U3LlQH1p.png"  />
         </Gallery>
-        <p>{t("contents.acolyte")}</p>
+        <p className="lg:px-20 whitespace-pre-line text-justify">{t("contents.acolyte")}</p>
         <Controls index={index} setIndex={handleClick}>
 
         </Controls>
@@ -134,10 +138,10 @@ const Portfolio = () => {
         <iframe className="w-full md:w-2/3 aspect-video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           src="https://www.youtube.com/embed/FCHJd61tqRA" 
-          title="Spectrum Switch Trailer" frameborder="0" 
-          allowfullscreen></iframe>
+          title="Spectrum Switch Trailer" frameBorder="0" 
+          allowFullScreen></iframe>
 
-        <p>{t("contents.spectrum")}</p>
+        <p className="lg:px-20 whitespace-pre-line text-justify">{t("contents.spectrum")}</p>
         <Controls index={index} setIndex={handleClick}>
           <Icon href="https://store.steampowered.com/app/420360/Spectrum/">
             <FaSteam className="w-full h-full" />
@@ -162,7 +166,7 @@ const Portfolio = () => {
           <img className="w-full lg:h-72 cursor-pointer" onClick={handleZoom} 
             alt="satelite-simulator" src="https://ik.imagekit.io/varunkie/title_267_8DzCuSc5B.png"  />
         </Gallery>
-        <p>{t("contents.gamejam")}</p>
+        <p className="lg:px-20 whitespace-pre-line text-justify">{t("contents.gamejam")}</p>
         <Controls index={index} setIndex={handleClick}>
           <Icon href="https://globalgamejam.org/users/eduardo-borges">
             <FaExternalLinkAlt className="w-full h-full"/>
@@ -179,10 +183,10 @@ const Cover = ({ className = "", src = "", title = "", subtitle = "", value, onC
       <img className="absolute inset-0 w-full h-full object-cover object-center" 
         alt={title} src={src}/>
         
-      <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-80 cursor-pointer"
+      <div className="px-4 md:px-6 flex flex-col justify-center relative z-10 w-full bg-white opacity-0 hover:opacity-80 cursor-pointer"
         onClick={() => onClick && onClick(value)}>
         <h2 className="title-font text-lg font-medium text-gray-900 mb-3">{title}</h2>
-        <p className="text-black leading-relaxed">{subtitle}</p>
+        <p className="text-black leading-relaxed text-sm">{subtitle}</p>
       </div>
     </div>
   );
@@ -207,11 +211,11 @@ const Gallery = ({ children }) => {;
 
 const Controls = ({ children, index, setIndex }) => {
   return (
-    <div className="w-full flex justify-center space-x-8">
-      <FaArrowLeft className="w-16 h-16 p-4 tm-border-300 object-cover cursor-pointer border-2 rounded-full"
+    <div className="w-full flex justify-center space-x-4 md:space-x-8">
+      <FaArrowLeft className="w-12 h-12 p-2 md:w-16 md:h-16 md:p-4 tm-border-300 object-cover cursor-pointer border-2 rounded-full"
         onClick={() => setIndex(index < NUMBER_OF_COVERS - 1 ? index + 1 : 0)} />
       {children}
-      <FaArrowRight className="w-16 h-16 p-4 tm-border-300 object-cover cursor-pointer border-2 rounded-full"
+      <FaArrowRight className="w-12 h-12 p-2 md:w-16 md:h-16 md:p-4 tm-border-300 object-cover cursor-pointer border-2 rounded-full"
         onClick={() => setIndex(index > 0 ? index - 1 : NUMBER_OF_COVERS - 1)} />
     </div>
   );

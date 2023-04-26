@@ -8,9 +8,9 @@ import "../../resources/themes/styles/Layout.css";
 
 const Layout = ({ children, transitionStage, ...rest }) => {
   return (
-    <Context className="tm-ct-100">
+    <Context className="tm-ct-100 font-sans">
       <Header className="tm-ct-200 px-8 py-2 h-14" dropdown="tm-ct-200 px-6 py-4 space-y-4 -right-8 translate-y-2"/>
-      <main className={`${transitionStage} p-6 lg:p-16 grow flex flex-col space-y-6 lg:space-y-12`} {...rest}>
+      <main className={`${transitionStage} p-6 lg:px-16 lg:py-6 grow flex flex-col justify-center space-y-6 lg:space-y-12`} {...rest}>
         <Suspense fallback="">
           {children}
         </Suspense>

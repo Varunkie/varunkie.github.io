@@ -1,13 +1,26 @@
 {
   "titles": {
-
+    "portfolio": "Portafolio",
+    "itchio": "Itch.io",
+    "unitytools": "Editor de Unity",
+    "acolyte": "Project Acolyte",
+    "spectrum": "Spectrum",
+    "gamejam": "Global Game Jam"
   },
 
   "subtitles": {
-
+    "itchio": "Itch.io es una plataforma donde los usuarios pueden subir sus videojuegos. En esta plataforma estan mis prototipos.",
+    "unitytools": "El desarrollo de herramientas de editor de Unity permite una mejor personalización para los game designers.",
+    "acolyte": "Project Acolyte es un juego metroidvania no lineal. Este proyecto tuvo que ser pausado debido a falta de presupuesto.",
+    "spectrum": "Spectrum es un juego de plataforma arcade que consiste en completar niveles esquivando obstaculos a travéz del salto y buceo",
+    "gamejam": "Global GameJam es un evento anual de desarrollo de videojuegos que toma lugar en mas de 100 paises alrededor del mundo."
   },
 
   "contents": {
-    
+    "itchio": "Itch.io es una plataforma donde los usuarios pueden alojar, vender y descargar viodejuegos independientes, game assets, comics, zines y música. Gracias a la cantidad de libertad que esta plataforma ofrece a los desarrolladores, fue la plataforma escogida para alojar los prototipos de los videojuegos que estoy realizando en mi tiempo libre. Actaulmente estoy trabajando en desarrollar ideas sobre videojuegos que he tenido desde hace mucho tiempo.\n\nMi primer prototipo se llama Sanctuary, un juego de cartas multijugador inspirado en los Mitos de Cthulhu. Intenté mezclar mecánicas de Hearthstone, Magic the Gathering y Yu-gi-oh. Soy bastante fan de los juegos de carta e intete darle a mi proyecto mi giro personal sobre como debería jugarse. Esta es la razón principal de porque el prototipo gira alrededor de 'recollectar fé' para obtener la victoria. Este proyecto se puede jugar dentro de la plataforma.",
+    "unitytools": "El desarrollo de herramientas de Unity para el editor permite una mejor personalización en los componentes destinado para facilitar a los game designers su uso además de acelerar la producción del proyecto.\n\nDurante mi trabajo en el proyecto de Acolyte, realicé una gran cantidad de herramientas que fueron utilizadas por el equipo de desarrollo entero con el fin de facilitar su trabajo. Entre las herramientas que realicé se encuentran algunas tales como una ventana para todo el sistema de combate, un sistema de diseño para plataformas movible, un sistema de interacción que globaliza todos los componentes del juego, un catalogo de objetos decorativos para el equipo de arte y algún otro sistema mas.\n\nEsas herramientas ofrecieron al equipo de desarrollo muchas opciones para personalizar las mecanicas del juego, sin necesidad de que un programador tenga que modificar el código para cumplir las necesidades del equipo de desarrollo, acelerando el progreso general del proyecto.",
+    "acolyte": "Acolyte es un juego metroidvania no lineal sin una fecha esperable de lanzamiento. El objetivo del juego es completar cada uno de los cuatro distritos en cualquier orden deseado con la meta de derrotar a CAIM, una IA malvada que esta liderando a la humanidad hacia su destrucción. Inicialmente planeado a ser lanzado en distintas plataformas, este proyecto tuvo que ser pausado despues de tres años de desarrollo debido a falta de presupuesto. Sin embargo, durante la mayoría de su desarrollo, yo trabajé como el lider de programación y el director del sistema de combate del juego junto a la supervisión del game director.\n\nAnalizando cada mecanica de juegos como Hollow Knight, Dead Cells y Axiom Verge; Tomé cuidado del sistema de combate, la inteligencia artificial de los enemigos y cada mecanica que el jugador pueda realizar. Mi mayor objetivo durante mi tiempo de trabajo fue que el desarrollo del videojuego siempre pueda ser llevado de la mejor forma, con las condiciones mas amigables para el usuario.",
+    "spectrum": "Spectrum es un juego de plataformas arcade que consiste en completar niveles esquivando obstaculos a travéz de mecánicas como el salto y el buceo. Lanzado inicialmente para Android y iPhones, empezó su desarrollo hacia las plataformas Xbox One, PlayStation 4 y Nintendo Switch en el momento que fui contratado. Spectrum está actualmente disponible en todas las consolas.\n\nYo fui contratado cerca del final del tiempo de desarrollo de este proyecto. Mi trabajo fue optimizar el rendimiento del juego para que ronde los 60 FPS en cada una de las consolas. Además de eso estuve a cargo de resolver errores visuales que no se habían podido resolver hasta ese momento del desarrollo. Mi participación en el proyecto fue con el objetivo de entregar un producto que este en sus perfectas condiciones y este lo más pulido posible.",
+    "gamejam": "Global GameJam es un evento anual de desarrollo de videojuegos que toma lugar en más de 100 paises alrededor del mundo. Este evento consiste en desarrollar un videojuego en menos de 48 horas. Utilizando el motor de Unity por primera vez, trabjé durante esos dos días en desarrollar diferentes proyectos con una temática especificada cada año.\n\nHe participado en este evento por tres años seguidos, y el Global GameJam fue mi primera experiencia en la industria del videojuego. Inicie mi carrera después de mi segundo año participando, uniendome al equipo de 3DAvenue como un programador de videojuegos, quienes eran también responsables para la organización del evento en la ciudad de Maracaibo, Venezuela.\n\nEstos proyectos pueden ser descargados en su propia plataforma."   
   }
 }

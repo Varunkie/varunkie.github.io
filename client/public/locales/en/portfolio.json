@@ -1,13 +1,26 @@
 {
   "titles": {
-    
+    "portfolio": "Portfolio",
+    "itchio": "Itch.io",
+    "unitytools": "Unity Tools",
+    "acolyte": "Project Acolyte",
+    "spectrum": "Spectrum",
+    "gamejam": "Global Game Jam"
   },
 
   "subtitles": {
-
+    "itchio": "Itch.io is a website for users to host indie video games. I'm using this platform for my game prototypes.",
+    "unitytools": "The development of Unity editor allow better customization of the components for game designers.",
+    "acolyte": "Project Acolyte is a non-linear metroidvania game. It had to be paused due to lack of budget.",
+    "spectrum": "Spectrum is an arcade platform game based on completing levels dodging by obstacles through jumping and diving mechanics.",
+    "gamejam": "Global GameJam is an annual video game development event that takes place in more than 100 countries around the world."
   },
 
   "contents": {
-    
+    "itchio": "Itch.io is a website for users to host, sell and download indie video games, game assets, comics, zines and music. Due to the amount of freedom it gives to developers, I'm using this platform to host my game prototypes that I'm making in my freetime. Currently I'm working in prototyping some game ideas that I have had for a long time.\n\nMy first prototype is named Sanctuary, a multiplayer card game inspired by Cthlhu Mythos. I tried to combine mechanics from Hearthstone, Magic the Gathering and Yu-gi-oh. I'm fan of these card games and I wanted to give to my project my own twist about how to play it. That is the reason because the game is about 'collecting faith' as winning condition. The project is playable on the site's own page.",
+    "unitytools": "The development of Unity editor extensions allow better customization of the various programmable components for game designers, in addition to speeding up the development of the game.\n\nDuring my work within the Acolyte project, I made tools that were used by the entire development team in order to ease their workload. I made tools that were extent to gigs such as: the entire combat system for the game, the creation of movable platforms, the design of an interaction system that globalizes the different components of the game, a catalog of decorative objects for the art team, and a couple more systems.\n\nThese tools offered the team many customization options when developing the game mechanics, without the need to be tied to a programmer to make them work, speeding up everyone's job.",
+    "acolyte": "Acolyte is a non-linear metroidvania game with no expected release date. The goal of the game is to complete each of the four district zones in any desired order with the goal of defeating CAIM, an evil AI that is leading the humanity to its destruction. Initially planned to be released cross-platform, Acolyte it's a project had to be paused after three years of development due to lack of budget. However, during most of its development, I worked as a lead programmer and game's combat director.\n\nAnalyzing every mechanic from games like Hollow Knight, Dead Cells, and Axiom Verge; I took care of both the combat system, the artificial intelligence of the enemies and each mechanic that the player character can perform. The main focus of my work was that the development of the game could always be carried out in the best, most user-friendly possible conditions.",
+    "spectrum": "Spectrum is an arcade platform game based on completing levels dodging by obstacles through jumping and diving mechanics. Released for Android and iPhones first, then it began its console development for Xbox One, PlayStation 4 and Nintendo Switch, time in which I was hired. Spectrum is now available on consoles.\n\nI was hired at the end of the development of this project. My job was to optimize the game performance to run at 60 fps on each of the consoles. Also I was in charge of solving visual bugs that were pending unresolved throughout development. My participation in the project was with the objective of delivering a product that is as perfect and polished as possible.",
+    "gamejam": "Global GameJam is an annual video game development event that takes place in more than 100 countries around the world. This event consists of developing a video game in less than 48 hours. Using the Unity engine for the first time, I worked for two days developing different projects with a specific theme each year.\n\nI participated in the event for three years in a row, and the Global GameJam was my very first experience in game development. I started my career after my second year participating, joining the 3D Avenue team as a videogame developer. 3D Avenue are also the responsibles for the organization of the event in the city of Maracaibo, Venezuela.\n\nThese projects are downloadable on the site's own page."   
   }
 }

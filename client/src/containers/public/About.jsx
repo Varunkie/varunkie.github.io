@@ -14,16 +14,16 @@ const About = () => {
   const { t } = useTranslation(ns.about);
 
   return (<>
-    <Group className="flex flex-col md:flex-row rounded-3xl md:space-x-2 lg:space-x-6">
+    <Group className="flex flex-col lg:flex-row rounded-3xl lg:space-x-6">
       <div className="flex justify-center">
-        <img className="object-cover rounded-3xl"
-          style={{ width: "100%", minWidth: "300px", maxWidth: "800px" }} 
+        <img className="object-cover rounded-3xl md:min-w-300px"
+          style={{ width: "100%", maxWidth: "800px" }} 
           src="https://ik.imagekit.io/varunkie/20200117_114600__flSr6VOt.jpg" alt="avatar" />
       </div>
 
       <div className="flex flex-col space-y-6 py-6 px-4 lg:px-6 justify-center">
         <Title className="font-bold text-3xl">{t("titles.about")}</Title>
-        <p>{t("contents.about")}</p>
+        <p className="text-justify">{t("contents.about")}</p>
         <ul className="grid lg:grid-cols-2 gap-2 border-2 border-dashed tm-border-300 rounded-xl p-6">
           <Item i18nKey="contents.name" value="Eduardo Borges" t={t} />
           <Item i18nKey="contents.address" value="Venezuela" t={t} />
@@ -50,7 +50,7 @@ const About = () => {
 const Item = ({ i18nKey, t, value }) => {
   return (
     <li><Trans i18nKey={i18nKey} t={t} values={{value}}>
-      <bold className="font-bold">key</bold>: value
+      <span className="font-bold">key</span>: value
     </Trans></li>
   );
 };
