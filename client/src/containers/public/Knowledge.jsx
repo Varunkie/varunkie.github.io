@@ -5,6 +5,7 @@ import { FaUnity, FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import React from "react";
 
+import Group from "../../components/layouts/WindowGroup";
 import Title from "../../components/layouts/PageTitle";
 import Skill from "../../components/layouts/SkillProgress";
 
@@ -12,7 +13,7 @@ const Knowledge = () => {
   const { t } = useTranslation(ns.knowledge);
 
   return (<>
-    <div className="tm-ct-300 p-6 md:p-10 rounded-3xl space-y-6">
+    <Group className="space-y-6">
       <Title className="font-bold text-3xl">{t("titles.knowledge")}</Title>
 
       <section className="grid md:grid-cols-2 gap-6">
@@ -25,9 +26,9 @@ const Knowledge = () => {
         <Trait render={FaGitAlt} title={t("subtitles.methodologies")} 
           subtitle={t("contents.methodologies")} />
       </section> 
-    </div>
+    </Group>
 
-    <div className="tm-ct-300 p-6 md:p-10 rounded-3xl space-y-6">
+    <Group className="space-y-6">
       <section className="grid md:grid-cols-2 py-6 gap-y-14 gap-x-6">
         <div className="space-y-6">
           <Title className="font-bold text-3xl">{t("subtitles.skills")}</Title>
@@ -79,7 +80,7 @@ const Knowledge = () => {
           </div>
         </div>
       </section>
-    </div>
+    </Group>
   </>);
 };
 

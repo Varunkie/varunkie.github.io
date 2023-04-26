@@ -1,5 +1,4 @@
-import { useLocation } from "react-router-dom";
-import React, { useLayoutEffect, Suspense } from 'react';
+import React, { Suspense } from 'react';
 
 import Context from '../../controllers/contexts/ThemeContext';
 import Header from './Header';
@@ -8,11 +7,6 @@ import Footer from './Footer';
 import "../../resources/themes/styles/Layout.css";
 
 const Layout = ({ children, transitionStage, ...rest }) => {
-  const location = useLocation();
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
   return (
     <Context className="tm-ct-100">
       <Header className="tm-ct-200 px-8 py-2 h-14" dropdown="tm-ct-200 px-6 py-4 space-y-4 -right-8 translate-y-2"/>

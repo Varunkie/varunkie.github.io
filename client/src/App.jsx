@@ -1,7 +1,7 @@
 import routes from "./resources/constants/routes/frontend.routes";
 
 import { Routes, Route } from "react-router-dom";
-import React, { lazy } from "react";
+import React, { lazy, useLayoutEffect } from "react";
 
 import { useBrowserAnimation } from "./utils/hooks/useAnimation";
 
@@ -18,6 +18,10 @@ const Portfolio = lazy(() => import("./containers/public/Portfolio"));
 // COMPONENTS
 const App = () => {
   const { displayLocation, transitionStage, onAnimationEnded } = useBrowserAnimation();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [displayLocation]);
 
   return (
     <Layout transitionStage={transitionStage} onAnimationEnd={onAnimationEnded}>

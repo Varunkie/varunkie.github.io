@@ -7,12 +7,14 @@ import { useTranslation, Trans } from "react-i18next";
 import React from "react";
 
 import Title from "../../components/layouts/PageTitle";
+import Group from "../../components/layouts/WindowGroup";
+import Icon from "../../components/layouts/ExternalIcon";
 
 const About = () => {
   const { t } = useTranslation(ns.about);
 
   return (<>
-    <div className="tm-ct-300 p-6 flex flex-col md:flex-row rounded-3xl md:space-x-2 lg:space-x-6">
+    <Group className="flex flex-col md:flex-row rounded-3xl md:space-x-2 lg:space-x-6">
       <div className="flex justify-center">
         <img className="object-cover rounded-3xl"
           style={{ width: "100%", minWidth: "300px", maxWidth: "800px" }} 
@@ -30,18 +32,18 @@ const About = () => {
         </ul>
 
         <div className="flex justify-center space-x-8 pt-4">
-          <a href="https://twitter.com/varunkie" target="_blank" rel="noopener noreferrer">
-            <CiTwitter className="w-16 h-16 p-4 tm-border-300 object-cover cursor-pointer rounded-full border-2" />
-          </a>
-          <a href="https://www.linkedin.com/in/eduardo-a-borges/" target="_blank" rel="noopener noreferrer">
-            <CiLinkedin className="w-16 h-16 p-4 tm-border-300 object-cover cursor-pointer rounded-full border-2" />
-          </a>
-          <a href="https://varunkie.itch.io" target="_blank" rel="noopener noreferrer">
-            <FaItchIo className="w-16 h-16 p-4 tm-border-300 object-cover cursor-pointer rounded-full border-2" />
-          </a>
+          <Icon href="https://twitter.com/varunkie">
+            <CiTwitter className="w-full h-full" />
+          </Icon>
+          <Icon href="https://www.linkedin.com/in/eduardo-a-borges/">
+            <CiLinkedin className="w-full h-full" />
+          </Icon>
+          <Icon href="https://varunkie.itch.io">
+            <FaItchIo className="w-full h-full" />
+          </Icon>
         </div>
       </div>
-    </div>
+    </Group>
   </>);
 };
 
