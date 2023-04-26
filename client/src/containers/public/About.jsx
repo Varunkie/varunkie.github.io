@@ -8,7 +8,7 @@ import React from "react";
 
 import Title from "../../components/layouts/PageTitle";
 import Group from "../../components/layouts/WindowGroup";
-import Icon from "../../components/layouts/ExternalIcon";
+import Icon from "../../components/layouts/ExternalLink";
 
 const About = () => {
   const { t } = useTranslation(ns.about);

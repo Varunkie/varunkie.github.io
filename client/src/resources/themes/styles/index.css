@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Modals */
+.background-modal  {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+}
+
 /* Scrollbars */
 .hide-scroll::-webkit-scrollbar {
   display: none;
