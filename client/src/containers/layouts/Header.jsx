@@ -30,7 +30,7 @@ const Header = ({ className = "", dropdown = "" }) => {
               <Element path={pathname} to={routes.about}>{t("pages.titles.about")}</Element>
               <Element path={pathname} to={routes.knowledge}>{t("pages.titles.knowledge")}</Element>
               <Element path={pathname} to={routes.experience}>{t("pages.titles.experience")}</Element>
-              <Element path={pathname} to={routes.portfolio}>{t("pages.titles.portfolio")}</Element>
+              <Element path={pathname} to={routes.portfolio} multi>{t("pages.titles.portfolio")}</Element>
             </>}
           </div>
 
@@ -66,7 +66,7 @@ const Element = ({ className = "", hidden, path, to, children, multi, onClick })
   return (hidden ? null :
     <div className={className}>
       <Link to={to} onClick={onClick}>{children}</Link>
-      <div className={`tm-hr-200 ${(multi && multi.includes(path)) || path === to ? "" : "invisible"}`} />
+      <div className={`tm-hr-200 ${(multi && path.includes(to)) || path === `/${to}` ? "" : "invisible"}`} />
     </div>
   );
 };

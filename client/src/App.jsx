@@ -14,6 +14,7 @@ const About = lazy(() => import("./containers/public/About"));
 const Knowledge = lazy(() => import("./containers/public/Knowledge"));
 const Experience = lazy(() => import("./containers/public/Experience"));
 const Portfolio = lazy(() => import("./containers/public/Portfolio"));
+const Archive = lazy(() => import("./containers/public/Archive"));
 
 // COMPONENTS
 const App = () => {
@@ -29,7 +30,14 @@ const App = () => {
         <Route element={<About />} path={routes.about} />
         <Route element={<Knowledge />} path={routes.knowledge} />
         <Route element={<Experience />} path={routes.experience} />
-        <Route element={<Portfolio />} path={routes.portfolio} />
+        <Route path={routes.portfolio}>
+          <Route element={<Portfolio/>} path={""} />
+          <Route element={<Archive index={routes.gamejam} />} path={routes.gamejam} />
+          <Route element={<Archive index={routes.spectrum} />} path={routes.spectrum} />
+          <Route element={<Archive index={routes.acolyte} />} path={routes.acolyte} />
+          <Route element={<Archive index={routes.unitytools} />} path={routes.unitytools} />
+          <Route element={<Archive index={routes.itchio} />} path={routes.itchio} />
+        </Route>
         <Route element={<NotFound />} path="*" />
       </Routes>
     </Layout>
