@@ -1,7 +1,7 @@
 {
   "titles": {
-    "experience": "Work experience",
-    "education": "Education"
+    "experience": "Experiencia laboral",
+    "education": "Educación"
   },
 
   "subtitles": {
@@ -12,40 +12,40 @@
     "dates": {
       "university": "Sep 2014 - Jul 2018",
       "first": "Mar 2018 - Sep 2019",
-      "second": "Sep 2019 - Apr 2021",
-      "third": "Aug 2021 - Oct 2022",
-      "fourth": "Aug 2021 - Oct 2022"
+      "second": "Sep 2019 - Abr 2021",
+      "third": "Ago 2021 - Oct 2022",
+      "fourth": "Ago 2021 - Oct 2022"
     },
     "items": {
-      "university": "Software Engineer",
-      "first": "Programmer, 3DAvenue",
-      "second": "Lead Programmer, 3DAvenue",
-      "third": "Srum Master, Coachteen",
-      "fourth": "Programmer, Coachteen"
+      "university": "Ingeniero Informático",
+      "first": "Programador, 3DAvenue",
+      "second": "Programador líder, 3DAvenue",
+      "third": "Scrum Master, Coachteen",
+      "fourth": "Desarrollador Full-Stack, Coachteen"
     },
     "subitems": {
-      "university": "I studied at Universidad Dr. Rafael Belloso Chacín based in Maracaibo.\nIn this time, I learned about how to code in C++, Java, Visual Basic, Javascript and C#.",
+      "university": "Yo estudié en la Universidad Dr. Rafael Belloso Chacín localizada en Maracaibo.\nDurante este tiempo fui aprendiendo sobre como utilizar lenguajes tales como C++, Java, Visual Basic, Javascript y C#.",
       "first": {
-        "one": "Developing the internal physics of the video game´s project.",
-        "two": "Writing scripted behaviors to fulfill game play requirements and other complementary systems of the video game.",
-        "three": "Designing Unity's tools to facilitate design of the project.",
-        "four": "Ensuring Spectrum game’s performance and functionality between different platforms such as PC, PlayStation 4, Xbox One and Nintendo Switch."
+        "one": "Desarrollar el motor de físicas internas del videojuego.",
+        "two": "Trabajar en los comportamientos de las entidades expuestas en los requisitos del proyecto y otros sistemas complementarios.",
+        "three": "Diseñar herramientas de desarrollo en el entorno de Unity para facilitar la producción del proyecto.",
+        "four": "Asegurar el rendimiento y la funcionalidad del videojuego entre diferentes plataformas tales como PC, PlayStation 4, Xbox One y Nintendo Switch."
       },
       "second": {
-        "one": "Providing technical support to the team of developers regarding software development and all creative aspects of the projects.",
-        "two": "Leading the technical development of the project using the SCRUM methodology.",
-        "three": "Assisting in establishing coding best practices and performing periodic code reviews.",
-        "four": "Establishing estimated time to complete the programming task and committing myself to meet it."
+        "one": "Asistir con soporte técnico al equipo con respecto a las herramientas de trabajo y todos los aspectos creativos del proyecto.",
+        "two": "Liderar el desarrollo técnico del proyecto a través de la metodología SCRUM.",
+        "three": "Ayudar a establecer las mejores prácticas de desarrollo sobretodo con revisiones periódicas del código del proyecto.",
+        "four": "Estimar el tiempo necesario para completar cada tarea de programación y comprometerse a cumplir cada una de ellas."
       },
       "third": {
-        "one": "Leading the technology department in setting up best practices such as git version control, work documentation and SCRUM methodology.",
-        "two": "Keeping the team organized, on track and focused on the processes by which they achieve their goals."
+        "one": "Dirigir el departamento de tecnologías en aplicar las mejores prácticas tales como control de versiones usando git, documentar el proyecto y utilizar la metodología SCRUM.",
+        "two": "Mantener el equipo organizado, al día y centrado en los procesos con los cuales ellos podrán completar los objetivos."
       },
       "fourth": {
-        "one": "Developing a new educational platform inspired by MOODLE using React.js, Express.js and MongoDB as primary technologies.",
-        "two": "Defining front-end and back-end structure following standards and guidelines to ensure an application secure, scalable and extensible.",
-        "three": "Localizating user interface and web layout designs into high quality components using Tailwind CSS framework.",
-        "four": "Building a RESTful API with effective security protocols, data protection measures and storage solutions."
+        "one": "Desarrollar una nueva plataforma educacional inspirada en MOODLE utilizando React.js, Express.js y MongoDB como sus tecnologáis principales.",
+        "two": "Definir una estructura front-end y back-end siguiendo los estándares de desarrollo que aseguran que la aplicación sea segura, escalable y extensible.",
+        "three": "Localizar la interfaz de usario y maquetación esperada dentro de componentes responsive utilizando Tailwind CSS.",
+        "four": "Construir una API siguiendo el patrón RESTful con efectivos protocolos de seguridad, medidas de protección de datos y soluciones de almacenamientos."
       }
     }
   }

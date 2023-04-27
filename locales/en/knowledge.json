@@ -15,10 +15,10 @@
   },
 
   "contents": {
-    "unity" : "I have an amazing knowledge in everything related to make a metroidvania game, specially in developing Unity tools to facilitate the design workflow and implementing the artificial inteligence of the game's enemies. I also have knowledge using Photon for networking games.",
+    "unity" : "I have an amazing knowledge in everything related to make a metroidvania game, specially in developing Unity tools to facilitate the design workflow and implementing the artificial inteligence of the game's enemies. I also have knowledge using Photon for making networking games.",
     "frontend": "I'm not considered myself a Front-end Developer but, I have knowledge in using React.js and Tailwind CSS, specially in implementing the layout provided by the designer, creating custom hooks for a better development workflow and set up technologies such as redux, slate, video.js and i18next.",
-    "backend": "Although I don't have enough experience, I would like says I'm a Back-end Developer. I have knowledge in developing a back-end structure using Node.js, Express.js and MongoDB, specially in building a RESTful API with effective security protocols, and connecting the backend to technologies such as sendgrid, imagekit.io, stripe and paypal.",
-    "methodologies": "I have mainly worked on SCRUM methodology for each project that I have participated. I have assisted in implementing this methodology into the tech department and I have ensured that it implements best practices such as pull request policies, documenting the project and creating a branch for feature to implement. For version control, I have used services as github and bitbucket.",
+    "backend": "Although I don't have enough experience, I would like says I'm a Back-end Developer. I have knowledge in developing a back-end structure using Node.js, Express.js and MongoDB, specially in building a RESTful API with effective security protocols, and connecting the backend to services such as sendgrid, imagekit.io, stripe and paypal.",
+    "methodologies": "I have mainly worked on SCRUM methodology for each project that I have participated. I have assisted in implementing this methodology into the tech department on one of the companies that I worked and I have ensured that it implements best practices such as pull request policies, documenting the project and creating a branch for feature to implement. For version control, I have used services as github and bitbucket.",
 
     "skills": {
       "csharp": "C#",

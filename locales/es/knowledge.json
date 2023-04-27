@@ -1,24 +1,24 @@
 {
   "titles": {
-    "knowledge": "Knowledge"
+    "knowledge": "Conocimiento"
   },
 
   "subtitles": {
     "unity" : "Unity",
     "frontend": "Front-end",
     "backend": "Back-end",
-    "methodologies": "Methodologies",
-    "skills": "Skills",
-    "languages": "Languages",
+    "methodologies": "Metodologías",
+    "skills": "Aptitudes",
+    "languages": "Lenguajes",
     "frameworks": "Frameworks",
-    "versions": "Version control"
+    "versions": "Control de versiones"
   },
 
   "contents": {
-    "unity" : "I have an amazing knowledge in everything related to make a metroidvania game, specially in developing Unity tools to facilitate the design workflow and implementing the artificial inteligence of the game's enemies. I also have knowledge using Photon for networking games.",
-    "frontend": "I'm not considered myself a Front-end Developer but, I have knowledge in using React.js and Tailwind CSS, specially in implementing the layout provided by the designer, creating custom hooks for a better development workflow and set up technologies such as redux, slate, video.js and i18next.",
-    "backend": "Although I don't have enough experience, I would like says I'm a Back-end Developer. I have knowledge in developing a back-end structure using Node.js, Express.js and MongoDB, specially in building a RESTful API with effective security protocols, and connecting the backend to technologies such as sendgrid, imagekit.io, stripe and paypal.",
-    "methodologies": "I have mainly worked on SCRUM methodology for each project that I have participated. I have assisted in implementing this methodology into the tech department and I have ensured that it implements best practices such as pull request policies, documenting the project and creating a branch for feature to implement. For version control, I have used services as github and bitbucket.",
+    "unity" : "Tengo un increible conocimiento en todo lo relacionado a hacer un juego metroidvania, especialmente en desarrollar herramientas en Unity para facilitar la producción del proyecto, además de implementar la inteligencia artificial de los enemigos. También dispongo de conocimiento en hacer juegos multijugador utilizando Photon.",
+    "frontend": "Aunque no me considere a mi mismo como Front-end Developer, tengo conocimiento en utilizar React.js y Tailwind.css, especialmente en implementar la maquetación proveida por el diseñador, crear custom hooks para un mejor desarrollo del proyecto y en implementar tecnologías como redux, slate, video.js y i18next.",
+    "backend": "A pesar de no disponer de suficiente experiencia, me gustaría decir que soy un Back-end Developer. Tengo conocimiento en desarrollar una estructura back-end utilizando Node.js, Express.js y MongoDB, especialmente en construir una RESTful API con los debidos protocolos de seguridad, además de conectar el back-end con servicios tales como sendgrid, imagekit.io, stripe y paypal.",
+    "methodologies": "Yo he trabajado principalmente con la metodología SCRUM en todo proyecto en que he participado. He asistido en implementar esta tecnología en el departamento técnico de una de las empresas, además me he asegurado de que se esten aplicando las mejores prácticas como tener politicas de pull request, la documentación del proyecto y de que cree un nuevo branch por cada feature nuevo a realizar. Para el control de versiones he utilizado servicios como github y bitbucket.",
 
     "skills": {
       "csharp": "C#",
@@ -29,13 +29,13 @@
     },
 
     "languages": {
-      "spanish": "Spanish",
-      "english": "English",
-      "japanese": "Japanese"
+      "spanish": "Español",
+      "english": "Inglés",
+      "japanese": "Japonés"
     },
 
     "levels": {
-      "native": "Native"
+      "native": "Nativo"
     },
 
     "frameworks": {

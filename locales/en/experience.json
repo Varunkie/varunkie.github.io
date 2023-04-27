@@ -20,8 +20,8 @@
       "university": "Software Engineer",
       "first": "Programmer, 3DAvenue",
       "second": "Lead Programmer, 3DAvenue",
-      "third": "Srum Master, Coachteen",
-      "fourth": "Programmer, Coachteen"
+      "third": "Scrum Master, Coachteen",
+      "fourth": "Full-Stack Developer, Coachteen"
     },
     "subitems": {
       "university": "I studied at Universidad Dr. Rafael Belloso Chacín based in Maracaibo.\nIn this time, I learned about how to code in C++, Java, Visual Basic, Javascript and C#.",
@@ -44,7 +44,7 @@
       "fourth": {
         "one": "Developing a new educational platform inspired by MOODLE using React.js, Express.js and MongoDB as primary technologies.",
         "two": "Defining front-end and back-end structure following standards and guidelines to ensure an application secure, scalable and extensible.",
-        "three": "Localizating user interface and web layout designs into high quality components using Tailwind CSS framework.",
+        "three": "Localizating user interface and web layout designs into responsive components using Tailwind CSS framework.",
         "four": "Building a RESTful API with effective security protocols, data protection measures and storage solutions."
       }
     }
