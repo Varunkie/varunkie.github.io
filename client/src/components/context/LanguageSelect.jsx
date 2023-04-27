@@ -5,7 +5,7 @@ import React from "react";
 const Menu = ({ className = "", i18n }) => {
   const setLanguage = value => i18n.changeLanguage(value);
   const handleChange = e => setLanguage(e.target.value);
-  const language = i18n.language;
+  const language = i18n.resolvedLanguage;
 
   return (
     <select className={`${className} uppercase`} 

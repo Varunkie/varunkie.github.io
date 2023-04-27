@@ -13,7 +13,7 @@ i18n
   .init({
     detection: { checkWhitelist: true }, // options for language detection
     interpolation: { escapeValue: false }, // react already does escaping
-    fallbackLng: languages.default, 
+    fallbackLng: languages.availables, 
     whitelist: languages.availables,
     debug: false,
 

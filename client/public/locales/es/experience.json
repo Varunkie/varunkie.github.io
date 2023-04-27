@@ -21,7 +21,7 @@
       "first": "Programador, 3DAvenue",
       "second": "Programador líder, 3DAvenue",
       "third": "Scrum Master, Coachteen",
-      "fourth": "Desarrollador Full-Stack, Coachteen"
+      "fourth": "Desarrollador Full-stack, Coachteen"
     },
     "subitems": {
       "university": "Yo estudié en la Universidad Dr. Rafael Belloso Chacín localizada en Maracaibo.\nDurante este tiempo fui aprendiendo sobre como utilizar lenguajes tales como C++, Java, Visual Basic, Javascript y C#.",
@@ -42,9 +42,9 @@
         "two": "Mantener el equipo organizado, al día y centrado en los procesos con los cuales ellos podrán completar los objetivos."
       },
       "fourth": {
-        "one": "Desarrollar una nueva plataforma educacional inspirada en MOODLE utilizando React.js, Express.js y MongoDB como sus tecnologáis principales.",
+        "one": "Desarrollar una nueva plataforma educacional inspirada en MOODLE utilizando React.js, Express.js y MongoDB como sus tecnologías principales.",
         "two": "Definir una estructura front-end y back-end siguiendo los estándares de desarrollo que aseguran que la aplicación sea segura, escalable y extensible.",
-        "three": "Localizar la interfaz de usario y maquetación esperada dentro de componentes responsive utilizando Tailwind CSS.",
+        "three": "Localizar la interfaz de usuario y maquetación esperada dentro de componentes responsive utilizando Tailwind CSS.",
         "four": "Construir una API siguiendo el patrón RESTful con efectivos protocolos de seguridad, medidas de protección de datos y soluciones de almacenamientos."
       }
     }

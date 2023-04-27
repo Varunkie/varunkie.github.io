@@ -35,8 +35,8 @@ const Header = ({ className = "", dropdown = "" }) => {
           </div>
 
           <div className="flex justify-center items-center space-x-4">
-            <Language className="bg-transparent px-1 py-0.5 border-0 ring-0" /> 
-            <DarkMode className="bg-white dark:bg-purple-400 w-14 h-7" /> 
+            { ready && <Language className="bg-transparent px-1 py-0.5 border-0 ring-0" /> }
+            { ready && <DarkMode className="bg-white dark:bg-purple-400 w-14 h-7" /> }
           </div>
         </div>
 
