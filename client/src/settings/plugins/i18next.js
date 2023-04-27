@@ -15,6 +15,8 @@ i18n
     interpolation: { escapeValue: false }, // react already does escaping
     fallbackLng: languages.availables, 
     whitelist: languages.availables,
+    supportedLngs: languages.availables,
+    //load: 'languageOnly',
     debug: false,
 
     ns: namespaces,

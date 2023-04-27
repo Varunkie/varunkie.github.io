@@ -16,14 +16,16 @@ const Header = ({ className = "", dropdown = "" }) => {
 
   return (
     <nav className={`${className} sticky top-0 flex z-20`}>
-      <div className="flex">
-        <Link className="flex space-x-4 items-center" to={routes.about}>
-          <img className="h-full"
+      <div className="flex max-w-max">
+        <Link className="relative flex space-x-4 items-center" to={routes.about}>
+          <img className="h-10"
             src="https://ik.imagekit.io/varunkie/logo-varunkie_1__10-971B6V.png" alt="logo" />
+          <img className="h-10 hidden md:flex"
+            src="https://ik.imagekit.io/varunkie/text-varunkie_1xk8YizEB.png" alt="name" />
         </Link>
       </div>
 
-      <div className="flex w-full justify-end">
+      <div className="flex grow justify-end">
         <div className="hidden lg:flex w-full">
           <div className="flex space-x-6 grow justify-center mx-8 items-center">
             { ready && <>

@@ -7,9 +7,8 @@ const Footer = ({ className = "" }) => {
   const { t, ready } = useTranslation(ns.common, { useSuspense: false });
 
   return (
-    <footer className={`${className} flex justify-end md:justify-between`}>
+    <footer className={`${className} flex justify-end`}>
       { ready && <>
-        <div className="hidden md:flex">Eduardo Borges</div>
         <div>{t("footer.contents.updated")}</div>
       </>}
     </footer>
