@@ -30,8 +30,10 @@ const Experience = () => {
       </Group>
 
       <Group className="lg:w-3/12 mb-6 lg:mb-0 space-y-6 flex flex-col justify-center items-center order-first lg:order-last">
-        <img className="object-cover" style={{ width: "100%", maxWidth: "200px" }}
-          src="https://ik.imagekit.io/varunkie/logo-coachteen_MkeEJgUDZ.png" alt="coachteen" />
+        <a href="https://www.coachteen.com" target="_blank" rel="noopener noreferrer">
+          <img className="object-cover" style={{ width: "100%", maxWidth: "200px" }}
+            src="https://ik.imagekit.io/varunkie/logo-coachteen_MkeEJgUDZ.png" alt="coachteen" />
+        </a>
       </Group>
     </div>
 
@@ -52,8 +54,10 @@ const Experience = () => {
       </Group>
 
       <Group className="lg:w-3/12 mb-6 lg:mb-0 space-y-6 flex flex-col justify-center items-center order-first lg:order-last">
-        <img className="object-cover" style={{ width: "100%", maxWidth: "300px" }}
-          src="https://ik.imagekit.io/varunkie/logo-3davenue_expTeJldD.png" alt="3davenue" />
+        <a href="http://www.3davenue.net" target="_blank" rel="noopener noreferrer">
+          <img className="object-cover" style={{ width: "100%", maxWidth: "300px" }}
+            src="https://ik.imagekit.io/varunkie/logo-3davenue_expTeJldD.png" alt="3davenue" />
+        </a>
       </Group>
     </div>
 
@@ -71,8 +75,10 @@ const Experience = () => {
       </Group>
 
       <Group className="lg:w-3/12 mb-6 lg:mb-0 space-y-6 flex flex-col justify-center items-center order-first lg:order-last">
-        <img className="object-cover" style={{ width: "100%", maxWidth: "120px" }}
-          src="https://ik.imagekit.io/varunkie/logo-urbe_JAwwRqdZC.gif" alt="urbe" />
+        <a href="https://www.urbe.edu/index.jsp" target="_blank" rel="noopener noreferrer">
+          <img className="object-cover" style={{ width: "100%", maxWidth: "120px" }}
+            src="https://ik.imagekit.io/varunkie/logo-urbe_JAwwRqdZC.gif" alt="urbe" />
+        </a>
       </Group>
     </div>
   </>);
