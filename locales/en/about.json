@@ -8,10 +8,10 @@
   },
 
   "contents": {
-    "about": "My name is Eduardo Borges. I'm a Unity Game Developer based in Venezuela, with experience as a professional Full Stack Developer. I have worked as Lead programmer at a Venezuelan indie game company called 3DAvenue and I'm currently looking for new opportunities within the industry. Meanwhile, I'm working on prototyping some game ideas that I have had for a long time. My dream is to make games that everyone can enjoy.",
-    "name": "<0>Full Name</0>: {{value}}",
-    "address": "<0>Location</0>: {{value}}",
-    "experience": "<0>Commercial Experience</0>: {{value}} years",
+    "about": "My name is Eduardo Borges. I'm an Unity Game Programmer based in Venezuela, with some experience as a professional Full Stack Developer. I have worked as Lead programmer at a Venezuelan indie game company called 3DAvenue and I'm currently searching for job in this industry. Meanwhile, I'm working in prototyping some game ideas that I have had for a long time. My dream is to make games that everyone can enjoy.",
+    "name": "<0>Fullname</0>: {{value}}",
+    "address": "<0>Address</0>: {{value}}",
+    "experience": "<0>Experience</0>: {{value}} years",
     "email": "<0>Email</0>: {{value}}"
   }
 }

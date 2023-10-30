@@ -8,10 +8,10 @@
   },
 
   "contents": {
-    "about": "Mi nombre es Eduardo Borges. Soy un programador en Unity actualmente localizado en Venezuela, con experiencia como desarrollador Full Stack. He trabajado como el Líder de programación en una empresa indie venezolana llamada 3DAvenue, y actualmente estoy buscando nuevas oportunidades en esta industria. Mientras tanto, estoy trabajando en crear prototipos de algunas ideas sobre juegos que he tenido desde hace mucho tiempo. Mi sueño es crear juegos que todos puedan disfrutar.",
+    "about": "Mi nombre es Eduardo Borges. Soy un programador en Unity actualmente localizado en Venezuela, además tengo algo de experiencia como desarrollador Full Stack. He trabajado como el Líder de programación en una empresa indie venezolana llamada 3DAvenue, y actualmente estoy buscando trabajo en esta industria. Mientras tanto, estoy trabajando en crear prototipos de algunas ideas sobre juegos que he tenido desde hace mucho tiempo. Mi sueño es crear juegos que todos puedan disfrutar.",
     "name": "<0>Nombre</0>: {{value}}",
-    "address": "<0>Localización</0>: {{value}}",
-    "experience": "<0>Experiencia Comercial</0>: {{value}} años",
+    "address": "<0>Direccion</0>: {{value}}",
+    "experience": "<0>Experiencia</0>: {{value}} años",
     "email": "<0>Correo</0>: {{value}}"
   }
 }
