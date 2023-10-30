@@ -1,5 +1,7 @@
 import ns from '../../resources/constants/routes/locales.routes';
 
+import { FaRegPaperPlane } from "react-icons/fa";
+
 import { useTranslation } from "react-i18next";
 import React from "react";
 
@@ -14,6 +16,19 @@ const Experience = () => {
     <Group className="space-y-6 flex justify-center lg:justify-start">
       <Title className="font-bold text-3xl">{t("titles.experience")}</Title>
     </Group>
+
+    <div className="flex flex-col lg:flex-row lg:space-x-6 lg:space-x-12">
+      <Group className="lg:w-8/12 grow md:space-y-4 lg:space-y-8">
+        <Work date={t("contents.dates.fiveth")} title={t("contents.items.fiveth")}>
+          <li>{t("contents.subitems.fiveth.one")}</li>
+          <li>{t("contents.subitems.fiveth.two")}</li>
+        </Work>
+      </Group>
+
+      <Group className="lg:w-3/12 mb-6 lg:mb-0 space-y-6 flex flex-col justify-center items-center order-first lg:order-last">
+        <FaRegPaperPlane className="w-32 h-32 object-cover" alt="freelance" />
+      </Group>
+    </div>
 
     <div className="flex flex-col lg:flex-row lg:space-x-6 lg:space-x-12">
       <Group className="lg:w-8/12 grow md:space-y-4 lg:space-y-8">
@@ -32,7 +47,7 @@ const Experience = () => {
       <Group className="lg:w-3/12 mb-6 lg:mb-0 space-y-6 flex flex-col justify-center items-center order-first lg:order-last">
         <a href="https://www.coachteen.com" target="_blank" rel="noopener noreferrer">
           <img className="object-cover" style={{ width: "100%", maxWidth: "200px" }}
-            src="https://ik.imagekit.io/varunkie/logo-coachteen_MkeEJgUDZ.png" alt="coachteen" />
+            src="https://ik.imagekit.io/varunkie/logo-coachteen_e2bY6-tZ1.png" alt="coachteen" />
         </a>
       </Group>
     </div>
@@ -77,7 +92,7 @@ const Experience = () => {
       <Group className="lg:w-3/12 mb-6 lg:mb-0 space-y-6 flex flex-col justify-center items-center order-first lg:order-last">
         <a href="https://www.urbe.edu/index.jsp" target="_blank" rel="noopener noreferrer">
           <img className="object-cover" style={{ width: "100%", maxWidth: "120px" }}
-            src="https://ik.imagekit.io/varunkie/logo-urbe_JAwwRqdZC.gif" alt="urbe" />
+            src="https://ik.imagekit.io/varunkie/logo-urbe_7SkGPiOh7.png" alt="urbe" />
         </a>
       </Group>
     </div>

@@ -35,14 +35,17 @@
     },
 
     "levels": {
-      "native": "Nativo"
+      "spanish": "Nativo",
+      "english": "B2",
+      "japanese": "N4"
     },
 
     "frameworks": {
       "unity2d": "Unity2D",
       "unreal": "Unreal Engine",
       "reactjs": "React.js",
-      "expressjs": "Express.js"
+      "expressjs": "Express.js",
+      "tailwindcss": "Tailwind.css"
     },
 
     "versions": {

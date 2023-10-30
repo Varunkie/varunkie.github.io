@@ -14,17 +14,19 @@
       "first": "Mar 2018 - Sep 2019",
       "second": "Sep 2019 - Abr 2021",
       "third": "Ago 2021 - Oct 2022",
-      "fourth": "Ago 2021 - Oct 2022"
+      "fourth": "Ago 2021 - Oct 2022",
+      "fiveth": "May 2023 - Actual"
     },
     "items": {
       "university": "Ingeniero Informático",
       "first": "Programador, 3DAvenue",
       "second": "Programador líder, 3DAvenue",
       "third": "Scrum Master, Coachteen",
-      "fourth": "Desarrollador Full-stack, Coachteen"
+      "fourth": "Desarrollador Full-stack, Coachteen",
+      "fiveth": "Programador, Freelance"
     },
     "subitems": {
-      "university": "Yo estudié en la Universidad Dr. Rafael Belloso Chacín localizada en Maracaibo.\nDurante este tiempo fui aprendiendo sobre como utilizar lenguajes tales como C++, Java, Visual Basic, Javascript y C#.",
+      "university": "Yo estudié en la Universidad Dr. Rafael Belloso Chacín localizada en Maracaibo. Durante este tiempo fui aprendiendo sobre como utilizar lenguajes tales como C++, Java, Visual Basic, Javascript y C#.",
       "first": {
         "one": "Desarrollar el motor de físicas internas del videojuego.",
         "two": "Trabajar en los comportamientos de las entidades expuestas en los requisitos del proyecto y otros sistemas complementarios.",
@@ -46,6 +48,10 @@
         "two": "Definir una estructura front-end y back-end siguiendo los estándares de desarrollo que aseguran que la aplicación sea segura, escalable y extensible.",
         "three": "Localizar la interfaz de usuario y maquetación esperada dentro de componentes responsive utilizando Tailwind CSS.",
         "four": "Construir una API siguiendo el patrón RESTful con efectivos protocolos de seguridad, medidas de protección de datos y soluciones de almacenamientos."
+      },
+      "fiveth": {
+        "one": "Crear herramientas de editor en Unity para permitir a los desarrolladores utilizar sistemas complejos de forma sencilla.",
+        "two": "Implementar las especificaciones de diseño como características funcionales dentro del juego configurables por el game designer."
       }
     }
   }

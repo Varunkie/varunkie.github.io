@@ -36,11 +36,9 @@ const Knowledge = () => {
             <Skill className="w-full h-12" 
               title={t("contents.skills.csharp")} value={100} showvalue={true} />
             <Skill className="w-full h-12" 
-              title={t("contents.skills.javascript")} value={100} showvalue={true} />
-            <Skill className="w-full h-12" 
               title={t("contents.skills.cplusplus")} value={20} showvalue={true} />
             <Skill className="w-full h-12" 
-              title={t("contents.skills.mysql")} value={20} showvalue={true} />
+              title={t("contents.skills.javascript")} value={100} showvalue={true} />
             <Skill className="w-full h-12" 
               title={t("contents.skills.mongodb")} value={60} showvalue={true} />
           </div>
@@ -50,11 +48,11 @@ const Knowledge = () => {
           <Title className="font-bold text-3xl">{t("subtitles.languages")}</Title>
           <div className="px-6 text-xl space-y-4">
             <Skill className="w-full h-12" 
-              title={t("contents.languages.spanish")} value={100} label={t("contents.levels.native")} />
+              title={t("contents.languages.spanish")} value={100} label={t("contents.levels.spanish")} />
             <Skill className="w-full h-12" 
-              title={t("contents.languages.english")} value={60} label="B1" />
+              title={t("contents.languages.english")} value={65} label={t("contents.levels.english")} />
             <Skill className="w-full h-12" 
-              title={t("contents.languages.japanese")} value={20} label="N5" />
+              title={t("contents.languages.japanese")} value={40} label={t("contents.levels.japanese")} />
           </div>
         </div>
 
@@ -64,11 +62,11 @@ const Knowledge = () => {
             <Skill className="w-full h-12" 
               title={t("contents.frameworks.unity2d")} value={100} showvalue={true} />
             <Skill className="w-full h-12" 
-              title={t("contents.frameworks.unreal")} value={20} showvalue={true} />
-            <Skill className="w-full h-12" 
               title={t("contents.frameworks.reactjs")} value={80} showvalue={true} />
             <Skill className="w-full h-12" 
               title={t("contents.frameworks.expressjs")} value={60} showvalue={true} />
+            <Skill className="w-full h-12" 
+              title={t("contents.frameworks.tailwindcss")} value={70} showvalue={true} />
           </div>
         </div>
 
@@ -76,7 +74,7 @@ const Knowledge = () => {
           <Title className="font-bold text-3xl">{t("subtitles.versions")}</Title>
           <div className="px-6 text-xl space-y-4">
             <Skill className="w-full h-12" 
-              title={t("contents.versions.git")} value={80} showvalue={true} />
+              title={t("contents.versions.git")} value={70} showvalue={true} />
           </div>
         </div>
       </section>

@@ -4,27 +4,25 @@
     "education": "Education"
   },
 
-  "subtitles": {
-    
-  },
-
   "contents": {
     "dates": {
       "university": "Sep 2014 - Jul 2018",
       "first": "Mar 2018 - Sep 2019",
       "second": "Sep 2019 - Apr 2021",
       "third": "Aug 2021 - Oct 2022",
-      "fourth": "Aug 2021 - Oct 2022"
+      "fourth": "Aug 2021 - Oct 2022",
+      "fiveth": "May 2023 - Current"
     },
     "items": {
       "university": "Software Engineer",
       "first": "Programmer, 3DAvenue",
       "second": "Lead Programmer, 3DAvenue",
       "third": "Scrum Master, Coachteen",
-      "fourth": "Full-stack Developer, Coachteen"
+      "fourth": "Full-stack Developer, Coachteen",
+      "fiveth": "Programmer, Freelance"
     },
     "subitems": {
-      "university": "I studied at Universidad Dr. Rafael Belloso Chacín based in Maracaibo.\nIn this time, I learned about how to code in C++, Java, Visual Basic, Javascript and C#.",
+      "university": "I studied at Universidad Dr. Rafael Belloso Chacín based in Maracaibo. In this time, I learned about how to code in C++, Java, Visual Basic, Javascript and C#.",
       "first": {
         "one": "Developing the internal physics of the video game´s project.",
         "two": "Writing scripted behaviors to fulfill game play requirements and other complementary systems of the video game.",
@@ -46,6 +44,10 @@
         "two": "Defining front-end and back-end structure following standards and guidelines to ensure an application secure, scalable and extensible.",
         "three": "Localizating user interface and web layout designs into responsive components using Tailwind CSS framework.",
         "four": "Building a RESTful API with effective security protocols, data protection measures and storage solutions."
+      },
+      "fiveth": {
+        "one": "Creating Unity editor tools for allowing developers to use complex systems in a simple way.",
+        "two": "Implementing design specification into functional game features configurable by the game designer."
       }
     }
   }
