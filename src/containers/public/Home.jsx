@@ -6,7 +6,8 @@ import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
 
 import { useTranslation, Trans } from "react-i18next";
 
-import Wave from "../../components/layouts/WaveContainer";
+import WaveContainer from "../../components/layouts/WaveContainer";
+import WaveText from "../../components/texts/WaveText";
 
 const Home = ({ style = { } }) => {
   const { t } = useTranslation([ns.home, ns.common]);
@@ -14,7 +15,7 @@ const Home = ({ style = { } }) => {
   return (<>
     <div className="pt-4 h-[65vh] mx-auto flex flex-col items-center space-y-0 lg:space-y-1 justify-end md:justify-start z-10">
       <img className="w-64 lg:w-80 select-none"
-        src={images.logos.suulore} alt="" />
+        src={images.logos.suulore_outline} alt="" />
       <div className="flex font-bold bg-olive px-2 uppercase text-xs space-x-2">
         <h3>{t("common.terms.illustration", { ns: ns.common })}</h3>
         <h3 className="select-none">•</h3>
@@ -24,7 +25,7 @@ const Home = ({ style = { } }) => {
       </div>
     </div>
 
-    <Wave className="bg-transparent fill-div-bold" color="" top bottom>
+    <WaveContainer className="bg-transparent fill-div-bold" color="" top bottom>
       <div className="bg-div-bold h-[70vh] p-6">
         <div className="relative w-full h-full">
           <div className="absolute w-full h-full flex items-center justify-between p-4">
@@ -47,14 +48,17 @@ const Home = ({ style = { } }) => {
         </div>
 
       </div>
-    </Wave>
+    </WaveContainer>
 
     <div className="bg-div w-5/6 mb-20 pb-4 mx-auto relative overflow-hidden
       border-t-olive border-b-light-cyan border-t-8 border-b-8 rounded-2xl flex">
       <div className="w-2/3 px-0 py-12 lg:px-12 space-y-3 mx-auto z-10">
-        <div className="w-full flex justify-center relative space-x-4">
+        <div className="w-full flex justify-center relative space-x-4 z-10">
           <Sparkles className="w-16" number={2} />
-          <h2 className="font-bold text-font-bold text-7xl z-10">{t("main.title")}</h2>
+          <WaveText className="font-extrabold text-[5.25rem] fill-font-bold" 
+            id="curve" width={90}>
+            {t("main.title")}
+          </WaveText>
           <Sparkles className="w-16" number={3} />
         </div>
 
@@ -139,10 +143,10 @@ const Sparkles = ({ className = "", number = 2 }) => {
   if (number === 2)
     return (
       <div className={`${className} relative flex justify-center items-center`}>
-        <img className="absolute w-11/12 rotate-[5rad] -translate-x-2 -translate-y-2 select-none"
+        <img className="absolute w-11/12 -translate-x-1 -translate-y-2 select-none"
           style={{ "minWidth": "40px" }}
           src={images.sparkles.sparkle_cyan_aboutme} alt="" />
-        <img className="absolute w-1/2 rotate-[25rad] translate-x-2 translate-y-4 select-none"
+        <img className="absolute w-1/2 translate-x-3 translate-y-4 select-none"
           style={{ "minWidth": "25px" }}
           src={images.sparkles.sparkle_cyan_aboutme} alt="" />
       </div>
@@ -150,13 +154,13 @@ const Sparkles = ({ className = "", number = 2 }) => {
   else if (number === 3)
     return (
       <div className={`${className} relative flex justify-center items-center`}>
-        <img className="absolute w-1/3 rotate-[30rad] translate-x-2 -translate-y-5 select-none"
+        <img className="absolute w-1/3 translate-x-2 -translate-y-5 select-none"
           style={{ "minWidth": "15px" }}
           src={images.sparkles.sparkle_cyan_aboutme} alt="" />
-        <img className="absolute w-11/12 rotate-[-5rad] -translate-x-2 -translate-y-1 select-none"
+        <img className="absolute w-11/12 -translate-x-2 -translate-y-1 select-none"
           style={{ "minWidth": "40px" }}
           src={images.sparkles.sparkle_cyan_aboutme} alt="" />
-        <img className="absolute w-2/3 rotate-[10rad] translate-x-4 translate-y-4 select-none"
+        <img className="absolute w-2/3 translate-x-4 translate-y-4 select-none"
           style={{ "minWidth": "30px" }}
           src={images.sparkles.sparkle_cyan_aboutme} alt="" />
       </div>

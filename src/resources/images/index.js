@@ -15,12 +15,14 @@ import menu from './icons/menu.svg';
 import contact from './icons/ContactHome.svg';
 
 import suulore from './logos/Logo.svg';
+import suulore_outline from './logos/LogoOutline.svg';
+import hello_curved from './logos/HelloCurved.svg';
 
 export const blobs = { footer_bottom_left, footer_top_right }; 
 export const flowers = { flower_green_5P, flower_green_beeg, flower_green_small,flower_pink_1, flower_pink_2 };
 export const sparkles = { sparkle_cyan_big, sparkle_cyan_small, sparkle_cyan_aboutme };
 export const icons = { menu, contact };
-export const logos = { suulore }; 
+export const logos = { suulore, suulore_outline, hello_curved }; 
 
 const images = { icons, logos, flowers, sparkles, blobs };
 export default images;
