@@ -1,0 +1,115 @@
+{
+  "header": {
+    "title": "commissions",
+    "subtitle": "availability <0>07.2024</0>"
+  },
+
+  "main": {
+    "exclamation": "!!!",
+    "caption": "Read my <0>Terms of Service</0> before availing any of my commissions.",
+    "links": {
+      "regular": "regular",
+      "vtubers": "vtubers"
+    }
+  },
+
+  "page": {
+    "tos": {
+      "title": "terms of service",
+      "subtitle": "read and concur before commissioning",
+      "items": {
+        "general": {
+          "title": "general",
+          "items": {
+            "p1": "Every project drawn by SuuLore (Sumii) and purchased by the client, is only for personal use. The client must credit the work as 'suulore_vt' with a link to my twitter page (https://twitter.com/suulore_vt)",
+            "p2": "We may decline an order if the project and/or character are something we cannot deliver well"
+          }
+        },
+        "payments": {
+          "title": "payments",
+          "items": {
+            "p1": "All payments will be through Paypal.",
+            "p2": "Any additional charges (rush fee, added details, futher edits, NDA) will be upheld and respected by all parties involved."
+          }
+        },
+        "revisions-requests": {
+          "title": "revisions and requests",
+          "items": {
+            "p1": "Changing references is allowed if we haven't started on your commission. Please ask first.",
+            "p2": "Major revisions can be made during the Sketch phase only.",
+            "p3": "After approval of the sketch (during lineart of color phase) major revisions/edits may be subject to a 'edit fee'.",
+            "p4": "If you require approval for every stage of the work (sketch > lineart > color > shading) please let me know.",
+            "p5": "No major changes are allowed in the finishing stage that will affect the composition of the artwork."
+          }
+        },
+        "deadlines-delivery": {
+          "title": "deadlines and delivery",
+          "items": {
+            "p1": "Do not use the artwork for commercial use unless discussed beforehand. There are extra charges and/or royalties involved for commercial projects.",
+            "p2": "I reserve the rights to the artwork and distribution."
+          }
+        },
+        "property-rights": {
+          "title": "intellectual property rights",
+          "items": {
+            "p1": "Do not use the artwork for commercial use unless discussed beforehand. There are extra charges and/or royalties involved for commercial projects.",
+            "p2": "I reserve the rights to the artwork and distribution.",
+            "p3": "Always credit the source of the art (by linking any of the artists's relevant social media accounts).",
+            "p4": "If the client is selling the model I have drawn, please contact me for permission before selling!",
+            "p5": "The artwork may be used in my portfolio/website gallery for example/resume purposes.",
+            "p6": "I might post work in progress on my social media (unless NDA)",
+            "p7": "The piece commissioned can be made private, please notify as an NDA fee will be added for your order.",
+            "p8": "Noncommercial and commercial works made by SuuLore/Sumii are NOT authorized for use in any blockchain-related technology including NFTs and any form of cryptocurrency. We also do NOT authorize our work for use in artificial learning programs, such as those used to create computer-generated works."
+          }
+        },
+        "refunds": {
+          "title": "refunds",
+          "items": {
+            "p1": "Clients are entitled to a full refund as long as the commission piece has not been started. If work has begun, client will receive a partial refund dependent on the progress made on the commission and will be allowed to keep the commission files sent."
+          }
+        },
+        "communication": {
+          "title": "communication",
+          "items": {
+            "p1": "Artist will notify clients of availability or any schedule mishaps that may occur.",
+            "p2": "The artist will require some form of contact with the client to ensure communications are clear!"
+          }
+        }
+      },
+      "caption": "By commissioning, you have agreed to these terms."
+    },
+
+    "will-do": {
+      "title": "will do",
+      "items": {
+        "p1": "feminine, masculine and androgynous characters",
+        "p2": "young to mature looking characters",
+        "p3": "NSFW",
+        "p4": "fan art (only personal use)",
+        "p5": "anime/game characters"
+      }
+    },
+
+    "wont-do": {
+      "title": "won't do",
+      "items": {
+        "p1": "muscular, furry, realistic, elderly, heavy armors, mechas",
+        "p2": "extreme violence and gore",
+        "p3": "webcomic and manga commissions",
+        "p4": "offensive themes pertaining to sex, race and religion"
+      }
+    },
+
+    "rules": {
+      "title": "rules",
+      "subtitle": "Please read and re-read everything above.",
+      "caption": "We are not liable for any false information given to us.",
+      "items": {
+        "p1": "1. If I find that these terms are violated, the one who committed the violation will be blacklisted and won't be able to commission again in the future.",
+        "p2": "2. In the event of a chargeback for any form of extortion; we may publish the offender's relevant social media, PayPal email and business-related exchanges (such as emails and invoices) as proof of breaking our ToS. Personal information such as addesses will be redacted.",
+        "p3": "3. Be honest and responsible customers, please. Only participate in any transaction only if you are able to pay by yourself: have your own Paypal account/credit card and not use someone else's if they're not aware and have not consented.",
+        "p4": "4. If you are a minor, have a consenting adult fill the form and make the purchase. The payer will be held responsible if there are any chargebacks and refunds."
+      }
+    }
+  }
+}

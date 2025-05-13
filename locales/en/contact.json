@@ -1,0 +1,27 @@
+{
+  "header": {
+    "title": "Contact",
+    "subtitle": "Currently accepting commercial inquires and personal commisions."
+  },
+
+  "form": {
+    "name": {
+      "label": "Name"
+    },
+    "last-name": {
+      "label": "Last Name"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "subject": {
+      "label": "Subject"
+    },
+    "message": {
+      "label": "Write a message"
+    },
+    "buttons": {
+      "submit": "Submit"
+    }
+  }
+}

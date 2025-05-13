@@ -1,0 +1,17 @@
+{
+  "header": {
+    "title": "SuuLore"
+  },
+
+  "main": {
+    "title": "Hello!",
+    "contents": {
+      "about-me": "I'm Sumii, a freelance artist who does <0>illustration</0>, <1>character design</1>, <2>stream assets</2> and more for clients all over the world. I love to illustrate colorful and eye catching compositions but also enjoy exploring various other themes!",
+      "business": "For business inquiries, I accept work for games, illustration books, albums/EP art, music videos, official merch, promotional art and more.",
+      "caption": "Please provide the following information in your email <0>//Project Name,  Project Materials, Schedule and Budget//</0>",
+      "commission": "I accept individual and personal commission as well, you can order through <0>vgen</0>, <1>email</1> or <2>twitter DMs.</2>",
+      "thank-you": "Thank you for the opportunity!",
+      "languages": "English/Spanish - OK!"
+    }
+  }
+}

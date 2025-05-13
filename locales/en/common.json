@@ -1,18 +1,42 @@
 {
   "pages": {
     "titles": {
-      "about": "About",
-      "knowledge": "Knowledge",
-      "experience": "Experience",
-      "education": "Education",
-      "portfolio": "Portfolio",
-      "notfound": "Page not found"
+      "home": "home",
+      "about": "about",
+      "gallery": "gallery",
+      "commissions": "commissions",
+      "contact": "contact"
     }
   },
 
+  "common": {
+    "terms": {
+      "illustration": "illustration",
+      "graphic-design": "graphic design",
+      "stream-assets": "stream assets",
+      "vtubers": "vtubers",
+      "character-design": "character design",
+      "game-art": "game art",
+      "infographics": "infographics",
+      "logos": "logos"
+    },
+    "email": "suulore@gmail.com"
+  },
+
+
+
   "footer": {
-    "contents": {
-      "updated": "Updated on October 2023"
+    "contact": {
+      "title": "contact"
+    },
+
+    "social": {
+      "title": "social"
+    },
+
+    "copyright": {
+      "title": "ART & DESIGN © 2015 by SuuLore. All rights reserved.",
+      "subtitle": "Character & relevant concepts in fanwork pieces belong to their respective owners"
     }
   }
 }
