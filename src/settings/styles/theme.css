@@ -2,6 +2,8 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-xs: 25rem;
+
   --font-base: "Outfit";
   
   --color-font: #473944;

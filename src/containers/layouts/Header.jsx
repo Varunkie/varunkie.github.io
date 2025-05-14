@@ -1,22 +1,19 @@
 import routes from "../../settings/routes/frontend.routes";
-import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
 
 import { useLocation, Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
 //import DarkMode from "../../components/context/DarkModeToggle";
 //import Language from "../../components/context/LanguageSelect";
 import Dropdown from "../../components/common/DropdownMenu";
 
-const Header = ({ className = "", content = "", dropdown = "" }) => {
-  const { t, ready } = useTranslation(ns.common, { useSuspense: false });
+const Header = ({ className = "", t, ready }) => {
   const { pathname } = useLocation(); 
 
   return (
     <nav className={`${className} sticky top-0 flex z-20 justify-end lg:justify-center`}>
       <div className="hidden md:flex w-full">
-        <div className={`${content} flex justify-center items-center`}>
+        <div className="mx-auto space-x-16 flex justify-center items-center">
           { ready && <>
             <Element path={pathname} to={routes.home}>{t("pages.titles.home")}</Element>
             <Element path={pathname} to={routes.about}>{t("pages.titles.about")}</Element>
@@ -30,7 +27,7 @@ const Header = ({ className = "", content = "", dropdown = "" }) => {
       <div className="md:hidden">
         <Dropdown className="flex items-center"
           render={({ onClose }) => !ready ? null :
-          <div className={`${dropdown} absolute flex flex-col items-center whitespace-nowrap`}>
+          <div className="bg-div-bold px-6 py-4 space-y-4 -right-8 translate-y-2 absolute flex flex-col items-center whitespace-nowrap">
             <div className="w-full h-1 bg-nav-item" />
             <Element path={pathname} to={routes.home} onClick={onClose} inline>{t("pages.titles.home")}</Element>
             <Element path={pathname} to={routes.about} onClick={onClose} inline>{t("pages.titles.about")}</Element>

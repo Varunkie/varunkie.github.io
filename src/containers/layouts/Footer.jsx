@@ -1,16 +1,13 @@
-import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
 
 import { useWindowSize } from '../../utils/hooks/useWindow';
-import { useTranslation } from "react-i18next";
 
 import { FaTwitterSquare } from "react-icons/fa";
 import { TbPencilHeart } from "react-icons/tb";
 
 import Icon from "../../components/common/ExternalLink";
 
-const Footer = ({ className = "", content="", icons = "" }) => {
-  const { t, ready } = useTranslation(ns.common, { useSuspense: false });
+const Footer = ({ className = "" }) => {
   const { width } = useWindowSize();
 
   return (<>
@@ -28,41 +25,45 @@ const Footer = ({ className = "", content="", icons = "" }) => {
 
         </div>
 
-        { ready && <div className={content}>
-          <div className="relative flex text-xl py-8">
-            <div className="flex flex-col grow space-y-2">
-              <p className="font-bold">{t("footer.contact.title")}</p>
-              <div className="flex items-center">
-                <TbPencilHeart className="mx-2 text-icon outline-0" />
-                <p className="text-lg">{t("common.email")}</p>
+        { ready && 
+          <div className="w-9/12 md:w-2/3 lg:w-1/2 mx-auto
+            sm:px-12 lg:px-16 py-16 space-y-30 sm:space-y-40">
+            <div className="relative flex text-xl
+              py-8 flex-col md:flex-row space-y-4 md:space-y0">
+              <div className="flex flex-col grow space-y-2">
+                <p className="font-bold">{t("footer.contact.title")}</p>
+                <div className="flex items-center">
+                  <TbPencilHeart className="mx-2 text-icon outline-0" />
+                  <p className="text-lg">{t("common.email")}</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col space-y-2">
+                <p className="font-bold">{t("footer.social.title")}</p>
+                <div className="flex h-full space-x-1 fill-icon">
+                  <Icon className="w-8 h-8"
+                    href="https://twitter.com/varunkie">
+                    <FaTwitterSquare className="w-full h-full fill-inherit" />
+                  </Icon>
+                  <Icon className="w-8 h-8"
+                    href="https://www.linkedin.com/in/eduardo-a-borges/">
+                    <FaTwitterSquare className="w-full h-full fill-inherit" />
+                  </Icon>
+                  <Icon className="w-8 h-8"
+                    href="https://www.linkedin.com/in/eduardo-a-borges/">
+                    <FaTwitterSquare className="w-full h-full fill-inherit" />
+                  </Icon>
+                </div>
               </div>
             </div>
 
-            <div className="flex flex-col space-y-2">
-              <p className="font-bold">{t("footer.social.title")}</p>
-              <div className="flex h-full space-x-1">
-                <Icon className={icons}
-                  href="https://twitter.com/varunkie">
-                  <FaTwitterSquare className="w-full h-full fill-inherit" />
-                </Icon>
-                <Icon className={icons}
-                  href="https://www.linkedin.com/in/eduardo-a-borges/">
-                  <FaTwitterSquare className="w-full h-full fill-inherit" />
-                </Icon>
-                <Icon className={icons}
-                  href="https://www.linkedin.com/in/eduardo-a-borges/">
-                  <FaTwitterSquare className="w-full h-full fill-inherit" />
-                </Icon>
-              </div>
+            <div className="w-fit relative flex flex-col text-xs">
+              <div className="w-42 h-1 mb-2 bg-line" />
+              <p className="font-bold">{t("footer.copyright.title")}</p>
+              <p>{t("footer.copyright.subtitle")}</p>
             </div>
           </div>
-
-          <div className="w-fit relative flex flex-col text-xs">
-            <div className="w-64 h-1 mb-2 bg-line" />
-            <p className="font-bold">{t("footer.copyright.title")}</p>
-            <p>{t("footer.copyright.subtitle")}</p>
-          </div>
-        </div>}
+      }
       </footer>
 
       <svg width="100%" height="0" preserveAspectRatio="none">

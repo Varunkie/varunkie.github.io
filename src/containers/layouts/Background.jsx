@@ -22,8 +22,8 @@ const Background = ({ src = "", naturalWidth = 1, naturalHeight = 1, parallaxSpe
 
   return (
     <>
-      <div className="z-0 w-full h-screen bg-no-repeat 
-        bg-size-[150%_auto] md:bg-size-[125%_auto] lg:bg-size-[100%_auto]"
+      <div className="z-0 w-full h-screen bg-cover bg-no-repeat 
+        size-[200%_auto] sm:bg-size-[125%_auto] md:bg-size-[125%_auto] lg:bg-size-[100%_auto]"
         style={{ backgroundImage: `url(${src})`, backgroundPosition: `50% ${position}px` }}>
         
       </div>
