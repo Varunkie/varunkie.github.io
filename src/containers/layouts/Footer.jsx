@@ -7,7 +7,7 @@ import { TbPencilHeart } from "react-icons/tb";
 
 import Icon from "../../components/common/ExternalLink";
 
-const Footer = ({ className = "" }) => {
+const Footer = ({ className = "", t, ready }) => {
   const { width } = useWindowSize();
 
   return (<>
