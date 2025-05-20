@@ -1,1 +1,0 @@
-import{j as o}from"./index-K8slmQar.js";const n=({className:r="",src:e,alt:s="",onClick:t=()=>{}})=>o.jsx("div",{className:`${r} rounded-3xl overflow-hidden ${e?"":"bg-font"}`,children:e&&o.jsx("img",{className:"h-full object-cover cursor-pointer select-none",src:e,alt:s,onClick:t})});export{n as G};
