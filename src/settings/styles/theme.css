@@ -1,4 +1,4 @@
-@import url("https://fonts.google.com/css2?family=Outfit");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -12,62 +12,27 @@
   
   --color-div: #fff2f2;
   --color-div-bold: #f3e3ec;
-  
-  --color-button: #f474ba;
+  --color-nav-item: #f884a1;
   --color-icon: #eb3677;
   --color-line: #f96589;
+  --color-button: #f474ba;
+  --color-button-hover: #e247a3;
+  --color-select: #F9D0F9;
+  --color-select-bold: #C471CD;
 
   --color-light-pink: #f9a0d5;
   --color-light-cyan: #37d8d8;
   --color-olive: #cdd83a;
-
-  --color-nav-item: #f884a1;
+  
+  --color-blob-cyan: #DBEEF3;
+  --color-blob-pink: #FFE9EF;
+  --color-blob-olive: #EAEFDC;
 }
 
-/* Components */
-/*
-@layer components {
-  .theme-content-100 {
-    @apply bg-lavender-100 text-black-pink font-sans;
-  }
-
-  .theme-content-200 {
-    @apply bg-lavender-200 text-black-pink font-sans;
-  }
-
-  .theme-button-100 {
-    @apply bg-lavender-900 rounded-2xl text-white;
-  }
-
-
-
-
-
-
-
-  .tm-ct-100 {
-    @apply bg-gradient-to-b from-blue-300 to-blue-600 dark:from-gray-700 dark:to-gray-800 dark:text-white;
-  }
-
-  .tm-ct-200 {
-    @apply bg-gradient-to-b from-blue-700 to-blue-950 text-white dark:from-gray-900 dark:to-gray-950;
-  }
-
-  .tm-ct-300 {
-    @apply bg-white dark:bg-gray-600 dark:text-white
-  }
-
-  .tm-hr-200 {
-    @apply w-full h-1 mx-auto bg-white;
-  }
-
-  .tm-hr-300 {
-    @apply w-full h-1 bg-black dark:bg-white;
-  }
-  
-  .tm-border-300 {
-    @apply border-black dark:border-white
-  }
+/* Modals */
+.bg-modal  {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
 }
 
 /* Scrollbars */

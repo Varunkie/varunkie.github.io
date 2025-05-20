@@ -12,11 +12,11 @@ import NotFound from "./containers/layouts/NotFound";
 // PUBLIC
 const Home = lazy(() => import("./containers/public/Home"));
 const About = lazy(() => import("./containers/public/Home"));
-const Commissions = lazy(() => import("./containers/public/Home"));
+const Commissions = lazy(() => import("./containers/public/Commissions"));
 const Regular = lazy(() => import("./containers/public/Home"));
 const Vtuber = lazy(() => import("./containers/public/Home"));
-const Gallery = lazy(() => import("./containers/public/Home"));
-const Contact = lazy(() => import("./containers/public/Home"));
+const Gallery = lazy(() => import("./containers/public/Gallery"));
+const Contact = lazy(() => import("./containers/public/Contact"));
 
 // COMPONENTS
 const App = () => {
@@ -27,7 +27,7 @@ const App = () => {
   }, [displayLocation]);
 
   return (
-    <Layout transitionStage={transitionStage} onAnimationEnd={onAnimationEnded}>
+    <Layout transitionStage={transitionStage} displayLocation={displayLocation} onAnimationEnd={onAnimationEnded}>
       <Routes location={displayLocation}>
         <Route element={<Home />} path={routes.home} />
         <Route element={<About />} path={routes.about} />

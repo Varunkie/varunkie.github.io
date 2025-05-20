@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import { useRef, useLayoutEffect, useState } from 'react';
 
 export const useWindowSize = () => {
   const [size, setSize] = useState({ width: 0, height: 0});
@@ -14,9 +14,9 @@ export const useWindowSize = () => {
 };
 
 export const useWindowScroll = () => {
-  const [scrollPosition, setScrollPosition] = useState({ x: 0, y: 0});
+  const [scrollPosition, setScrollPosition] = useState({ x: 0, y: 0 });
   useLayoutEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (e) => {
       setScrollPosition({ x: window.scrollX, y: window.scrollY });
     };
     window.addEventListener('scroll', handleScroll);
@@ -24,4 +24,26 @@ export const useWindowScroll = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return scrollPosition;
+};
+
+export const useResizeObserver = (containerRef) => {
+  const [size, setSize] = useState({ width: 0, height: 0 });
+
+  useLayoutEffect(() => {
+    if (containerRef.current) {
+      const resizeObserver = new ResizeObserver(entries => {
+        for (let entry of entries) {
+          setSize({
+            width: entry.contentRect.width,
+            height: entry.contentRect.height,
+          });
+        }
+      });
+
+      resizeObserver.observe(containerRef.current);
+      return () => resizeObserver.disconnect();
+    }
+  }, [containerRef.current]);
+
+  return size;
 };

@@ -1,7 +1,7 @@
 {
   "header": {
     "title": "commissions",
-    "subtitle": "availability <0>07.2024</0>"
+    "subtitle": "<0>availability</0><1></1><2>07.2024</2>"
   },
 
   "main": {
@@ -86,7 +86,8 @@
         "p2": "young to mature looking characters",
         "p3": "NSFW",
         "p4": "fan art (only personal use)",
-        "p5": "anime/game characters"
+        "p5": "mild gore",
+        "p6": "anime/game characters"
       }
     },
 
