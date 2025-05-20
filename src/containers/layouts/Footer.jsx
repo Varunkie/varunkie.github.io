@@ -12,21 +12,24 @@ import { d } from "../../components/layouts/WaveContainer";
 const Footer = ({ className = "", t }) => {
   const containerRef = useRef(null);
   const containerSize = useResizeObserver(containerRef);
-
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  
   return (<>
-      <svg width="100%" height="0" preserveAspectRatio="none">
-        <defs>
-          <mask id="path" /*clipPathUnits="objectBoundingBox"*/>
-            <rect  x="0" y="0" width="100%" height={containerSize.height} fill="white" />
+      { !isSafari &&
+        <svg width="100%" height="0" preserveAspectRatio="none">
+          <defs>
+            <mask id="path">
+              <rect  x="0" y="0" width="100%" height={containerSize.height} fill="white" />
 
-            <path transform={`scale(${containerSize.width / 1440}, ${containerSize.width / 1440})`}
-                d={d}>
-            </path>
-          </mask>
-        </defs>
-      </svg>
+              <path transform={`scale(${containerSize.width / 1440}, ${containerSize.width / 1440})`}
+                  d={d}>
+              </path>
+            </mask>
+          </defs>
+        </svg>
+      }
 
-      <footer className={`${className} relative overflow-hidden mask-[url(#path)]`} ref={containerRef}>
+      <footer className={`${className} relative overflow-hidden ${isSafari ? "" : "mask-[url(#path)]"}`} ref={containerRef}>
         <div className="absolute w-full h-full bg-cover bg-no-repeat"
           style={{ backgroundImage: `url(\"${images.blobs.footer_top_right}\")` }} />
 

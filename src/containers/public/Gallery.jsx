@@ -55,11 +55,11 @@ const Gallery = () => {
     </div>
 
     <WaveContainer className="bg-transparent fill-div-bold overflow-hidden -mb-20" 
-      content="bg-div-bold py-4 pb-20 relative"
+      content="bg-div-bold py-4 pb-24 relative"
       height="50" top>
         
-      <div className="w-2/3 py-8 space-y-4">
-        <div className="flex w-2/3 h-full absolute items-start pointer-events-none">
+      <div className="w-4/5 sm:w-2/3 py-8 space-y-4">
+        <div className="flex w-4/5 sm:w-2/3 h-full absolute items-start pointer-events-none">
           <FloatImage left
             width={50} height={50} 
             xOffset={85} yOffset={120}
@@ -69,7 +69,7 @@ const Gallery = () => {
             xOffset={45} yOffset={40}
             src={images.flowers.flower_white_1} />
         </div>
-        <div className="flex w-2/3 h-full absolute items-end pointer-events-none">
+        <div className="flex w-4/5 sm:w-2/3 h-full absolute items-end pointer-events-none">
           <FloatImage right
             width={60} height={60} 
             xOffset={55} yOffset={-300}
@@ -80,7 +80,7 @@ const Gallery = () => {
             src={images.flowers.flower_pink_2} />
         </div>
 
-        <TempContainer className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" 
+        <GalleryContainer className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" 
           content="gap-4" rows={4}>
           {
             photos && photos.map((item, x) => 
@@ -89,26 +89,13 @@ const Gallery = () => {
                 onClick={(e) => handleZoom(item, e)} />
             )
           }
-        </TempContainer>
-
-{/*
-        <GalleryContainer className="w-fit space-x-2 justify-center" content="space-y-2">
-          {
-            photos && photos.map((item, x) => 
-              <GalleryItem className={`${item.meta.className} grow cursor-pointer`} key={x}
-                src={item.src} alt={item.alt}
-                onClick={handleZoom} />
-            )
-          }
         </GalleryContainer>
-*/}
-      
-        </div>
+      </div>
     </WaveContainer>
   </>);
 };
 
-const TempContainer = ({  id = "", className = "", content = "", children, rows }) => {
+const GalleryContainer = ({  id = "", className = "", content = "", children, rows }) => {
   const array = React.Children.toArray(children); 
   const elements = mapElementsByRows(array, rows);
   return (

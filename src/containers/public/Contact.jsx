@@ -46,11 +46,11 @@ const Contact = () => {
       content="bg-div-bold py-4 pb-20 relative"
       height="50" top>
         
-      <form className="w-1/2 py-8 space-y-4" 
+      <form className="w-3/4 sm:w-1/2 py-8 space-y-4 z-10" 
         onSubmit={handleSubmit}
         ref={formRef} >
 
-        <div className="flex w-1/2 h-full absolute items-center pointer-events-none">
+        <div className="flex w-3/4 sm:w-1/2 h-full absolute items-center pointer-events-none -z-10">
           <FloatImage left
             width={60} height={60} 
             xOffset={80} yOffset={-220}
@@ -86,7 +86,7 @@ const Contact = () => {
             src={images.flowers.flower_pink_2} />
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 gap-4">
           <Input className="space-y-1"
             type="text" name="first_name" 
             label={t("form.name.label")} />
