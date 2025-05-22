@@ -1,3 +1,4 @@
+import routes from "../../settings/routes/frontend.routes";
 import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
 
@@ -29,7 +30,7 @@ const Contact = () => {
         alignment="middle" anchor="middle" size="1" offset="0px"
         value={t("header.title")} />
 
-      <EmailButton className="mt-6 mb-8"
+      <EmailButton className="mt-6 mb-8" selectable
         label={t("common.email", { ns: ns.common })} />
 
       <div className="w-2/3 md:w-1/3 flex flex-col text-center text-sm space-y-4">
@@ -43,13 +44,11 @@ const Contact = () => {
     </div>
 
     <WaveContainer className="bg-transparent fill-div-bold overflow-hidden -mb-20" 
-      content="bg-div-bold py-4 pb-20 relative"
-      height="50" top>
+      content="bg-div-bold py-4 pb-20 relative" height="50" top>
         
       <form className="w-3/4 sm:w-1/2 py-8 space-y-4 z-10" 
-        onSubmit={handleSubmit}
-        ref={formRef} >
-
+        onSubmit={handleSubmit} ref={formRef} >
+          
         <div className="flex w-3/4 sm:w-1/2 h-full absolute items-center pointer-events-none -z-10">
           <FloatImage left
             width={60} height={60} 
@@ -111,6 +110,7 @@ const Contact = () => {
         <input className="px-4 py-2 rounded-lg bg-button text-white flex items-center font-bold cursor-pointer mx-auto hover:bg-button-hover focus:outline-2 focus:outline-offset-2 focus:outline-button-hover"
           type="submit" value={t("form.buttons.submit")} />
       </form>
+
     </WaveContainer>
   </>);
 };

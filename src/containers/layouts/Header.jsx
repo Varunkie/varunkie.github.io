@@ -11,7 +11,7 @@ const Header = ({ className = "", t, ready }) => {
   const { pathname } = useLocation(); 
 
   return (
-    <nav className={`${className} sticky top-0 flex z-20 justify-end lg:justify-center`}>
+    <nav className={`${className} sticky top-0 flex z-150 justify-end lg:justify-center`}>
       <div className="hidden md:flex w-full">
         <div className="mx-auto space-x-16 flex justify-center items-center">
           { ready && <>

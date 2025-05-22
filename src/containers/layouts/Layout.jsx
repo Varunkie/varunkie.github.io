@@ -53,9 +53,8 @@ const Layout = ({ children, transitionStage, displayLocation, ...rest }) => {
         <main className={`${transitionStage} grow flex flex-col relative`} {...rest}>
           {children}
         </main>
+        <Footer className={`${transitionStage} w-full`} t={t} /> 
       </Suspense>
-
-      <Footer className={`${transitionStage} w-full bg-div`} t={t} /> 
     </Context>
   );
 };

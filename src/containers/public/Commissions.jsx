@@ -1,7 +1,10 @@
+import routes from "../../settings/routes/frontend.routes";
 import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
 
 import { useTranslation, Trans } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
 
 import BlobContainer from "../../components/layouts/BlobContainer";
 import { FloatImage } from "../../components/layouts/FloatContainer";
@@ -12,6 +15,11 @@ import { BlobHeader } from "../../components/customs/BlobBackground";
 
 const Commissions = () => {
   const { t } = useTranslation(ns.commissions);
+  const navigate = useNavigate();
+
+  const handleSubpage = useCallback((value) => {
+    navigate(`/${routes.commissions}/${value}`);
+  }, []);
 
   return (<>
     <BlobHeader className="w-full h-120" />
@@ -32,8 +40,7 @@ const Commissions = () => {
     </div>
 
     <WaveContainer className="bg-transparent fill-div-bold overflow-hidden" 
-      content="bg-div-bold py-4 space-y-2"
-      height="50" top bottom>
+      content="bg-div-bold py-4 space-y-2" height="50" top bottom>
  
       <div className="flex flex-col items-center">
         <h2 className="text-font-bold font-bold text-3xl">{t("main.exclamation")}</h2>
@@ -45,12 +52,16 @@ const Commissions = () => {
       </div>
 
       <div className="w-[75vw] h-full grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto relative py-4">
-        <PageType className="flex justify-end items-end group" left>
+        <PageType className="flex justify-end items-end group" 
+          onClick={() => handleSubpage(routes.regular)} left>
+
           <p>{t("main.links.regular")}</p>
           <span className="w-4 h-4 bg-light-cyan group-hover:animate-spin"></span>
         </PageType>
 
-        <PageType className="flex justify-end md:justify-start items-end group" right>
+        <PageType className="flex justify-end md:justify-start items-end group" 
+          onClick={() => handleSubpage(routes.vtuber)} right>
+
           <p className="md:mx-2 order-0 md:order-1">{t("main.links.vtubers")}</p>
           <div className="w-4 h-4 bg-light-cyan group-hover:animate-spin"></div>
         </PageType>
@@ -69,21 +80,19 @@ const Commissions = () => {
 
       <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-4">
         <div className="pt-2 md:py-4 space-y-4">
-          <TermItem 
+          <TermItem id="general"
             title={t("page.tos.items.general.title")}
             items={[
               t("page.tos.items.general.items.p1"),
               t("page.tos.items.general.items.p2"),
             ]} />
-
-          <TermItem 
+          <TermItem id="payments"
             title={t("page.tos.items.payments.title")}
             items={[
               t("page.tos.items.payments.items.p1"),
               t("page.tos.items.payments.items.p2"),
             ]} />
-
-          <TermItem 
+          <TermItem id="revisions-requests"
             title={t("page.tos.items.revisions-requests.title")}
             items={[
               t("page.tos.items.revisions-requests.items.p1"),
@@ -92,16 +101,16 @@ const Commissions = () => {
               t("page.tos.items.revisions-requests.items.p4"),
               t("page.tos.items.revisions-requests.items.p5"),
             ]} />
-
-          <TermItem 
+          <TermItem id="deadlines-delivery"
             title={t("page.tos.items.deadlines-delivery.title")}
             items={[
               t("page.tos.items.deadlines-delivery.items.p1"),
               t("page.tos.items.deadlines-delivery.items.p2"),
             ]} />
         </div>
+
         <div className="py-4 space-y-4">
-          <TermItem 
+          <TermItem id="property-rights"
             title={t("page.tos.items.property-rights.title")}
             items={[
               t("page.tos.items.property-rights.items.p1"),
@@ -113,14 +122,12 @@ const Commissions = () => {
               t("page.tos.items.property-rights.items.p7"),
               t("page.tos.items.property-rights.items.p8"),
             ]} />
-
-          <TermItem 
+          <TermItem id="refunds"
             title={t("page.tos.items.refunds.title")}
             items={[
               t("page.tos.items.refunds.items.p1"),
             ]} />
-        
-          <TermItem 
+          <TermItem id="communication"
             title={t("page.tos.items.communication.title")}
             items={[
               t("page.tos.items.communication.items.p1"),
@@ -199,9 +206,10 @@ const Commissions = () => {
   </>);
 };
 
-const PageType = ({ className = "", children, left, right }) => {
+const PageType = ({ className = "", children, left, right, onClick = () => {} }) => {
   return (
-    <div className={`${className} relative w-full aspect-square bg-font rounded-3xl cursor-pointer text-white px-3 py-4 font-medium hover:font-bold`}> 
+    <div className={`${className} relative w-full aspect-square bg-font rounded-3xl cursor-pointer text-white px-3 py-4 font-medium hover:font-bold`}
+      onClick={onClick}> 
       {
         left && <>
           <div className="flex w-full h-full absolute items-center">
@@ -312,13 +320,13 @@ const PageType = ({ className = "", children, left, right }) => {
   );
 };
 
-const TermItem = ({ title = "", items = [] }) => {
+const TermItem = ({ id = "", title = "", items = [] }) => {
   return (
     <div className="">
       <h3 className="uppercase text-font-bold font-bold">{title}</h3>
       {
         items && items.map((item, x) => 
-          <p className="space-x-1" key={`${title}.${x}`}>
+          <p className="space-x-1" key={`${id}.${x}`}>
             <span className="inline-flex items-baseline">
               <img className="w-4 h-4 translate-y-0.5 select-none"  
                 src={images.sparkles.sparkle_cyan_small} alt="" /> 

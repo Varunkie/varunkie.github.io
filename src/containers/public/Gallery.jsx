@@ -55,9 +55,8 @@ const Gallery = () => {
     </div>
 
     <WaveContainer className="bg-transparent fill-div-bold overflow-hidden -mb-20" 
-      content="bg-div-bold py-4 pb-24 relative"
-      height="50" top>
-        
+      content="bg-div-bold py-4 pb-24 relative" height="50" top>
+
       <div className="w-4/5 sm:w-2/3 py-8 space-y-4">
         <div className="flex w-4/5 sm:w-2/3 h-full absolute items-start pointer-events-none">
           <FloatImage left
@@ -69,6 +68,7 @@ const Gallery = () => {
             xOffset={45} yOffset={40}
             src={images.flowers.flower_white_1} />
         </div>
+
         <div className="flex w-4/5 sm:w-2/3 h-full absolute items-end pointer-events-none">
           <FloatImage right
             width={60} height={60} 
@@ -82,15 +82,14 @@ const Gallery = () => {
 
         <GalleryContainer className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" 
           content="gap-4" rows={4}>
-          {
-            photos && photos.map((item, x) => 
-              <GalleryItem className={`cursor-pointer hover:outline-2 hover:outline-offset-2 hover:outline-button-hover`} key={x}
-                src={item.meta.thumbnail ? item.meta.thumbnail : item.src} alt={item.alt}
-                onClick={(e) => handleZoom(item, e)} />
-            )
-          }
+          { photos && photos.map((item, i) => 
+            <GalleryItem className={`cursor-pointer hover:outline-2 hover:outline-offset-2 hover:outline-button-hover`} 
+              src={item.meta.thumbnail ? item.meta.thumbnail : item.src} alt={item.alt}
+              onClick={(e) => handleZoom(item, e)} key={`photos_${i}`} />
+          )}
         </GalleryContainer>
       </div>
+
     </WaveContainer>
   </>);
 };

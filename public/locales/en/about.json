@@ -57,7 +57,7 @@
             "items": {
               "p1": "Contributed to creative process through original ideas and designs.",
               "p2": "Produced illustrations and model art for content creators.",
-              "p3": "Handled all client communications to build professional and long-lasting business relationships"
+              "p3": "Handled all client communications to build professional and long-lasting business relationships."
             }
           },
           "megacatstudios": {
@@ -83,23 +83,14 @@
       }
     },
 
-    "skills":{
-      "title": "Skills",
-      "content": "Illustration, Character Design, Graphic Design, Vtuber Model Art, Concept Art, Web Design, Environment Art."
+    "extras": {
+      "skills": "<0>Skills</0> Illustration, Character Design, Graphic Design, Vtuber Model Art, Concept Art, Web Design, Environment Art.",
+      "softwares": "<0>Softwares</0> Clip Studio Paint, Photoshop, Procreate, Illustrator, InDesign, After Effects, Live2D Cubism.",
+      "knowledge": "<0>Basic Knowledge of</0> Unity, Blender, HTML, CSS."
     },
 
-    "softwares": {
-      "title": "Softwares",
-      "content": "Clip Studio Paint, Photoshop, Procreate, Illustrator, InDesign, After Effects, Live2D Cubism."
-    },
-
-    "knowledge": {
-      "title": "Basic Knowledge of",
-      "content": "Unity, Blender, HTML, CSS."
-    },
-
-    "gallery": {
-      "title": "Work Gallery"
+    "buttons": {
+      "gallery": "Work Gallery"
     }
   }
 }

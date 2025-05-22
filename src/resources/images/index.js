@@ -23,6 +23,7 @@ import contact from './icons/ContactHome.svg';
 
 import suulore from './logos/Logo.svg';
 import suulore_outline from './logos/LogoOutline.svg';
+import suulore_chibi from './logos/SumiiChibi.png';
 
 export const blobs = { 
     footer_bottom_left, footer_top_right, 
@@ -40,7 +41,7 @@ export const sparkles = {
 
 export const icons = { menu, contact };
 
-export const logos = { suulore, suulore_outline }; 
+export const logos = { suulore, suulore_outline, suulore_chibi }; 
 
 const images = { icons, logos, flowers, sparkles, blobs };
 export default images;

@@ -6,35 +6,21 @@ import { FaTwitterSquare } from "react-icons/fa";
 import { TbPencilHeart } from "react-icons/tb";
 import { useRef } from 'react';
 
-import Icon from "../../components/common/ExternalLink";
+import Link from "../../components/common/ExternalLink";
 import { d } from "../../components/layouts/WaveContainer";
 
 const Footer = ({ className = "", t }) => {
   const containerRef = useRef(null);
-  const containerSize = useResizeObserver(containerRef);
-  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  
+
   return (<>
-      { !isSafari &&
-        <svg width="100%" height="0" preserveAspectRatio="none">
-          <defs>
-            <mask id="path">
-              <rect  x="0" y="0" width="100%" height={containerSize.height} fill="white" />
-
-              <path transform={`scale(${containerSize.width / 1440}, ${containerSize.width / 1440})`}
-                  d={d}>
-              </path>
-            </mask>
-          </defs>
-        </svg>
-      }
-
-      <footer className={`${className} relative overflow-hidden ${isSafari ? "" : "mask-[url(#path)]"}`} ref={containerRef}>
+      <footer className={`${className} relative overflow-hidden z-100`} ref={containerRef}>
+        {/*
         <div className="absolute w-full h-full bg-cover bg-no-repeat"
           style={{ backgroundImage: `url(\"${images.blobs.footer_top_right}\")` }} />
 
         <div className="absolute w-full h-full bg-contain bg-no-repeat bg-left-bottom"
           style={{ backgroundImage: `url(\"${images.blobs.footer_bottom_left}\")` }} />
+          */}
  
         <div className="w-9/12 md:w-2/3 lg:w-1/2 mx-auto
           sm:px-12 lg:px-16 py-16 space-y-30 sm:space-y-40">
@@ -51,18 +37,18 @@ const Footer = ({ className = "", t }) => {
             <div className="flex flex-col space-y-2">
               <p className="font-bold">{t("footer.social.title")}</p>
               <div className="flex h-full space-x-1 fill-icon">
-                <Icon className="w-8 h-8"
+                <Link className="w-8 h-8"
                   href="https://twitter.com/varunkie">
                   <FaTwitterSquare className="w-full h-full fill-inherit" />
-                </Icon>
-                <Icon className="w-8 h-8"
+                </Link>
+                <Link className="w-8 h-8"
                   href="https://www.linkedin.com/in/eduardo-a-borges/">
                   <FaTwitterSquare className="w-full h-full fill-inherit" />
-                </Icon>
-                <Icon className="w-8 h-8"
+                </Link>
+                <Link className="w-8 h-8"
                   href="https://www.linkedin.com/in/eduardo-a-borges/">
                   <FaTwitterSquare className="w-full h-full fill-inherit" />
-                </Icon>
+                </Link>
               </div>
             </div>
           </div>
@@ -74,7 +60,49 @@ const Footer = ({ className = "", t }) => {
           </div>
         </div>
       </footer>
+
+      <Background className={className} containerRef={containerRef} />
     </>
+  );
+};
+
+const Background = ({ className = "", containerRef }) => {
+  const containerSize = useResizeObserver(containerRef);
+  const pathScale = containerSize.width / 1440;
+  const xOffset = containerSize.width - 1440;
+  const yOffset = containerSize.height - 475;
+
+  return (
+    <svg className={`${className} absolute bottom-0 z-90`} 
+      width="100%" height={containerSize.height}
+      preserveAspectRatio="none">
+
+      <defs>
+        <mask id="path">
+          <rect x="0" y="0" width="100%" height="100%" fill="white" />
+          <path transform={`scale(${pathScale}, ${pathScale})`}
+            d={d}>
+          </path>
+        </mask>
+      </defs>
+
+      <rect x="0" y="0" 
+        className="fill-div" 
+        width="100%" height="100%" 
+        mask="url(#path)" />
+
+      <image x={Math.max(xOffset, 0)} y="0" 
+        width={1440} height={containerSize.height} 
+        href={images.blobs.footer_top_right} 
+        preserveAspectRatio="none"
+        mask="url(#path)" />
+
+      <image x="0" y={Math.max(yOffset, 0)} 
+        width={650} height={500}
+        href={images.blobs.footer_bottom_left} 
+        preserveAspectRatio="none"
+        mask="url(#path)" />
+    </svg>
   );
 };
 

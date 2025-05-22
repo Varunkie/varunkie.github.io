@@ -1,5 +1,5 @@
-import ns from '../../settings/routes/locales.routes';
 import routes from "../../settings/routes/frontend.routes";
+import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
 
 import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
@@ -18,9 +18,9 @@ const Home = () => {
   const { t } = useTranslation([ns.home, ns.common]);
   const navigate = useNavigate();
 
-  const handleClick = useCallback((value) => {
-    navigate(`/${routes.commissions}/${value}`);
-  }, [navigate]);
+  const handleEmail = useCallback(() => {
+    navigate(`/${routes.contact}`);
+  }, []);
 
   return (<>
     <div className="flex flex-col items-center mx-auto justify-end md:justify-start
@@ -36,10 +36,9 @@ const Home = () => {
       </div>
     </div>
 
-    <WaveContainer className="bg-transparent fill-div-bold" 
-      content="bg-div-bold h-[75vh] xs:h-[80vh] px-8 py-12" 
-      top bottom>
-        
+    <WaveContainer className="bg-transparent fill-div-bold" top bottom
+      content="bg-div-bold h-[75vh] xs:h-[80vh] px-8 py-12 relative">
+
       <div className="relative w-full h-full">
         <div className="absolute w-full h-full flex items-center justify-between p-4 z-10 pointer-events-none">
           <button className="text-white">
@@ -58,12 +57,14 @@ const Home = () => {
           <GalleryItem className="w-full h-full hidden md:block" />
         </div>
       </div>
+      
     </WaveContainer>
 
-    <div className="bg-div w-11/12 sm:w-5/6 mb-20 pt-6 pb-8 mx-auto relative overflow-hidden
-      border-t-olive border-b-light-cyan border-t-8 border-b-8 rounded-2xl flex">
+    <div className="w-11/12 sm:w-5/6 mb-20 pt-6 pb-8 bg-div flex relative mx-auto
+      border-t-olive border-b-light-cyan border-t-8 border-b-8 rounded-2xl overflow-hidden">
       <div className="w-9/12 sm:w-2/3 py-6 px-0 lg:px-12 space-y-3 mx-auto z-10">
-        <div className="w-full flex relative z-10 justify-center">
+
+        <div className="w-full pb-4 flex relative z-10 justify-center">
           <WaveText className="w-full h-20 flex justify-center font-extrabold fill-font-bold text-6xl" id="c1" 
             viewport="0.625 -53.44183349609375 225 70.94506072998047" hardcoded
             alignment="middle" anchor="middle" size="1" offset="10px" 
@@ -78,7 +79,7 @@ const Home = () => {
           </WaveText>
         </div>
 
-        <div className="relative">
+        <p className="relative">
           <FloatImage left
             width={100} height={100} 
             xOffset={15} yOffset={-65}
@@ -94,18 +95,17 @@ const Home = () => {
             xOffset={75} yOffset={35}
             src={images.flowers.flower_pink_2} />
 
-          <p className="relative pt-4 z-10">
-            <Trans i18nKey="main.contents.about-me" t={t}>
-              <span className="font-bold"></span>
-              <span className="font-bold"></span>
-              <span className="font-bold"></span>
-            </Trans>
-          </p>
-        </div>
+          <Trans i18nKey="main.contents.about-me" t={t}>
+            <span className="font-bold"></span>
+            <span className="font-bold"></span>
+            <span className="font-bold"></span>
+          </Trans>
+        </p>
 
         <div className="relative flex justify-center py-5">
-          <EmailButton className="relative"
-            label={t("common.email", { ns: ns.common })}>
+          <EmailButton className="relative" 
+            label={t("common.email", { ns: ns.common })}
+            onClick={handleEmail}>
 
             <FloatImage className="cursor-default" left
               width={413} height={272} 
@@ -114,21 +114,21 @@ const Home = () => {
           </EmailButton>
         </div>
         
-        <div className="relative">
+        <p className="relative">
           <FloatImage left
             width={60} height={60} 
             xOffset={115} yOffset={5}
             src={images.sparkles.sparkle_cyan_small} />
-
-          <p className="relative">{t("main.contents.business")}</p>
-        </div>
+          <span className="relative">{t("main.contents.business")}</span>
+        </p>
 
         <p className="relative">
           <Trans i18nKey="main.contents.caption" t={t}>
             <span className="text-font-soft"></span>
           </Trans>
         </p>
-        <div className="relative">
+
+        <p className="relative">
           <FloatImage left
             width={100} height={100} 
             xOffset={30} yOffset={-40}
@@ -139,16 +139,16 @@ const Home = () => {
             xOffset={60} yOffset={-5}
             src={images.sparkles.sparkle_cyan_small} />
 
-          <p className="relative">
-            <Trans i18nKey="main.contents.commission" t={t}>
-              <span className="text-font-soft"></span>
-              <span className="text-font-soft"></span>
-              <span className="text-font-soft"></span>
-            </Trans>
-          </p>
-        </div>
+          <Trans i18nKey="main.contents.commission" t={t}>
+            <span className="text-font-soft"></span>
+            <span className="text-font-soft"></span>
+            <span className="text-font-soft"></span>
+          </Trans>
+        </p>
+
         <p className="relative">{t("main.contents.thank-you")}</p>
         <p className="text-center sm:text-left sm:ml-8 relative">{t("main.contents.languages")}</p>
+
       </div>
     </div>
   </>);

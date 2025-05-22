@@ -11,10 +11,10 @@ import NotFound from "./containers/layouts/NotFound";
 
 // PUBLIC
 const Home = lazy(() => import("./containers/public/Home"));
-const About = lazy(() => import("./containers/public/Home"));
+const AboutMe = lazy(() => import("./containers/public/AboutMe"));
 const Commissions = lazy(() => import("./containers/public/Commissions"));
-const Regular = lazy(() => import("./containers/public/Home"));
-const Vtuber = lazy(() => import("./containers/public/Home"));
+const Regular = lazy(() => import("./containers/subpages/RegularCommissions"));
+const Vtuber = lazy(() => import("./containers/subpages/RegularCommissions"));
 const Gallery = lazy(() => import("./containers/public/Gallery"));
 const Contact = lazy(() => import("./containers/public/Contact"));
 
@@ -30,7 +30,7 @@ const App = () => {
     <Layout transitionStage={transitionStage} displayLocation={displayLocation} onAnimationEnd={onAnimationEnded}>
       <Routes location={displayLocation}>
         <Route element={<Home />} path={routes.home} />
-        <Route element={<About />} path={routes.about} />
+        <Route element={<AboutMe />} path={routes.about} />
         <Route path={routes.commissions}>
           <Route element={<Commissions />} path={""} />
           <Route element={<Regular />} path={routes.regular} />
