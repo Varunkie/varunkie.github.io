@@ -84,7 +84,7 @@ const Gallery = () => {
         <GalleryContainer className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" 
           content="gap-4" rows={4}>
           { photos && photos.map((item, i) => 
-            <GalleryItem className={`cursor-pointer hover:outline-2 hover:outline-offset-2 hover:outline-button-hover`} 
+            <GalleryItem selectable
               src={item.meta.thumbnail ? item.meta.thumbnail : item.src} alt={item.alt}
               onClick={(e) => handleZoom(item, e)} key={`photos_${i}`} />
           )}

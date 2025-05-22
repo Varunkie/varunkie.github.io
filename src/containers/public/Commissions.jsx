@@ -31,6 +31,7 @@ const Commissions = () => {
         viewport="0.625 -34.98773193359375 225 51.59220504760742" hardcoded
         alignment="middle" anchor="middle" size="1" offset="0px"
         value={t("header.title")} />
+        
       <div className="grid grid-cols-3 font-bold text-sm justify-items-center items-center">
         <Trans i18nKey="header.subtitle" t={t}>
           <span className="justify-self-end translate-x-6"></span>

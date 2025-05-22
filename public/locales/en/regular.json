@@ -1,6 +1,176 @@
 {
-  "header": {
-    "title": "regular commision",
-    "subtitle": ""
+  "main": {
+    "regular": {
+      "title": "regular commision",
+      "subtitle": "<0>status</0><1></1><2>open</2>",
+      "exclamation": "!!!",
+      "caption": "Please take note these piece are for noncomercial commissions available during openings.\nScroll below for information regarding <0>commercial projects</0>.",
+      "items": {
+        "chibis": {
+          "title": "chibis",
+          "subtitle": "starts at 50 USD",
+          "details": "Base price is for each chibi. Character details may be simplified.",
+          "terms": {
+            "label": "Add-Ons",
+            "value": "Price"
+          },
+          "items": {
+            "p1": {
+              "label": "Per Additional Character",
+              "value": "+$50"
+            },
+            "p2": {
+              "label": "Detailed Background",
+              "value": "+$25"          
+            }
+          },
+          "explanation": "You will receive a full version without a watermark for your use ONLY and a watermarked version for your social media.",
+          "caption": "<0>For commercial projects only:</0>\nPlease inform me if you want to separate the character from the backgroudn and let me know what kind of project is it (music video art, stream assets, etc)."
+        },
+
+        "bust": {
+          "title": "bust",
+          "subtitle": "starts at 75 USD",
+          "details": "Base price is for each bust (shoulder up) character.",
+          "terms": {
+            "label": "Add-Ons",
+            "value": "Price"
+          },
+          "items": {
+            "p1": {
+              "label": "Per Additional Character",
+              "value": "+$75"
+            },
+            "p2": {
+              "label": "Complex Details",
+              "value": "+$20"          
+            },
+            "p3": {
+              "label": "Detailed Background",
+              "value": "+$30"          
+            }
+          },
+          "explanation": "You will receive a full version without a watermark for your use ONLY and a watermarked version for your social media."
+        },
+
+        "halfbody": {
+          "title": "halfbody",
+          "subtitle": "starts at 95 USD",
+          "details": "Base price is for each half body character.",
+          "terms": {
+            "label": "Add-Ons",
+            "value": "Price"
+          },
+          "items": {
+            "p1": {
+              "label": "Per Additional Character",
+              "value": "+$95"
+            },
+            "p2": {
+              "label": "Complex Details",
+              "value": "+$40"          
+            },
+            "p3": {
+              "label": "Detailed Background",
+              "value": "+$50"          
+            }
+          },
+          "explanation": "You will receive a full version without a watermark for your use ONLY and a watermarked version for your social media.",
+          "caption": "<0>For commercial projects only:</0>\nPlease inform me if you want to separate the character from the backgroudn and let me know what kind of project is it (music video art, stream assets, etc)."
+        },
+
+        "fullbody": {
+          "title": "fullbody",
+          "subtitle": "starts at 140 USD",
+          "details": "Base price is for each fullbody character.",
+          "terms": {
+            "label": "Add-Ons",
+            "value": "Price"
+          },
+          "items": {
+            "p1": {
+              "label": "Per Additional Character",
+              "value": "+$140"
+            },
+            "p2": {
+              "label": "Complex Details",
+              "value": "+$60"          
+            },
+            "p3": {
+              "label": "Detailed Background",
+              "value": "+$90"          
+            }
+          },
+          "explanation": "You will receive a full version without a watermark for your use ONLY and a watermarked version for your social media.",
+          "caption": "<0>For commercial projects only:</0>\nPlease inform me if you want to separate the character from the backgroudn and let me know what kind of project is it (music video art, stream assets, etc)."
+        }
+      }
+    },
+
+    "commercial": {
+      "title": "commercial works",
+      "subtitle": "<0>status</0><1></1><2>accepting enquiries</2>",
+      "exclamation": "!!!",
+      "caption": "There are additional fees for commercial use of my work. You may negotiate fees, budged and payment plans with me.\nThe commissions below already include <0>commercial rights</0>.",
+      "items": {
+        "emotes": {
+          "title": "emotes",
+          "subtitle": "starts at 22 USD",
+          "details": "Base price includes 1 emote. Character details may be simplified.",
+          "terms": {
+            "label": "Bundles",
+            "value": "Price"
+          },
+          "items": {
+            "p1": {
+              "label": "5 emotes",
+              "value": "$100"
+            },
+            "p2": {
+              "label": "10 emotes",
+              "value": "$200"          
+            },
+            "p3": {
+              "label": "20 emotes",
+              "value": "$400"          
+            }
+          },
+          "explanation": "You will get your emotes in 112x112, 56x56, 28x28\nIf you want your emote to be a bigger resolution, a fee of 10$ per emote will be added."
+        },
+
+        "alerts": {
+          "title": "alerts",
+          "subtitle": "starts at 40 USD",
+          "details": "Base price per alert art. Character details may be simplified.",
+          "terms": {
+            "label": "Bundles",
+            "value": "Price"
+          },
+          "items": {
+            "p1": {
+              "label": "3 alerts",
+              "value": "$110"
+            },
+            "p2": {
+              "label": "5 alerts",
+              "value": "$185"          
+            }
+          },
+          "explanation": "You will get your alerts in 700x700px."
+        }
+      }
+    },
+
+    "information": {
+      "title": "information",
+      "items": {
+        "p1": "You may enquire for unlisted services (e.g. infographics, overlays, logos).",
+        "p2": "I'm particularly interested in illustration, promotional posters, book cover arts, music video assets and stream assets (starting, brb, ending screen, etc).",
+        "p3": "Depending on my schedule, I may accept game projects as well (e.g. visual novels, game icons, etc).",
+        "p4": "Kindly be mindful of my workload (<0>work queue</0>). You may discuss scheduling and availability with us.",
+        "p5": "Everything will be paid through PayPal."
+      },
+      "thank-you": "Thank you so much for the interest in my commissions!"
+    }
   }
 }
