@@ -2,6 +2,7 @@ import footer_bottom_left from "./blobs/FooterBottomLeft.svg";
 import footer_top_right from "./blobs/FooterTopRight.svg";
 import blob_bottom_left from "./blobs/BlobBottomLeft.png";
 import blob_top_right from "./blobs/BlobTopRight.png";
+import blob_middle_center from "./blobs/BlobMiddleCenter.png";
 import blob_will_do from "./blobs/BlobWillDo.svg";
 import blob_wont_do from "./blobs/BlobWontDo.svg";
 
@@ -27,7 +28,7 @@ import suulore_chibi from './logos/SumiiChibi.png';
 
 export const blobs = { 
     footer_bottom_left, footer_top_right, 
-    blob_bottom_left, blob_top_right,
+    blob_bottom_left, blob_top_right, blob_middle_center,
     blob_will_do, blob_wont_do }; 
 
 export const flowers = { 

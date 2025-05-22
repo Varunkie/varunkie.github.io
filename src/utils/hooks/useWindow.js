@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useState } from 'react';
+import { useRef, useLayoutEffect, useState, useEffect } from 'react';
 
 export const useWindowSize = () => {
   const [size, setSize] = useState({ width: 0, height: 0});
@@ -29,8 +29,8 @@ export const useWindowScroll = () => {
 export const useResizeObserver = (containerRef) => {
   const [size, setSize] = useState({ width: 0, height: 0 });
 
-  useLayoutEffect(() => {
-    if (containerRef.current) {
+  useEffect(() => {
+    if (containerRef && containerRef.current) {
       const resizeObserver = new ResizeObserver(entries => {
         for (let entry of entries) {
           setSize({
@@ -43,7 +43,7 @@ export const useResizeObserver = (containerRef) => {
       resizeObserver.observe(containerRef.current);
       return () => resizeObserver.disconnect();
     }
-  }, [containerRef.current]);
+  }, [containerRef]);
 
   return size;
 };

@@ -26,15 +26,15 @@ const AboutMe = () => {
   return (<>
     <BlobHeader className="w-full min-h-120" containerRef={containerRef} />
 
-    <div className="pt-8 pb-14 w-2/3 sm:w-5/6 lg:w-2/3 space-x-12 space-y-4 sm:space-y-0
-      flex flex-col sm:flex-row mx-auto" ref={containerRef}>
+    <div className="w-2/3 md:w-5/6 xl:w-2/3 space-x-12
+      flex flex-col md:flex-row mx-auto" ref={containerRef}>
 
-      <div className="w-full flex items-center">
-        <img className="w-250 h-fit"
+      <div className="pt-8 md:pb-14 w-full flex justify-center items-center">
+        <img className="w-auto h-70 md:w-auto md:h-auto md:max-h-100"
           src={images.logos.suulore_chibi} alt="" />
       </div>
 
-      <div className="grow flex flex-col items-center relative">
+      <div className="md:pt-8 pb-14 grow flex flex-col items-center relative">
         <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
         <WaveText className="w-full h-18 font-extrabold fill-font-bold text-5xl" id="c1" 
           viewport="0.625 -46.35607147216797 225 66.15290069580078" hardcoded
@@ -115,7 +115,7 @@ const AboutMe = () => {
     </div>
 
     <WaveContainer className="bg-transparent fill-div-bold overflow-hidden -mb-20" 
-      content="bg-div-bold py-4 pb-20 relative" height="50" top>
+      content="bg-div-bold py-4 pb-20 relative min-h-screen" height="50" top>
 
       <div className="w-3/4 sm:5/6 lg:w-2/3 py-8 space-y-4 z-10">
         <div className="flex w-3/4 sm:5/6 lg:w-2/3 h-full absolute items-center pointer-events-none -z-10">

@@ -3,7 +3,7 @@ import images from "../../resources/images";
 import photos from "../../resources/content/gallery.json";
 
 import { useTranslation, Trans } from "react-i18next";
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useRef } from 'react';
 
 import Sparkles from "../../components/effects/Sparkles";
 import WaveText from "../../components/effects/WaveText";
@@ -17,6 +17,7 @@ import Viewport from "../modals/Viewport";
 const Gallery = () => {
   const { t } = useTranslation([ns.gallery, ns.common]);
   const [image, setImage] = useState(false);
+  const containerRef = useRef(null);
 
   const handleZoom = useCallback((value, e) => {
     e.preventDefault();
@@ -26,9 +27,9 @@ const Gallery = () => {
   return (<>
     { image && <Viewport image={image} setImage={setImage} /> }
 
-    <BlobHeader className="w-full h-120" />
+    <BlobHeader className="w-full min-h-120" containerRef={containerRef} />
 
-    <div className="pt-8 pb-14 relative flex flex-col items-center">
+    <div className="pt-8 pb-14 relative flex flex-col items-center" ref={containerRef}>
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
       <WaveText className="w-full h-18 font-extrabold fill-font-bold text-6xl" id="c1" 
         viewport="0.625 -57.95635986328125 225 80.91878509521484" hardcoded
@@ -37,7 +38,7 @@ const Gallery = () => {
 
       <div className="grid grid-cols-3 font-bold text-sm justify-items-center items-center">
         <Trans i18nKey="header.subtitle" t={t}>
-          <span className="justify-self-end translate-x-6"></span>
+          <span className="justify-self-end translate-x-6 text-right"></span>
           <Sparkles className="w-6 h-6 z-10 fill-olive" stars={2} />
           <span className="justify-self-start -translate-x-6"></span>
         </Trans>

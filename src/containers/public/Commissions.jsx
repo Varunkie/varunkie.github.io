@@ -4,7 +4,7 @@ import images from "../../resources/images";
 
 import { useTranslation, Trans } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { useCallback } from "react";
+import { useCallback, useRef } from "react";
 
 import BlobContainer from "../../components/layouts/BlobContainer";
 import { FloatImage } from "../../components/layouts/FloatContainer";
@@ -15,6 +15,7 @@ import { BlobHeader } from "../../components/customs/BlobBackground";
 
 const Commissions = () => {
   const { t } = useTranslation(ns.commissions);
+  const containerRef = useRef(null);
   const navigate = useNavigate();
 
   const handleSubpage = useCallback((value) => {
@@ -22,9 +23,9 @@ const Commissions = () => {
   }, []);
 
   return (<>
-    <BlobHeader className="w-full h-120" />
+    <BlobHeader className="w-full min-h-120" containerRef={containerRef} />
 
-    <div className="pt-8 pb-14 relative flex flex-col items-center">
+    <div className="pt-8 pb-14 relative flex flex-col items-center" ref={containerRef}>
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
       <WaveText className="w-full h-20 font-extrabold fill-font-bold text-3xl xs:text-4xl" id="c1" 
         viewport="0.625 -34.98773193359375 225 51.59220504760742" hardcoded

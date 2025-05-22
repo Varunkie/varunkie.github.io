@@ -14,6 +14,7 @@ import { FloatImage } from "../../components/layouts/FloatContainer";
 
 const Contact = () => {
   const { t } = useTranslation([ns.contact, ns.common]);
+  const containerRef = useRef(null);
   const formRef = useRef(null);
 
   const handleSubmit = () => {
@@ -21,9 +22,9 @@ const Contact = () => {
   };
 
   return (<>
-    <BlobHeader className="w-full h-120" />
+    <BlobHeader className="w-full min-h-120" containerRef={containerRef} />
 
-    <div className="pt-8 pb-14 relative flex flex-col items-center">
+    <div className="pt-8 pb-14 relative flex flex-col items-center" ref={containerRef}>
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
       <WaveText className="w-full h-18 font-extrabold fill-font-bold text-6xl" id="c1" 
         viewport="0.625 -58.86821746826172 225 81.77326965332031" hardcoded
@@ -117,7 +118,7 @@ const Contact = () => {
 
 const Input = ({ className = "", type = "", name = "", label = "", placeholder = "", rows = 1 }) => {
   return (
-    <label className={`${className} flex flex-col group`} for={name}>
+    <label className={`${className} flex flex-col group`} htmlFor={name}>
       <span className="space-x-1 group-focus-within:text-font-bold">
         <span className="inline-flex items-baseline">
           <img className="w-4 h-4 translate-y-0.5 select-none"  
