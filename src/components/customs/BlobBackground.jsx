@@ -31,7 +31,7 @@ export const BlobBackground = ({ className = "", containerRef }) => {
             <div className="absolute w-full h-full bg-no-repeat bg-position-[0px_200px]"
                 style={{ backgroundImage: `url(\"${images.blobs.blob_bottom_left}\")` }} />
 
-            <div className="absolute w-full h-full bg-no-repeat bg-position-[-750px_1000px]"
+            <div className="absolute w-full h-full bg-no-repeat bg-position-[-625px_1125px]"
                 style={{ backgroundImage: `url(\"${images.blobs.blob_middle_center}\")` }} />
         </div>
     );

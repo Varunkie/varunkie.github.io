@@ -14,7 +14,7 @@ const Home = lazy(() => import("./containers/public/Home"));
 const AboutMe = lazy(() => import("./containers/public/AboutMe"));
 const Commissions = lazy(() => import("./containers/public/Commissions"));
 const Regular = lazy(() => import("./containers/subpages/RegularCommissions"));
-const Vtuber = lazy(() => import("./containers/subpages/RegularCommissions"));
+const Vtuber = lazy(() => import("./containers/subpages/VtuberCommissions"));
 const Gallery = lazy(() => import("./containers/public/Gallery"));
 const Contact = lazy(() => import("./containers/public/Contact"));
 

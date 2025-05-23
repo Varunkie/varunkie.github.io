@@ -18,7 +18,7 @@ const Commissions = () => {
   const containerRef = useRef(null);
   const navigate = useNavigate();
 
-  const handleSubpage = useCallback((value) => {
+  const handleNavigate = useCallback((value) => {
     navigate(`/${routes.commissions}/${value}`);
   }, []);
 
@@ -55,14 +55,14 @@ const Commissions = () => {
 
       <div className="w-[75vw] h-full grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto relative py-4">
         <PageType className="flex justify-end items-end group" 
-          onClick={() => handleSubpage(routes.regular)} left>
+          onClick={() => handleNavigate(routes.regular)} left>
 
           <p>{t("main.links.regular")}</p>
           <span className="w-4 h-4 bg-light-cyan group-hover:animate-spin"></span>
         </PageType>
 
         <PageType className="flex justify-end md:justify-start items-end group" 
-          onClick={() => handleSubpage(routes.vtuber)} right>
+          onClick={() => handleNavigate(routes.vtuber)} right>
 
           <p className="md:mx-2 order-0 md:order-1">{t("main.links.vtubers")}</p>
           <div className="w-4 h-4 bg-light-cyan group-hover:animate-spin"></div>

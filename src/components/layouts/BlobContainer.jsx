@@ -9,8 +9,8 @@ const BlobBackground = ({ className = "", content = "", type = "WillDo", childre
     const size = useResizeObserver(containerRef);
 
     return (
-        <div className={`${className} w-full h-full relative inline-block`} ref={containerRef}>
-            <CustomPath className="absolute -z-10" type={type} 
+        <div className={`${className} w-full h-full relative inline-block overflow-visible`} ref={containerRef}>
+            <CustomPath className="absolute -z-10 overflow-visible" type={type} 
                 size={size} offset={offset} padding={padding} />
 
             <div className={`${content} w-full h-full relative flex flex-col items-center`}>

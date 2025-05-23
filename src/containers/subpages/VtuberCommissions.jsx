@@ -14,9 +14,9 @@ import GalleryItem from "../../components/customs/GalleryItem";
 
 import Viewport from "../modals/Viewport";
 
-const RegularCommissions = () => {
+const VtuberCommissions = () => {
 
-  const { t } = useTranslation([ns.regular, ns.common]);
+  const { t } = useTranslation([ns.vtuber, ns.common]);
   const [scroll, setScroll] = useState(null);
   const [image, setImage] = useState(false);
   const containerRef = useRef(null);
@@ -43,78 +43,41 @@ const RegularCommissions = () => {
 
     <div className="relative flex flex-col items-center" ref={containerRef}>
 
-      <WorkType i18n="regular" t={t} hardcoded
-        viewport="0.625 -23.380739212036133 225 36.51387023925781" >
+      <WorkType i18n="vtuber" t={t} hardcoded
+        viewport="0.625 -23.228713989257812 225 36.18302536010742" >
 
         <CommissionCaption t={t}>
-          <Trans i18nKey="main.regular.caption" t={t}>
-            <span className="font-bold text-light-cyan cursor-pointer" 
-              onClick={() => setScroll(`#commercial-link`)}></span>
-          </Trans>
-        </CommissionCaption>
-
-        <div className="px-4 xs:px-8 lg:px-16 space-y-10">
-          <CommissionType i18n="chibis" type="regular" t={t} 
-            items={[ "p1", "p2" ]} 
-            caption inverse>
-              
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-          </CommissionType>
-
-          <CommissionType i18n="bust" type="regular" t={t} 
-            items={[ "p1", "p2", "p3" ]}>
-
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-          </CommissionType>
-
-          <CommissionType i18n="halfbody" type="regular" t={t} 
-            items={[ "p1", "p2", "p3" ]} 
-            caption>
-
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-          </CommissionType>
-
-          <CommissionType i18n="fullbody" type="regular" t={t} 
-            items={[ "p1", "p2", "p3" ]} 
-            caption>
-
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-            <CommissionItem onClick={(e) => handleZoom(null, e)} />
-          </CommissionType>
-        </div>
-      </WorkType>
-
-      <div id="commercial-link" className="py-4" />
-
-      <WorkType i18n="commercial" t={t} hardcoded
-        viewport="0.625 -22.35525131225586 225 35.4124870300293">
-
-        <CommissionCaption t={t}>
-          <Trans i18nKey="main.commercial.caption" t={t}>
+          <Trans i18nKey="main.vtuber.caption" t={t}>
             <span className="font-bold text-font-soft"></span>
           </Trans>
         </CommissionCaption>
 
         <div className="px-4 xs:px-8 lg:px-16 space-y-10">
-          <CommissionType i18n="emotes" type="commercial" t={t} 
-            items={[ "p1", "p2", "p3" ]} 
-            inverse>
+          <CommissionType i18n="live2d-model" type="vtuber" t={t} 
+            subtypes={[ "p1", "p2", "p3" ]}
+            items={[ "p1", "p2", "p3", "p4", "p5"]}
+            includes>
+              
+            <CommissionItem className="md:order-first xs:col-span-3 h-120" onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem className="hidden md:block" onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem className="hidden md:block" onClick={(e) => handleZoom(null, e)} />
+          </CommissionType>
+
+          <CommissionType i18n="chibi-model-a" type="vtuber" t={t} 
+            items={[ "p1", "p2", "p3", "p4", "p5" ]}
+            includes>
 
             <CommissionItem onClick={(e) => handleZoom(null, e)} />
             <CommissionItem onClick={(e) => handleZoom(null, e)} />
             <CommissionItem onClick={(e) => handleZoom(null, e)} />
           </CommissionType>
 
-          <CommissionType i18n="alerts" type="commercial" t={t} 
-            items={[ "p1", "p2" ]} 
-            inverse>
+          <CommissionType i18n="chibi-model-b" type="vtuber" t={t} 
+            items={[ "p1", "p2", "p3", "p4", "p5" ]}
+            includes>
 
             <CommissionItem onClick={(e) => handleZoom(null, e)} />
             <CommissionItem onClick={(e) => handleZoom(null, e)} />
@@ -124,7 +87,7 @@ const RegularCommissions = () => {
       </WorkType>
 
       <div className="px-1 sm:px-6 pt-14 pb-14 mx-auto">
-        <BlobContainer className="w-full fill-blob-olive" 
+        <BlobContainer className="w-full fill-blob-pink" 
           content="sm:px-12 pt-6 pb-20 space-y-4">
 
           <div className="px-2 w-full sm:w-2/3 flex flex-col items-center -space-y-2">
@@ -137,14 +100,12 @@ const RegularCommissions = () => {
 
           <div className="px-2 w-full sm:w-2/3 flex flex-col text-lg text-sm">
             <p><span className="text-font-bold font-bold mr-2">+</span>{t("main.information.items.p1")}</p>
-            <p><span className="text-font-bold font-bold mr-2">+</span>{t("main.information.items.p2")}</p>
-            <p><span className="text-font-bold font-bold mr-2">+</span>{t("main.information.items.p3")}</p>
             <p><span className="text-font-bold font-bold mr-2">+</span>
-              <Trans i18nKey="main.information.items.p4" t={t}>
+              <Trans i18nKey="main.information.items.p2" t={t}>
                 <span className="font-bold text-font-soft"></span>
               </Trans>
             </p>
-            <p><span className="text-font-bold font-bold mr-2">+</span>{t("main.information.items.p5")}</p>
+            <p><span className="text-font-bold font-bold mr-2">+</span>{t("main.information.items.p3")}</p>
             <p className="text-center mt-8">{t("main.information.thank-you")}</p>
           </div>
         </BlobContainer>
@@ -188,7 +149,8 @@ const CommissionCaption = ({ children, t }) => {
 };
 
 const CommissionType = ({ t, children, 
-  i18n = "", type = "", inverse, items = [], caption }) => {
+  i18n = "", type = "", items = [], 
+  inverse, caption, includes }) => {
 
   return (
     <div className="grid xs:grid-cols-3 md:grid-cols-5 gap-y-4 gap-x-2 lg:gap-x-3 items-center">
@@ -234,6 +196,9 @@ const CommissionType = ({ t, children,
             </Trans>
           </p>
         }
+        { includes && 
+          <p className="whitespace-pre-line">{t(`main.${type}.items.${i18n}.include`)}</p>
+        }
       </div>
 
       { children }
@@ -242,11 +207,11 @@ const CommissionType = ({ t, children,
   );
 };
 
-const CommissionItem = ({ onClick = () => {} }) => {
+const CommissionItem = ({ className = "", onClick = () => {} }) => {
   return (
-    <GalleryItem className="w-full h-80 mx-auto" selectable 
+    <GalleryItem className={`${className} w-full min-h-80 mx-auto`} selectable 
       onClick={(e) => onClick(null, e)} />
   );
 };
 
-export default RegularCommissions;
+export default VtuberCommissions;
