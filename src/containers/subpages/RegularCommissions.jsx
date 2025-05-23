@@ -30,250 +30,84 @@ const RegularCommissions = () => {
 
     <div className="relative flex flex-col items-center" ref={containerRef}>
 
-      {/* #######
-          REGULAR 
-          ####### */}
+      <WorkType i18n="regular" t={t} hardcoded
+        viewport="0.625 -22.753162384033203 225 35.71244430541992" >
 
-      <div className="pt-8 w-full flex flex-col items-center">
-        <Sparkles className="w-16 h-16 z-10 fill-font translate-y-12" stars={3} />
-        <WaveText className="w-full h-32 font-extrabold fill-font-bold text-2xl" id="c1" 
-          viewport="0.625 -34.98773193359375 225 51.59220504760742" hardcoded
-          alignment="middle" anchor="middle" size="1" offset="0px"
-          value={t("main.regular.title")} />
-      </div>
-
-      <div className="grid grid-cols-3 font-bold text-sm justify-items-center items-center">
-        <Trans i18nKey="main.regular.subtitle" t={t}>
-          <span className="justify-self-end"></span>
-          <Sparkles className="w-6 h-6 z-10 fill-olive" stars={2} />
-          <span className="justify-self-start"></span>
-        </Trans>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h2 className="text-font-bold font-bold text-3xl">{t("main.regular.exclamation")}</h2>
-        <h3 className="px-2 -translate-y-1 text-sm text-center whitespace-pre-line">
+        <CommissionCaption t={t}>
           <Trans i18nKey="main.regular.caption" t={t}>
             <span className="font-bold text-light-cyan"></span>
           </Trans>
-        </h3>
-      </div>
+        </CommissionCaption>
 
-      <div className="px-24">
-        <CommissionItem id="chibis" t={t} inverse
-          className="grid grid-cols-5 gap-2" 
-          i18nTitle="main.regular.items.chibis.title"
-          i18nSubtitle="main.regular.items.chibis.subtitle"
-          i18nDetails="main.regular.items.chibis.details"
-          i18nLabel="main.regular.items.chibis.terms.label"
-          i18nValue="main.regular.items.chibis.terms.value"
-          i18nItems={[
-            { 
-              label: "main.regular.items.chibis.items.p1.label",
-              value: "main.regular.items.chibis.items.p1.value",
-            },
-            { 
-              label: "main.regular.items.chibis.items.p2.label",
-              value: "main.regular.items.chibis.items.p2.value",
-            },
-          ]}
-          i18nExplanation="main.regular.items.chibis.explanation"
-          i18nCaption="main.regular.items.chibis.caption"
-        >
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-        </CommissionItem>
+        <div className="px-4 xs:px-8 lg:px-16 space-y-10">
+          <CommissionType i18n="chibis" type="regular" t={t} 
+            items={[ "p1", "p2" ]} 
+            caption inverse>
+              
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+          </CommissionType>
 
-        <CommissionItem id="bust" t={t} 
-          className="grid grid-cols-5 gap-2" 
-          i18nTitle="main.regular.items.bust.title"
-          i18nSubtitle="main.regular.items.bust.subtitle"
-          i18nDetails="main.regular.items.bust.details"
-          i18nLabel="main.regular.items.bust.terms.label"
-          i18nValue="main.regular.items.bust.terms.value"
-          i18nItems={[
-            { 
-              label: "main.regular.items.bust.items.p1.label",
-              value: "main.regular.items.bust.items.p1.value",
-            },
-            { 
-              label: "main.regular.items.bust.items.p2.label",
-              value: "main.regular.items.bust.items.p2.value",
-            },
-            { 
-              label: "main.regular.items.bust.items.p3.label",
-              value: "main.regular.items.bust.items.p3.value",
-            },
-          ]}
-          i18nExplanation="main.regular.items.bust.explanation"
-        >
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-        </CommissionItem>
+          <CommissionType i18n="bust" type="regular" t={t} 
+            items={[ "p1", "p2", "p3" ]}>
 
-        <CommissionItem id="halfbody" t={t} 
-          className="grid grid-cols-5 gap-2" 
-          i18nTitle="main.regular.items.halfbody.title"
-          i18nSubtitle="main.regular.items.halfbody.subtitle"
-          i18nDetails="main.regular.items.halfbody.details"
-          i18nLabel="main.regular.items.halfbody.terms.label"
-          i18nValue="main.regular.items.halfbody.terms.value"
-          i18nItems={[
-            { 
-              label: "main.regular.items.halfbody.items.p1.label",
-              value: "main.regular.items.halfbody.items.p1.value",
-            },
-            { 
-              label: "main.regular.items.halfbody.items.p2.label",
-              value: "main.regular.items.halfbody.items.p2.value",
-            },
-            { 
-              label: "main.regular.items.halfbody.items.p3.label",
-              value: "main.regular.items.halfbody.items.p3.value",
-            },
-          ]}
-          i18nExplanation="main.regular.items.halfbody.explanation"
-          i18nCaption="main.regular.items.halfbody.caption"
-        >
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-        </CommissionItem>
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+          </CommissionType>
 
-        <CommissionItem id="fullbody" t={t} 
-          className="grid grid-cols-5 gap-2" 
-          i18nTitle="main.regular.items.fullbody.title"
-          i18nSubtitle="main.regular.items.fullbody.subtitle"
-          i18nDetails="main.regular.items.fullbody.details"
-          i18nLabel="main.regular.items.fullbody.terms.label"
-          i18nValue="main.regular.items.fullbody.terms.value"
-          i18nItems={[
-            { 
-              label: "main.regular.items.fullbody.items.p1.label",
-              value: "main.regular.items.fullbody.items.p1.value",
-            },
-            { 
-              label: "main.regular.items.fullbody.items.p2.label",
-              value: "main.regular.items.fullbody.items.p2.value",
-            },
-            { 
-              label: "main.regular.items.fullbody.items.p3.label",
-              value: "main.regular.items.fullbody.items.p3.value",
-            },
-          ]}
-          i18nExplanation="main.regular.items.fullbody.explanation"
-          i18nCaption="main.regular.items.fullbody.caption"
-        >
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-        </CommissionItem>
-      </div>
+          <CommissionType i18n="halfbody" type="regular" t={t} 
+            items={[ "p1", "p2", "p3" ]} 
+            caption>
 
-    {/* ##########
-        COMMERCIAL 
-        ########## */}
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+          </CommissionType>
 
-     <div className="pt-8 w-full flex flex-col items-center">
-        <Sparkles className="w-16 h-16 z-10 fill-font translate-y-12" stars={3} />
-        <WaveText className="w-full h-32 font-extrabold fill-font-bold text-2xl" id="c2" 
-          viewport="0.625 -34.98773193359375 225 51.59220504760742" hardcoded
-          alignment="middle" anchor="middle" size="1" offset="0px"
-          value={t("main.commercial.title")} />
-      </div>
+          <CommissionType i18n="fullbody" type="regular" t={t} 
+            items={[ "p1", "p2", "p3" ]} 
+            caption>
 
-      <div className="grid grid-cols-3 font-bold text-sm justify-items-center items-center">
-        <Trans i18nKey="main.commercial.subtitle" t={t}>
-          <span className="justify-self-end"></span>
-          <Sparkles className="w-6 h-6 z-10 fill-olive" stars={2} />
-          <span className="justify-self-start"></span>
-        </Trans>
-      </div>
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+          </CommissionType>
+        </div>
+      </WorkType>
 
-      <div className="flex flex-col items-center">
-        <h2 className="text-font-bold font-bold text-3xl">{t("main.commercial.exclamation")}</h2>
-        <h3 className="px-2 -translate-y-1 text-sm text-center whitespace-pre-line">
+      <WorkType i18n="commercial" t={t} hardcoded
+        viewport="0.625 -22.35525131225586 225 35.4124870300293">
+
+        <CommissionCaption t={t}>
           <Trans i18nKey="main.commercial.caption" t={t}>
-            <span className="font-bold text-font-bold"></span>
+            <span className="font-bold text-font-soft"></span>
           </Trans>
-        </h3>
-      </div>
+        </CommissionCaption>
 
-      <div className="px-24">
-        <CommissionItem id="emotes" t={t} inverse
-          className="grid grid-cols-5 gap-2" 
-          i18nTitle="main.commercial.items.emotes.title"
-          i18nSubtitle="main.commercial.items.emotes.subtitle"
-          i18nDetails="main.commercial.items.emotes.details"
-          i18nLabel="main.commercial.items.emotes.terms.label"
-          i18nValue="main.commercial.items.emotes.terms.value"
-          i18nItems={[
-            { 
-              label: "main.commercial.items.emotes.items.p1.label",
-              value: "main.commercial.items.emotes.items.p1.value",
-            },
-            { 
-              label: "main.commercial.items.emotes.items.p2.label",
-              value: "main.commercial.items.emotes.items.p2.value",
-            },
-            { 
-              label: "main.commercial.items.emotes.items.p3.label",
-              value: "main.commercial.items.emotes.items.p3.value",
-            },
-          ]}
-          i18nExplanation="main.commercial.items.emotes.explanation"
-        >
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-        </CommissionItem>
+        <div className="px-4 xs:px-8 lg:px-16 space-y-10">
+          <CommissionType i18n="emotes" type="commercial" t={t} 
+            items={[ "p1", "p2", "p3" ]} 
+            inverse>
 
-        <CommissionItem id="alerts" t={t} inverse
-          className="grid grid-cols-5 gap-2" 
-          i18nTitle="main.commercial.items.alerts.title"
-          i18nSubtitle="main.commercial.items.alerts.subtitle"
-          i18nDetails="main.commercial.items.alerts.details"
-          i18nLabel="main.commercial.items.alerts.terms.label"
-          i18nValue="main.commercial.items.alerts.terms.value"
-          i18nItems={[
-            { 
-              label: "main.commercial.items.alerts.items.p1.label",
-              value: "main.commercial.items.alerts.items.p1.value",
-            },
-            { 
-              label: "main.commercial.items.alerts.items.p2.label",
-              value: "main.commercial.items.alerts.items.p2.value",
-            },
-          ]}
-          i18nExplanation="main.commercial.items.alerts.explanation"
-        >
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-          <GalleryItem className="w-full h-70" selectable 
-            onClick={(e) => handleZoom(null, e)} />
-        </CommissionItem>
-      </div>
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+          </CommissionType>
 
-      <div className="w-[75vw] px-6 pt-6 pb-14 mx-auto">
+          <CommissionType i18n="alerts" type="commercial" t={t} 
+            items={[ "p1", "p2" ]} 
+            inverse>
+
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+            <CommissionItem onClick={(e) => handleZoom(null, e)} />
+          </CommissionType>
+        </div>
+      </WorkType>
+
+      <div className="w-[75vw] px-6 pt-6 pb-14 mx-auto hidden">
         <BlobContainer className="w-full fill-blob-olive" 
           content="px-12 pt-6 pb-20 -space-y-2">
 
@@ -303,62 +137,99 @@ const RegularCommissions = () => {
   </>);
 };
 
-const CommissionItem = ({ id = "", className = "", t, children, inverse,
-  i18nTitle = "", i18nSubtitle = "", i18nDetails = "",
-  i18nLabel = "", i18nValue = "", i18nItems = [], 
-  i18nExplanation = "", i18nCaption }) => {
+const WorkType = ({ i18n = "regular", t, viewport, hardcoded, children }) => {
+
+  return (<>
+    <div className="px-2 pt-8 w-full flex flex-col items-center overflow-hidden">
+      <Sparkles className="w-16 h-16 z-10 fill-font translate-y-4" stars={3} />
+      <WaveText className="w-full h-20 font-extrabold fill-font-bold text-xl md:text-2xl" id={`${i18n}_wave`}
+        alignment="middle" anchor="middle" size="1" offset="0px"
+        viewport={viewport} hardcoded={hardcoded}
+        value={t(`main.${i18n}.title`)} />
+    </div>
+
+    <div className="flex font-bold text-sm justify-center items-center space-x-2 -translate-y-2 md:translate-y-0">
+      <Trans i18nKey={`main.${i18n}.subtitle`} t={t}>
+        <span className="justify-self-end"></span>
+        <Sparkles className="w-6 h-6 z-10 fill-olive" stars={2} />
+        <span className="justify-self-start"></span>
+      </Trans>
+    </div>
+
+    {children}
+  </>);
+};
+
+const CommissionCaption = ({ children, t }) => {
+  return (
+    <div className="pt-8 pb-8 md:pb-14 flex flex-col items-center overflow-hidden">
+      <h2 className="text-font-bold font-bold text-3xl">{t("main.terms.exclamation")}</h2>
+      <h3 className="px-4 -translate-y-1 text-sm text-center whitespace-pre-line">
+        {children}
+      </h3>
+    </div>
+  );
+};
+
+const CommissionType = ({ t, children, 
+  i18n = "", type = "", inverse, items = [], caption }) => {
 
   return (
-    <div className={`${className} gap-2 items-center`}>
+    <div className="grid xs:grid-cols-3 md:grid-cols-5 gap-y-4 gap-x-2 lg:gap-x-3 items-center">
 
-      { inverse && children }
-
-      <div className="px-8 space-y-3 text-sm col-span-2">
-        <div>
-          <h3 className="text-font-bold font-medium text-2xl">{t(i18nTitle)}</h3>
+      <div className={`px-4 lg:px-8 space-y-3 text-sm xs:col-span-3 md:col-span-2 ${inverse ? "md:order-last" : ""}`}>
+        <div className="">
+          <h3 className="text-font-bold font-medium text-2xl">{t(`main.${type}.items.${i18n}.title`)}</h3>
           <h4 className="font-bold relative flex items-center -translate-y-1">
             <Sparkles className="w-4 h-4 z-10 fill-olive mr-1" stars={2} />
-            <span>{t(i18nSubtitle)}</span>
+            <span>{t(`main.${type}.items.${i18n}.subtitle`)}</span>
           </h4>
         </div>
 
-        <h5 className="-mt-1">{t(i18nDetails)}</h5>
+        <h5 className="-mt-1">{t(`main.${type}.items.${i18n}.details`)}</h5>
 
-        {i18nItems && i18nItems.length > 0 && <>
-          <div className="px-6 grid grid-cols-3 gap-0">
+        {items && items.length > 0 && <>
+          <div className="px-2 md:px-6 grid grid-cols-3 gap-0">
             <div className="font-bold col-span-2">
-              {t(i18nLabel)}
+              {t(`main.${type}.items.${i18n}.terms.label`)}
             </div>
             <div className="font-bold">
-              {t(i18nValue)}
+              {t(`main.${type}.items.${i18n}.terms.value`)}
             </div>
 
-            { i18nItems.map((item, i) => 
-              <Fragment key={`${id}_${i}`}>
+            { items.map((item, i) => 
+              <Fragment key={`${i18n}_${i}`}>
                 <div className="col-span-2">
-                  {t(item.label)}
+                  {t(`main.${type}.items.${i18n}.items.${item}.label`)}
                 </div>
                 <div className="">
-                  {t(item.value)}
+                  {t(`main.${type}.items.${i18n}.items.${item}.value`)}
                 </div>
               </Fragment>
             )}
           </div>
         </>}
 
-        <p className="whitespace-pre-line">{t(i18nExplanation)}</p>
-        { i18nCaption && 
+        <p className="whitespace-pre-line">{t(`main.${type}.items.${i18n}.explanation`)}</p>
+        { caption && 
           <p className="whitespace-pre-line">
-            <Trans i18nKey={i18nCaption} t={t}>
+            <Trans i18nKey={`main.${type}.items.${i18n}.caption`} t={t}>
               <span className="font-bold"></span>
             </Trans>
           </p>
         }
       </div>
 
-      { !inverse && children }
+      { children }
 
     </div>
+  );
+};
+
+const CommissionItem = ({ onClick = () => {} }) => {
+  return (
+    <GalleryItem className="w-full h-80 mx-auto" selectable 
+      onClick={(e) => onClick(null, e)} />
   );
 };
 

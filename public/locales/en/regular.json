@@ -1,9 +1,12 @@
 {
   "main": {
+    "terms": {
+      "exclamation": "!!!"
+    },
+
     "regular": {
       "title": "regular commision",
       "subtitle": "<0>status</0><1></1><2>open</2>",
-      "exclamation": "!!!",
       "caption": "Please take note these piece are for noncomercial commissions available during openings.\nScroll below for information regarding <0>commercial projects</0>.",
       "items": {
         "chibis": {
