@@ -2,16 +2,17 @@ import { useRef } from 'react';
 
 import { useResizeObserver } from '../../utils/hooks/useWindow';
 
-const BlobBackground = ({ className = "", content = "", type = "WillDo", children,  
-    padding = { x: 0, y: 0 }, offset = { x: 0, y: 0 } }) => {
+const BlobBackground = ({ className = "", background = "", content = "", 
+    type = "WillDo", children, ratio = "slice" }) => {
 
     const containerRef = useRef(null);
     const size = useResizeObserver(containerRef);
 
     return (
         <div className={`${className} w-full h-full relative inline-block overflow-visible`} ref={containerRef}>
-            <CustomPath className="absolute -z-10 overflow-visible" type={type} 
-                size={size} offset={offset} padding={padding} />
+            <CustomPath className={`${background} absolute -z-10 overflow-visible`}
+                offset={{ x: 0, y: 0 }} padding={{ x: 0, y:0 }}
+                size={size} type={type} ratio={ratio} />
 
             <div className={`${content} w-full h-full relative flex flex-col items-center`}>
                 {children}
@@ -20,21 +21,29 @@ const BlobBackground = ({ className = "", content = "", type = "WillDo", childre
     );
 };
 
-const CustomPath = ({ type, className, size, offset, padding }) => {
+const CustomPath = ({ type, ...rest }) => {
     if (type == "WillDo")
-        return <WillDo className={className} size={size} offset={offset} padding={padding} />
+        return <WillDo {...rest} />
     else if (type == "WontDo")
-        return <WontDo className={className} size={size} offset={offset} padding={padding} />
+        return <WontDo {...rest} />
+    else if (type == "GreenBeeg")
+        return <GreenBeeg {...rest} />
+    else if (type == "AboutMeOne")
+        return <AboutMeOne {...rest} />
+    else if (type == "AboutMeTwo")
+        return <AboutMeTwo {...rest} />
+    else if (type == "AboutMeThree")
+        return <AboutMeThree {...rest} />
     else
         return null;
 };
 
-const WillDo = ({ className, size, offset, padding }) => {
+const WillDo = ({ className, size, offset, padding, ratio = "slice" }) => {
     return (
         <svg className={className}
             viewBox={`${offset.x} ${offset.y} 765 570`} 
             width={size.width + padding.x} height={size.height + padding.y}
-            preserveAspectRatio='none'>
+            preserveAspectRatio={`xMidYMid ${ratio}`}>
 
             <g>
                 <path 
@@ -45,49 +54,74 @@ const WillDo = ({ className, size, offset, padding }) => {
     );
 };
 
-const WontDo = ({ className, size, offset, padding }) => {
+const WontDo = ({ className, size, offset, padding, ratio = "slice" }) => {
     return (
         <svg className={className}
             viewBox={`${offset.x} ${offset.y} 478 319.4`} 
             width={size.width + padding.x} height={size.height + padding.y}
-            preserveAspectRatio='none'>
+            preserveAspectRatio={`xMidYMid ${ratio}`}>
 
-            <g>
-                <path d="M-2337.7-654.8c-86.7,62.7-115.7,139.2-97,233.2c11.3,56.8,32.1,125.2,83,170.6
-                    c66.7,59.5,152,88.9,259.8,104.9c108.1,16.1,226.5-10.2,333.4-31.3c184.7-36.5,284.1-30.3,475.8-32.9
-                    c27.1-0.4,124.1-10.5,145.6-21.9c13.9-7.4,43.4-20.8,50.9-31.6c28.8-41.1,50.1-84.6,63-129.2c11.4-39.3,16.2-80.6-1.6-118.5
-                    c-13.3-28.3-38.6-53.4-67.2-75.8c-108.2-84.7-270.3-136.4-436.2-139c-163-2.5-324.7,39.9-486.9,29c-110.3-7.4-223.2-9.5-312.5,36.2
-                    "/>
-            </g>
-            <g>
-                <path d="M-441.3-823.1c-59.3-16-126.1,3.5-162.3,52.4c-17.5,23.6-26.2,52.5-30.7,81.4c-2.6,16.4-3.9,33.4,0.2,49.5
-                    c4,15.7,13.1,29.9,23.5,42.4c27.5,32.9,65.8,56.5,107.3,68.4c41.5,11.9,86,12.3,128.1,3.1c38.3-8.4,74.9-24.5,113.8-29.1
-                    c21.3-2.5,45.2-2.4,60.6-17.1c8.3-8,12.6-19.1,16.7-29.8c8-21,16-42,21.5-63.7c4.7-18.4,7.5-37.5,6-56.5
-                    c-2.5-30.1-17-59.8-41.7-77.7c-17.5-12.6-38.8-18.8-60-23.1c-35.6-7.3-72.4-9.9-108.4-5.1c-24.9,3.3-50.1,10.2-74.7,4.8"/>
-            </g>
             <g>
                 <path d="M289.5,12.7c59.8-13.6,125.7,9,159.8,60.1c16.4,24.7,24,54.3,27.3,83.7c1.9,16.7,2.5,34-2.3,50.1
                     c-4.7,15.8-14.3,29.7-25.3,41.9c-28.8,32.1-68,54.4-109.9,64.6s-86.4,8.7-128-2.4c-37.9-10.1-73.7-28-112.4-34.4
                     c-21.2-3.5-45-4.4-59.8-20c-8-8.4-11.8-19.8-15.5-30.9C16.3,203.8,9.2,182.2,4.6,160c-3.9-18.9-5.9-38.3-3.6-57.5
                     c3.7-30.4,19.4-59.9,44.9-76.9c17.9-12,39.5-17.3,60.8-20.8c35.9-5.8,72.7-6.9,108.5-0.5c24.7,4.4,49.6,12.5,74.3,8.1"/>
             </g>
+        </svg>
+    );
+};
+
+const GreenBeeg = ({ className, size, offset, padding, ratio = "slice" }) => {
+    return (
+        <svg className={className}
+            viewBox={`${offset.x} ${offset.y} 1460 600`} 
+            width={size.width + padding.x} height={size.height + padding.y}
+            preserveAspectRatio={`xMidYMid ${ratio}`}>
+
             <g>
-                <path d="M-1751-1075.5c-9.9,10.4-15,24.4-14.3,41.5c0.4,10.3,4.5,19.9,9.1,28.5c6.1,11.3,14.1,22.2,25.1,26.1
-                    c11,3.9,23,0.2,34.4-2.6c19.7-4.8,39.9-6.5,59.9-5.1c2.8,0.2,5.9,0.4,8.3-1.5c1.5-1.2,2.6-3.1,3.5-4.9c3.6-7.1,6.4-14.7,8.3-22.6
-                    c1.7-6.9,2.8-14.3,1.4-21.3c-1-5.2-3.3-9.9-6-14.2c-10.1-16.3-26.3-27.1-43.5-29.2c-16.9-2-34.3,4-51.1,0.5
-                    c-11.4-2.4-23.1-3.9-33,3.5"/>
+                <path d="M135 67.9c89.2-45.7 202.2-43.6 312.4-36.2C609.6 42.6 771.3.2 934.3 2.7c165.9 2.6 328 54.3 436.2 139 28.6 22.4 53.9 47.5 67.2 75.8 17.8 37.9 13 79.2 1.6 118.5-12.9 44.6-34.2 88.1-63 129.2-7.5 10.8-37 24.2-50.9 31.6-21.5 11.4-118.5 21.5-145.6 21.9-191.7 2.6-291.1-3.6-475.8 32.9-106.9 21.1-225.3 47.4-333.4 31.3-107.8-16-193.1-45.4-259.8-104.9-50.9-45.4-71.7-113.8-83-170.6-18.7-94.1 10.4-170.6 97.1-233.2"/>
             </g>
+        </svg>
+    );
+};
+
+const AboutMeOne = ({ className, size, offset, padding, ratio = "slice" }) => {
+    return (
+        <svg className={className}
+            viewBox={`${offset.x} ${offset.y} 160 125`} 
+            width={size.width + padding.x} height={size.height + padding.y}
+            preserveAspectRatio={`xMidYMid ${ratio}`}>
+
             <g>
-                <path d="M-1471-1080.2c18.1-4.7,38.1,3.4,48.5,21.4c5,8.7,7.3,19.1,8.4,29.5c0.6,5.9,0.8,12-0.6,17.6
-                    c-1.4,5.5-4.3,10.4-7.6,14.7c-8.7,11.3-20.5,19-33.2,22.6c-12.7,3.5-26.1,2.9-38.8-1.1c-11.5-3.6-22.4-10-34.1-12.3
-                    c-6.4-1.3-13.6-1.6-18.1-7.1c-2.4-3-3.6-7-4.7-10.9c-2.2-7.6-4.4-15.2-5.8-23.1c-1.2-6.7-1.9-13.5-1.2-20.2
-                    c1.1-10.7,5.8-21,13.5-27c5.4-4.2,11.9-6,18.4-7.2c10.9-2,22-2.3,32.8,0C-1486-1081.6-1478.4-1078.8-1471-1080.2"/>
+                <path d="M65.2 4.1c-19-5.8-40.7 1.9-52.6 20.7-5.7 9-8.7 20.1-10.3 31.1-.9 6.2-1.4 12.7-.1 18.8 1.2 6 4.1 11.3 7.4 16 8.7 12.4 21 21.2 34.3 25.5 13.3 4.3 27.7 4.3 41.4.6 12.4-3.3 24.3-9.6 36.9-11.5 6.9-1 14.6-1.1 19.6-6.8 2.7-3.1 4.2-7.3 5.5-11.4 2.7-8 5.3-16 7.2-24.3 1.6-7 2.6-14.3 2.2-21.5-.7-11.4-5.2-22.7-13.1-29.4-5.6-4.7-12.4-7-19.3-8.5-11.5-2.6-23.3-3.5-35-1.5-8 1.4-16.2 4.1-24.1 2.2"/>
             </g>
+        </svg>
+    );
+};
+
+const AboutMeTwo = ({ className, size, offset, padding, ratio = "slice" }) => {
+    return (
+        <svg className={className}
+            viewBox={`${offset.x} ${offset.y} 160 125`} 
+            width={size.width + padding.x} height={size.height + padding.y}
+            preserveAspectRatio={`xMidYMid ${ratio}`}>
+
             <g>
-                <path d="M-1917.2-1078.4c-19.1-5.8-40.7,1.9-52.6,20.6c-5.7,9-8.7,20.1-10.3,31.1c-0.9,6.2-1.4,12.7-0.1,18.8
-                    c1.2,6,4.1,11.3,7.4,16c8.7,12.4,21,21.2,34.3,25.5s27.7,4.3,41.4,0.6c12.4-3.3,24.3-9.6,36.9-11.5c6.9-1,14.6-1.1,19.6-6.8
-                    c2.7-3.1,4.2-7.3,5.5-11.4c2.7-8,5.3-16,7.2-24.3c1.6-7,2.6-14.3,2.2-21.5c-0.7-11.4-5.2-22.7-13.1-29.4c-5.6-4.7-12.4-7-19.3-8.5
-                    c-11.5-2.6-23.3-3.5-35-1.5C-1901.1-1079.3-1909.3-1076.5-1917.2-1078.4"/>
+                <path d="M18.3 6.4C28.2-1 39.9.5 51.3 2.9c16.8 3.5 34.2-2.5 51.1-.5 17.2 2.1 33.4 12.9 43.5 29.2 2.7 4.3 5 9 6 14.2 1.4 7 .3 14.4-1.4 21.3-1.9 7.9-4.7 15.5-8.3 22.6-.9 1.8-2 3.7-3.5 4.9-2.4 1.9-5.5 1.7-8.3 1.5-20-1.4-40.2.3-59.9 5.1-11.4 2.8-23.4 6.5-34.4 2.6S17.1 89 11 77.7c-4.6-8.6-8.7-18.2-9.1-28.5-.7-17.1 4.4-31.1 14.3-41.5"/>
+            </g>
+        </svg>
+    );
+};
+
+const AboutMeThree = ({ className, size, offset, padding, ratio = "slice" }) => {
+    return (
+        <svg className={className}
+            viewBox={`${offset.x} ${offset.y} 150 125`} 
+            width={size.width + padding.x} height={size.height + padding.y}
+            preserveAspectRatio={`xMidYMid ${ratio}`}>
+
+            <g>
+                <path d="M88.6 5.2c18.1-4.7 38.1 3.4 48.5 21.4 5 8.7 7.3 19.1 8.4 29.5.6 5.9.8 12-.6 17.6-1.4 5.5-4.3 10.4-7.6 14.7-8.7 11.3-20.5 19-33.2 22.6-12.7 3.5-26.1 2.9-38.8-1.1-11.5-3.6-22.4-10-34.1-12.3-6.4-1.3-13.6-1.6-18.1-7.1-2.4-3-3.6-7-4.7-10.9C6.2 72 4 64.4 2.6 56.5 1.4 49.8.7 43 1.4 36.3c1.1-10.7 5.8-21 13.5-27 5.4-4.2 11.9-6 18.4-7.2 10.9-2 22-2.3 32.8 0 7.5 1.7 15.1 4.6 22.5 3.1"/>
             </g>
         </svg>
     );

@@ -1,16 +1,17 @@
+import photos from "../../resources/content/gallery.json";
 import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
-import photos from "../../resources/content/gallery.json";
 
 import { useTranslation, Trans } from "react-i18next";
 import React, { useCallback, useState, useRef } from 'react';
 
+import { GalleryItem } from "../../components/customs/ImagePreview";
+import { BlobHeader } from "../../components/customs/BlobBackground";
+import { FloatImage } from "../../components/layouts/FloatContainer";
+import WaveContainer from "../../components/layouts/WaveContainer";
+import PhotoCollage from "../../components/common/PhotoCollage";
 import Sparkles from "../../components/effects/Sparkles";
 import WaveText from "../../components/effects/WaveText";
-import WaveContainer from "../../components/layouts/WaveContainer";
-import { FloatImage } from "../../components/layouts/FloatContainer";
-import { BlobHeader } from "../../components/customs/BlobBackground";
-import GalleryItem from "../../components/customs/GalleryItem";
 
 import Viewport from "../modals/Viewport";
 
@@ -31,7 +32,7 @@ const Gallery = () => {
 
     <div className="pt-8 pb-14 relative flex flex-col items-center" ref={containerRef}>
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
-      <WaveText className="w-full h-18 font-extrabold fill-font-bold text-6xl" id="c1" 
+      <WaveText className="w-full h-18 font-extrabold fill-bold-pink  text-6xl" id="c1" 
         viewport="0.625 -57.95635986328125 225 80.91878509521484" hardcoded
         alignment="middle" anchor="middle" size="1" offset="0px"
         value={t("header.title")} />
@@ -81,46 +82,19 @@ const Gallery = () => {
             src={images.flowers.flower_pink_2} />
         </div>
 
-        <GalleryContainer className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" 
+        <PhotoCollage className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" 
           content="gap-4" rows={4}>
           { photos && photos.map((item, i) => 
-            <GalleryItem selectable
-              src={item.meta.thumbnail ? item.meta.thumbnail : item.src} alt={item.alt}
-              onClick={(e) => handleZoom(item, e)} key={`photos_${i}`} />
+            <GalleryItem 
+              thumbnail={item.meta.thumbnail} fullart={item.src} alt={item.alt}
+              onClick={(e) => handleZoom(item, e)} key={`photos_${i}`} 
+              selectable />
           )}
-        </GalleryContainer>
+        </PhotoCollage>
       </div>
 
     </WaveContainer>
   </>);
-};
-
-const GalleryContainer = ({  id = "", className = "", content = "", children, rows }) => {
-  const array = React.Children.toArray(children); 
-  const elements = mapElementsByRows(array, rows);
-  return (
-    <div className={`${className} grid`}>
-      { elements.map((element, i) => 
-        <div className={`${content} grid`} key={`${id}_${i}`}>
-          { element.map((value) => value )}
-        </div>
-      )}
-    </div>
-  );
-};
-
-const mapElementsByRows = (values, rows) => {
-  const arrayLength = values.length;
-  const elementSize = Math.ceil(arrayLength / rows);
-  const containers = [];
-  for (let i = 0, j = 0; i < rows && j < arrayLength; i++)
-  {
-    const elements = [];
-    for (let k = 0; k < elementSize && j < arrayLength; k++, j++)
-      elements.push(values[j]);
-    containers.push(elements);
-  }
-  return containers;
 };
 
 export default Gallery;

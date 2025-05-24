@@ -6,12 +6,13 @@ import { useTranslation, Trans } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useCallback, useRef } from "react";
 
-import Sparkles from "../../components/effects/Sparkles";
-import WaveContainer from "../../components/layouts/WaveContainer";
-import WaveText from "../../components/effects/WaveText";
 import { BlobHeader } from "../../components/customs/BlobBackground";
+import { EasyButton } from "../../components/customs/CustomButton";
 import { FloatImage } from "../../components/layouts/FloatContainer";
+import WaveContainer from "../../components/layouts/WaveContainer";
 import BlobContainer from "../../components/layouts/BlobContainer";
+import Sparkles from "../../components/effects/Sparkles";
+import WaveText from "../../components/effects/WaveText";
 import Link from "../../components/common/ExternalLink";
 
 const AboutMe = () => {
@@ -26,7 +27,7 @@ const AboutMe = () => {
   return (<>
     <BlobHeader className="w-full min-h-120" containerRef={containerRef} />
 
-    <div className="w-2/3 md:w-5/6 xl:w-2/3 space-x-12
+    <div className="w-4/5 sm:w-2/3 md:w-5/6 xl:w-2/3 space-x-12
       flex flex-col md:flex-row mx-auto" ref={containerRef}>
 
       <div className="pt-8 md:pb-14 w-full flex justify-center items-center">
@@ -36,7 +37,7 @@ const AboutMe = () => {
 
       <div className="md:pt-8 pb-14 grow flex flex-col items-center relative">
         <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
-        <WaveText className="w-full h-18 font-extrabold fill-font-bold text-5xl" id="c1" 
+        <WaveText className="w-full h-18 font-extrabold fill-bold-pink text-5xl" id="c1" 
           viewport="0.625 -46.35607147216797 225 66.15290069580078" hardcoded
           alignment="middle" anchor="middle" size="1" offset="0px"
           value={t("main.title")} />
@@ -64,8 +65,8 @@ const AboutMe = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 xs:grid-cols-3 gap-2 xs:gap-12">
-          <BlobLink className="fill-blob-pink"
+        <div className="grid grid-cols-2 xs:grid-cols-3 gap-4 md:gap-12">
+          <BlobLink className="fill-blob-pink" type="AboutMeOne"
             title={t("main.contents.links.art.title")}
             links={[
               { 
@@ -83,7 +84,7 @@ const AboutMe = () => {
             ]} 
           />
 
-          <BlobLink className="fill-blob-cyan"
+          <BlobLink className="fill-blob-cyan" type="AboutMeTwo"
             title={t("main.contents.links.vtuber.title")}
             links={[
               { 
@@ -97,7 +98,7 @@ const AboutMe = () => {
             ]} 
           />
 
-          <BlobLink className="px-[25%] xs:px-0 fill-blob-olive col-span-2 xs:col-span-1"
+          <BlobLink className="fill-blob-olive col-span-2 xs:col-span-1" type="AboutMeThree"
             title={t("main.contents.links.others.title")}
             links={[
               { 
@@ -155,7 +156,7 @@ const AboutMe = () => {
         </div> 
 
         <div className="space-y-2">
-          <WaveText className="w-4/5 sm:w-1/2 h-20 font-extrabold fill-font-bold text-2xl" id="c1" 
+          <WaveText className="w-4/5 sm:w-1/2 h-20 font-extrabold fill-bold-pink text-2xl" id="c1" 
             viewport="0.625 -29.11968231201172 225 36.61968231201172" hardcoded
             alignment="bottom" anchor="start" size="1" offset="2px" 
             value={t("page.curriculum.academics.title")} />
@@ -169,7 +170,7 @@ const AboutMe = () => {
         </div>
 
         <div className="space-y-2">
-          <WaveText className="w-4/5 sm:w-1/2 h-20 font-extrabold fill-font-bold text-2xl" id="c1" 
+          <WaveText className="w-4/5 sm:w-1/2 h-20 font-extrabold fill-bold-pink  text-2xl" id="c1" 
             viewport="0.625 -29.36648178100586 225 36.86648178100586" hardcoded
             alignment="bottom" anchor="start" size="1" offset="0px" 
             value={t("page.curriculum.experience.title")} />
@@ -224,24 +225,24 @@ const AboutMe = () => {
           </p>
         </div>
         
-        <button className="px-4 py-2 rounded-lg bg-button text-white flex items-center font-bold mx-auto 
-          cursor-pointer hover:bg-button-hover focus:outline-2 focus:outline-offset-2 focus:outline-button-hover"
+        <EasyButton 
           onClick={handleGallery}>
 
           {t("page.buttons.gallery")}
-        </button>
+        </EasyButton>
       </div>
 
     </WaveContainer>
   </>);
 };
 
-const BlobLink = ({ className = "", title = "", links = [] }) => {
+const BlobLink = ({ className = "", title = "", links = [], type = "AboutMeOne" }) => {
   return (
-    <BlobContainer className={className}
-      content="px-8 pt-4 pb-6 space-y-1">
+    <BlobContainer className={`px-2 ${className}`} type={type}
+      content="px-8 space-y-2 w-fit space-y-1"
+      background="scale-125" ratio="meet">
 
-      <h3 className="uppercase font-bold relative text-xs">
+      <h3 className="mt-2 uppercase font-bold relative text-xs">
         <span className="absolute w-full h-full flex items-center">
           <FloatImage left
             width={10} height={10} 
@@ -252,10 +253,12 @@ const BlobLink = ({ className = "", title = "", links = [] }) => {
         {title}
       </h3>
 
-      { links && links.map((item, i) => 
-        <Link className="bg-div text-font-bold hover:font-medium px-1 text-sm"
-          href={item.href} key={`${title}.${i}`}>{item.text}</Link>
-      )}
+      <div className="mb-4 flex flex-col space-y-1 text-center">
+        { links && links.map((item, i) => 
+          <Link className="bg-div text-bold-pink  hover:font-medium px-1 text-sm"
+            href={item.href} key={`${title}.${i}`}>{item.text}</Link>
+        )}
+      </div>
     </BlobContainer>
   );
 };

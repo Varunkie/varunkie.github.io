@@ -1,21 +1,24 @@
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+
+import photos from "../../resources/content/gallery.json";
 import routes from "../../settings/routes/frontend.routes";
 import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
 
-import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
-
 import { useTranslation, Trans } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 
+import { EmailButton } from "../../components/customs/CustomButton";
+import { CarouselItem } from "../../components/customs/ImagePreview";
 import { FloatSparkles, FloatImage } from "../../components/layouts/FloatContainer";
 import WaveContainer from "../../components/layouts/WaveContainer";
+import Carousel from '../../components/common/GalleryCarousel';
 import WaveText from "../../components/effects/WaveText";
-import EmailButton from "../../components/customs/EmailButton";
-import GalleryItem from "../../components/customs/GalleryItem";
 
 const Home = () => {
   const { t } = useTranslation([ns.home, ns.common]);
+  const [image, setImage] = useState(false);
   const navigate = useNavigate();
 
   const handleEmail = useCallback(() => {
@@ -23,6 +26,8 @@ const Home = () => {
   }, []);
 
   return (<>
+    { image && <Viewport image={image} setImage={setImage} /> }
+
     <div className="flex flex-col items-center mx-auto justify-end md:justify-start
       pt-4 h-[80vh] xs:h-[75vh] sm:h-[70vh] lg:h-[65vh] space-y-0 lg:space-y-1 z-10">
       <img className="w-64 lg:w-80 select-none"
@@ -37,25 +42,16 @@ const Home = () => {
     </div>
 
     <WaveContainer className="bg-transparent fill-div-bold" top bottom
-      content="bg-div-bold h-[75vh] xs:h-[80vh] px-8 py-12 relative">
+      content="bg-div-bold px-8 py-12 relative">
 
-      <div className="relative w-full h-full">
-        <div className="absolute w-full h-full flex items-center justify-between p-4 z-10 pointer-events-none">
-          <button className="text-white">
-            <IoIosArrowBack className="w-10 h-10 sm:w-16 sm:h-16"></IoIosArrowBack>
-          </button>
-          <button className="text-white">
-            <IoIosArrowForward className="w-10 h-10 sm:w-16 sm:h-16"></IoIosArrowForward>
-          </button>
-        </div>
-
-        <div className="w-full h-full grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-2">
-          <GalleryItem className="w-full h-full" />
-          <GalleryItem className="w-full h-full hidden sm:block" />
-          <GalleryItem className="w-full h-full hidden sm:block" />
-          <GalleryItem className="w-full h-full hidden md:block" />
-          <GalleryItem className="w-full h-full hidden md:block" />
-        </div>
+      <div className="w-full h-full relative">
+        <Carousel className="w-full h-[75vh] xs:h-[80vh] grid md:grid-cols-5 gap-2 p-2">
+          { photos && photos.map((item, i) => 
+            <CarouselItem key={`photos_${i}`}
+              thumbnail={item.thumbnail} fullart={item.src} alt={item.alt} 
+              selectable />
+          )}
+        </Carousel>
       </div>
       
     </WaveContainer>
@@ -65,7 +61,7 @@ const Home = () => {
       <div className="w-9/12 sm:w-2/3 py-6 px-0 lg:px-12 space-y-3 mx-auto z-10">
 
         <div className="w-full pb-4 flex relative z-10 justify-center">
-          <WaveText className="w-full h-20 flex justify-center font-extrabold fill-font-bold text-6xl" id="c1" 
+          <WaveText className="w-full h-20 flex justify-center font-extrabold fill-bold-pink  text-6xl" id="c1" 
             viewport="0.625 -53.44183349609375 225 70.94506072998047" hardcoded
             alignment="middle" anchor="middle" size="1" offset="10px" 
             value = {t("main.title")}>
@@ -79,7 +75,7 @@ const Home = () => {
           </WaveText>
         </div>
 
-        <p className="relative">
+        <div className="relative">
           <FloatImage left
             width={100} height={100} 
             xOffset={15} yOffset={-65}
@@ -95,12 +91,14 @@ const Home = () => {
             xOffset={75} yOffset={35}
             src={images.flowers.flower_pink_2} />
 
-          <Trans i18nKey="main.contents.about-me" t={t}>
-            <span className="font-bold"></span>
-            <span className="font-bold"></span>
-            <span className="font-bold"></span>
-          </Trans>
-        </p>
+          <p>
+            <Trans i18nKey="main.contents.about-me" t={t}>
+              <span className="font-bold"></span>
+              <span className="font-bold"></span>
+              <span className="font-bold"></span>
+            </Trans>
+          </p>
+        </div>
 
         <div className="relative flex justify-center py-5">
           <EmailButton className="relative" 
@@ -114,21 +112,21 @@ const Home = () => {
           </EmailButton>
         </div>
         
-        <p className="relative">
+        <div className="relative">
           <FloatImage left
             width={60} height={60} 
             xOffset={115} yOffset={5}
             src={images.sparkles.sparkle_cyan_small} />
-          <span className="relative">{t("main.contents.business")}</span>
-        </p>
+          <p className="relative">{t("main.contents.business")}</p>
+        </div>
 
         <p className="relative">
           <Trans i18nKey="main.contents.caption" t={t}>
-            <span className="text-font-soft"></span>
+            <span className="text-soft-pink "></span>
           </Trans>
         </p>
 
-        <p className="relative">
+        <div className="relative">
           <FloatImage left
             width={100} height={100} 
             xOffset={30} yOffset={-40}
@@ -139,12 +137,14 @@ const Home = () => {
             xOffset={60} yOffset={-5}
             src={images.sparkles.sparkle_cyan_small} />
 
-          <Trans i18nKey="main.contents.commission" t={t}>
-            <span className="text-font-soft"></span>
-            <span className="text-font-soft"></span>
-            <span className="text-font-soft"></span>
-          </Trans>
-        </p>
+          <p>
+            <Trans i18nKey="main.contents.commission" t={t}>
+              <span className="text-soft-pink "></span>
+              <span className="text-soft-pink "></span>
+              <span className="text-soft-pink "></span>
+            </Trans>
+          </p>
+        </div>
 
         <p className="relative">{t("main.contents.thank-you")}</p>
         <p className="text-center sm:text-left sm:ml-8 relative">{t("main.contents.languages")}</p>

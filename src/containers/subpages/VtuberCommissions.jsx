@@ -5,12 +5,12 @@ import images from "../../resources/images";
 import { useCallback, useRef, Fragment, useState, useEffect } from "react";
 import { useTranslation, Trans } from "react-i18next";
 
+import { GalleryItem } from "../../components/customs/ImagePreview";
 import { FloatImage } from "../../components/layouts/FloatContainer";
 import { BlobBackground } from "../../components/customs/BlobBackground";
 import BlobContainer from "../../components/layouts/BlobContainer";
 import Sparkles from "../../components/effects/Sparkles";
 import WaveText from "../../components/effects/WaveText";
-import GalleryItem from "../../components/customs/GalleryItem";
 
 import Viewport from "../modals/Viewport";
 
@@ -48,7 +48,7 @@ const VtuberCommissions = () => {
 
         <CommissionCaption t={t}>
           <Trans i18nKey="main.vtuber.caption" t={t}>
-            <span className="font-bold text-font-soft"></span>
+            <span className="font-bold text-soft-pink "></span>
           </Trans>
         </CommissionCaption>
 
@@ -87,28 +87,18 @@ const VtuberCommissions = () => {
       </WorkType>
 
       <div className="px-1 sm:px-6 pt-14 pb-14 mx-auto">
-        <BlobContainer className="w-full fill-blob-pink" 
-          content="sm:px-12 pt-6 pb-20 space-y-4">
+        <BeegBlob id="c5" className="fill-blob-olive" title={t("main.information.title")}
+          viewport="0.625 -33.695411682128906 225 50.19906997680664" hardcoded>
 
-          <div className="px-2 w-full sm:w-2/3 flex flex-col items-center -space-y-2">
-            <Sparkles className="w-8 h-8 z-10 fill-olive" stars={2} />
-            <WaveText className="w-full h-12 font-extrabold fill-font-bold text-4xl" id="c3" 
-              viewport="0.625 -33.695411682128906 225 50.19906997680664" hardcoded
-              alignment="middle" anchor="middle" size="1" offset="0px"
-              value={t("main.information.title")} />
-          </div>
-
-          <div className="px-2 w-full sm:w-2/3 flex flex-col text-lg text-sm">
-            <p><span className="text-font-bold font-bold mr-2">+</span>{t("main.information.items.p1")}</p>
-            <p><span className="text-font-bold font-bold mr-2">+</span>
+            <p><span className="text-bold-pink  font-bold mr-2">+</span>{t("main.information.items.p1")}</p>
+            <p><span className="text-bold-pink  font-bold mr-2">+</span>
               <Trans i18nKey="main.information.items.p2" t={t}>
-                <span className="font-bold text-font-soft"></span>
+                <span className="font-bold text-soft-pink "></span>
               </Trans>
             </p>
-            <p><span className="text-font-bold font-bold mr-2">+</span>{t("main.information.items.p3")}</p>
+            <p><span className="text-bold-pink  font-bold mr-2">+</span>{t("main.information.items.p3")}</p>
             <p className="text-center mt-8">{t("main.information.thank-you")}</p>
-          </div>
-        </BlobContainer>
+        </BeegBlob>
       </div>
     </div>
   </>);
@@ -119,7 +109,7 @@ const WorkType = ({ i18n = "regular", t, viewport, hardcoded, children }) => {
   return (<>
     <div className="px-2 pt-8 w-full flex flex-col items-center overflow-hidden">
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-4" stars={3} />
-      <WaveText className="w-full h-20 font-extrabold fill-font-bold text-xl md:text-2xl" id={`${i18n}_wave`}
+      <WaveText className="w-full h-20 font-extrabold fill-bold-pink  text-xl md:text-2xl" id={`${i18n}_wave`}
         alignment="middle" anchor="middle" size="1" offset="0px"
         viewport={viewport} hardcoded={hardcoded}
         value={t(`main.${i18n}.title`)} />
@@ -140,7 +130,7 @@ const WorkType = ({ i18n = "regular", t, viewport, hardcoded, children }) => {
 const CommissionCaption = ({ children, t }) => {
   return (
     <div className="pt-8 pb-8 md:pb-14 flex flex-col items-center overflow-hidden">
-      <h2 className="text-font-bold font-bold text-3xl">{t("main.terms.exclamation")}</h2>
+      <h2 className="text-bold-pink  font-bold text-3xl">{t("main.terms.exclamation")}</h2>
       <h3 className="px-4 -translate-y-1 text-sm text-center whitespace-pre-line">
         {children}
       </h3>
@@ -157,7 +147,7 @@ const CommissionType = ({ t, children,
 
       <div className={`px-4 lg:px-8 space-y-3 text-sm xs:col-span-3 md:col-span-2 ${inverse ? "md:order-last" : ""}`}>
         <div className="">
-          <h3 className="text-font-bold font-medium text-2xl">{t(`main.${type}.items.${i18n}.title`)}</h3>
+          <h3 className="text-bold-pink  font-medium text-2xl">{t(`main.${type}.items.${i18n}.title`)}</h3>
           <h4 className="font-bold relative flex items-center -translate-y-1">
             <Sparkles className="w-4 h-4 z-10 fill-olive mr-1" stars={2} />
             <span>{t(`main.${type}.items.${i18n}.subtitle`)}</span>
@@ -211,6 +201,48 @@ const CommissionItem = ({ className = "", onClick = () => {} }) => {
   return (
     <GalleryItem className={`${className} w-full min-h-80 mx-auto`} selectable 
       onClick={(e) => onClick(null, e)} />
+  );
+};
+
+const BeegBlob = ({ id = "beeg_c5", className = "", title = "", children,
+    viewport, hardcoded }) => {
+
+  return (
+    <BlobContainer className={`${className} w-full`} 
+      content="px-2 pt-18 pb-28 space-y-2"
+      type="GreenBeeg" ratio="slice">
+
+      <div className="w-full flex flex-col items-center">
+        <Sparkles className="w-8 h-8 z-10 fill-olive translate-y-2" stars={2} />
+        <WaveText className="w-full h-12 font-extrabold fill-bold-pink  text-4xl" id={id} 
+          viewport={viewport} hardcoded={hardcoded}
+          alignment="middle" anchor="middle" size="1" offset="0px"
+          value={title} />
+      </div>
+
+      <div className="sm:w-4/5 px-4 py-2 flex flex-col text-lg text-sm space-y-0 relative">
+        
+        <div className="flex w-full h-full absolute -z-10">
+          <FloatImage right
+            width={70} height={70} 
+            xOffset={-90} yOffset={-80}
+            src={images.flowers.flower_white_2} />
+          <FloatImage right
+            width={70} height={70} 
+            xOffset={-25} yOffset={-35}
+            src={images.flowers.flower_pink_1} />
+        </div>
+
+        <div className="flex w-full h-full absolute items-end -z-10">
+          <FloatImage left
+            width={85} height={85} 
+            xOffset={40} yOffset={-40}
+            src={images.flowers.flower_green_5P} />
+        </div>
+
+        {children}
+      </div>
+    </BlobContainer>
   );
 };
 

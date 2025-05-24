@@ -5,6 +5,11 @@ import blob_top_right from "./blobs/BlobTopRight.png";
 import blob_middle_center from "./blobs/BlobMiddleCenter.png";
 import blob_will_do from "./blobs/BlobWillDo.svg";
 import blob_wont_do from "./blobs/BlobWontDo.svg";
+import blob_pink_beeg from "./blobs/BlobPinkBeeg.svg";
+import blob_green_beeg from "./blobs/BlobGreenBeeg.svg";
+import blob_aboutme_1 from "./blobs/BlobAboutMe1.svg";
+import blob_aboutme_2 from "./blobs/BlobAboutMe2.svg";
+import blob_aboutme_3 from "./blobs/BlobAboutMe3.svg";
 
 import flower_green_5P from "./flowers/FlowerGreen5P.svg";
 import flower_green_beeg from "./flowers/FlowerGreenBeeg.svg";
@@ -29,6 +34,8 @@ import suulore_chibi from './logos/SumiiChibi.png';
 export const blobs = { 
     footer_bottom_left, footer_top_right, 
     blob_bottom_left, blob_top_right, blob_middle_center,
+    blob_aboutme_1, blob_aboutme_2, blob_aboutme_3,
+    blob_pink_beeg, blob_green_beeg,
     blob_will_do, blob_wont_do }; 
 
 export const flowers = { 

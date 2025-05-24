@@ -6,12 +6,12 @@ import { useTranslation, Trans } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useCallback, useRef } from "react";
 
-import BlobContainer from "../../components/layouts/BlobContainer";
+import { BlobHeader } from "../../components/customs/BlobBackground";
 import { FloatImage } from "../../components/layouts/FloatContainer";
+import BlobContainer from "../../components/layouts/BlobContainer";
 import WaveContainer from "../../components/layouts/WaveContainer";
 import Sparkles from "../../components/effects/Sparkles";
 import WaveText from "../../components/effects/WaveText";
-import { BlobHeader } from "../../components/customs/BlobBackground";
 
 const Commissions = () => {
   const { t } = useTranslation(ns.commissions);
@@ -27,7 +27,7 @@ const Commissions = () => {
 
     <div className="pt-8 pb-14 relative flex flex-col items-center" ref={containerRef}>
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
-      <WaveText className="w-full h-20 font-extrabold fill-font-bold text-3xl xs:text-4xl" id="c1" 
+      <WaveText className="w-full h-20 font-extrabold fill-bold-pink  text-3xl xs:text-4xl" id="c1" 
         viewport="0.625 -34.98773193359375 225 51.59220504760742" hardcoded
         alignment="middle" anchor="middle" size="1" offset="0px"
         value={t("header.title")} />
@@ -45,7 +45,7 @@ const Commissions = () => {
       content="bg-div-bold py-4 space-y-2" height="50" top bottom>
  
       <div className="flex flex-col items-center">
-        <h2 className="text-font-bold font-bold text-3xl">{t("main.exclamation")}</h2>
+        <h2 className="text-bold-pink  font-bold text-3xl">{t("main.exclamation")}</h2>
         <h3 className="px-2 -translate-y-1 text-sm text-center">
           <Trans i18nKey="main.caption" t={t}>
             <span className="font-bold"></span>
@@ -73,7 +73,7 @@ const Commissions = () => {
     <div className="w-[75vw] h-full flex flex-col items-center space-y-4 py-4 mx-auto">
       <div className="flex flex-col items-center">
         <Sparkles className="w-8 h-8 z-10 fill-olive" stars={2} />
-        <WaveText className="w-full h-10 font-extrabold fill-font-bold text-xl" id="c2" 
+        <WaveText className="w-full h-10 font-extrabold fill-bold-pink  text-xl" id="c2" 
           viewport="0.625 -17.61100196838379 225 29.448198318481445" hardcoded
           alignment="middle" anchor="middle" size="1" offset="0px"
           value={t("page.tos.title")} />
@@ -142,75 +142,86 @@ const Commissions = () => {
     </div>
 
     <div className="w-full mt-2">
-      <div className="w-[75vw] grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
-        <BlobContainer className="w-full fill-blob-cyan" 
-          content="px-12 pt-6 pb-10 space-y-2"
-          type="WillDo">
+      <div className="lg:w-[75vw] grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-0 md:gap-6 mx-auto">
 
-          <WaveText className="w-full h-10 font-extrabold fill-font-bold text-6xl" id="c3" 
-            viewport="0.625 -69.89789581298828 225 96.0047607421875" hardcoded
-            alignment="middle" anchor="middle" size="1" offset="0" 
-            value={t("page.will-do.title")} />
+        <MiniBlob id="c3" type="WillDo" className="fill-blob-cyan"
+          viewport="0.625 -69.89789581298828 225 96.0047607421875" hardcoded
+          title={t("page.will-do.title")}>
 
-          <div className="w-2/3 flex flex-col items-center text-center text-sm">
+            <div className="flex w-full h-full absolute items-end">
+              <FloatImage left
+                width={70} height={70} 
+                xOffset={-40} yOffset={70}
+                src={images.flowers.flower_pink_1} />
+              <FloatImage left
+                width={45} height={45} 
+                xOffset={60} yOffset={20}
+                src={images.flowers.flower_green_5P} />
+            </div>
+
             <p>{t("page.will-do.items.p1")}</p>
             <p>{t("page.will-do.items.p2")}</p>
             <p>{t("page.will-do.items.p3")}</p>
             <p>{t("page.will-do.items.p4")}</p>
             <p>{t("page.will-do.items.p5")}</p>
             <p>{t("page.will-do.items.p6")}</p>
-          </div>
-        </BlobContainer>
+        </MiniBlob>
 
-        <BlobContainer className="w-full fill-blob-pink" 
-          content="px-12 pt-6 pb-10 space-y-2"
-          type="WontDo">
+        <MiniBlob id="c4" type="WontDo" className="fill-blob-pink"
+          viewport="0.625 -69.89789581298828 225 96.0047607421875" hardcoded
+          title={t("page.wont-do.title")}>
 
-          <WaveText className="w-full h-10 font-extrabold fill-font-bold text-6xl" id="c4" 
-            viewport="0.625 -69.89789581298828 225 96.0047607421875" hardcoded
-            alignment="middle" anchor="middle" size="1" offset="0"
-            value={t("page.wont-do.title")} />
+            <div className="flex w-full h-full absolute">
+              <FloatImage right
+                width={70} height={70} 
+                xOffset={-20} yOffset={-85}
+                src={images.flowers.flower_green_beeg} />
+            </div>
 
-          <div className="w-2/3 flex flex-col items-center text-center text-sm">
             <p>{t("page.wont-do.items.p1")}</p>
             <p>{t("page.wont-do.items.p2")}</p>
             <p>{t("page.wont-do.items.p3")}</p>
             <p>{t("page.wont-do.items.p4")}</p>
-          </div>
-        </BlobContainer>
+        </MiniBlob>
       </div>
 
-      <div className="w-[75vw] p-6 mx-auto">
-        <BlobContainer className="w-full fill-blob-olive" 
-          content="px-12 pt-6 pb-20 space-y-2">
+      <div className="md:w-[75vw] px-8 mt-6 sm:mt-0 md:mt-6 mb-12 mx-auto">
+        <BeegBlob id="c5" className="fill-blob-olive" title={t("page.rules.title")}
+          viewport="0.625 -57.97426223754883 225 80.87842559814453" hardcoded>
 
-          <div className="w-full flex flex-col items-center -space-y-2">
-            <Sparkles className="w-8 h-8 z-10 fill-olive" stars={2} />
-            <WaveText className="w-full h-12 font-extrabold fill-font-bold text-6xl" id="c5" 
-              viewport="0.625 -57.97426223754883 225 80.87842559814453" hardcoded
-              alignment="middle" anchor="middle" size="1" offset="-25px"
-              value={t("page.rules.title")} />
-          </div>
+            <div className="flex w-full h-full absolute -z-10">
+              <FloatImage right
+                width={70} height={70} 
+                xOffset={-120} yOffset={-80}
+                src={images.flowers.flower_white_2} />
+              <FloatImage right
+                width={70} height={70} 
+                xOffset={-55} yOffset={-35}
+                src={images.flowers.flower_pink_1} />
+            </div>
 
-          <div className="w-[55vw] flex flex-col text-lg text-sm">
+            <div className="flex w-full h-full absolute items-end -z-10">
+              <FloatImage left
+                width={85} height={85} 
+                xOffset={20} yOffset={-40}
+                src={images.flowers.flower_green_5P} />
+            </div>
+
             <p>{t("page.rules.subtitle")}</p>
             <p className="font-bold">{t("page.rules.caption")}</p>
-
             <p className="mt-4">{t("page.rules.items.p1")}</p>
             <p>{t("page.rules.items.p2")}</p>
             <p>{t("page.rules.items.p3")}</p>
             <p>{t("page.rules.items.p4")}</p>
-          </div>
-        </BlobContainer>
+        </BeegBlob>
       </div>
-
     </div>
   </>);
 };
 
 const PageType = ({ className = "", children, left, right, onClick = () => {} }) => {
   return (
-    <div className={`${className} relative w-full aspect-square bg-font rounded-3xl cursor-pointer text-white px-3 py-4 font-medium hover:font-bold`}
+    <div className={`${className} relative w-full aspect-square bg-font rounded-3xl cursor-pointer text-white px-3 py-4 font-medium hover:font-bold hover:outline-2 hover:outline-offset-2 hover:outline-button-hover`}
       onClick={onClick}> 
       {
         left && <>
@@ -325,7 +336,7 @@ const PageType = ({ className = "", children, left, right, onClick = () => {} })
 const TermItem = ({ id = "", title = "", items = [] }) => {
   return (
     <div className="">
-      <h3 className="uppercase text-font-bold font-bold">{title}</h3>
+      <h3 className="uppercase text-bold-pink  font-bold">{title}</h3>
       {
         items && items.map((item, x) => 
           <p className="space-x-1" key={`${id}.${x}`}>
@@ -337,6 +348,49 @@ const TermItem = ({ id = "", title = "", items = [] }) => {
           </p>)
       }
     </div>
+  );
+};
+
+const MiniBlob = ({  id = "c1", className = "", title = "", children, 
+    viewport, hardcoded, type = "WillDo" }) => {
+
+  return (
+    <BlobContainer className={`px-2 py-6 ${className}`} 
+      content="pt-12 pb-18 space-y-2 w-fit"
+      type={type} ratio="meet">
+
+      <WaveText className="w-full h-10 font-extrabold fill-bold-pink  text-6xl" id={id} 
+        viewport={viewport} hardcoded={hardcoded}
+        alignment="middle" anchor="middle" size="1" offset="0" 
+        value={title} />
+
+      <div className="w-2/3 sm:w-4/5 md:w-2/3 flex flex-col items-center text-center text-sm relative">
+        {children}
+      </div>
+    </BlobContainer>
+  );
+};
+
+const BeegBlob = ({ id = "beeg_c5", className = "", title = "", children,
+    viewport = "0.625 -57.97426223754883 225 80.87842559814453", hardcoded }) => {
+
+  return (
+    <BlobContainer className={`${className} w-full`} 
+      content="px-2 pt-18 pb-28 space-y-2"
+      type="GreenBeeg" ratio="slice">
+
+      <div className="w-full flex flex-col items-center">
+        <Sparkles className="w-8 h-8 z-10 fill-olive translate-y-2" stars={2} />
+        <WaveText className="w-full h-12 font-extrabold fill-bold-pink  text-6xl" id={id} 
+          viewport={viewport} hardcoded={hardcoded}
+          alignment="middle" anchor="middle" size="1" offset="-25px"
+          value={title} />
+      </div>
+
+      <div className="px-4 py-2 flex flex-col text-lg text-sm space-y-2 relative">
+        {children}
+      </div>
+    </BlobContainer>
   );
 };
 

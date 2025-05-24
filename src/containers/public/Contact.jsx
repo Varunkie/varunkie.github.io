@@ -5,12 +5,12 @@ import images from "../../resources/images";
 import { useTranslation, Trans } from "react-i18next";
 import { useRef } from 'react';
 
-import Sparkles from "../../components/effects/Sparkles";
-import WaveContainer from "../../components/layouts/WaveContainer";
-import WaveText from "../../components/effects/WaveText";
-import EmailButton from "../../components/customs/EmailButton";
+import { EmailButton, SubmitButton } from "../../components/customs/CustomButton";
 import { BlobHeader } from "../../components/customs/BlobBackground";
 import { FloatImage } from "../../components/layouts/FloatContainer";
+import WaveContainer from "../../components/layouts/WaveContainer";
+import Sparkles from "../../components/effects/Sparkles";
+import WaveText from "../../components/effects/WaveText";
 
 const Contact = () => {
   const { t } = useTranslation([ns.contact, ns.common]);
@@ -26,7 +26,7 @@ const Contact = () => {
 
     <div className="pt-8 pb-14 relative flex flex-col items-center" ref={containerRef}>
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
-      <WaveText className="w-full h-18 font-extrabold fill-font-bold text-6xl" id="c1" 
+      <WaveText className="w-full h-18 font-extrabold fill-bold-pink  text-6xl" id="c1" 
         viewport="0.625 -58.86821746826172 225 81.77326965332031" hardcoded
         alignment="middle" anchor="middle" size="1" offset="0px"
         value={t("header.title")} />
@@ -38,7 +38,7 @@ const Contact = () => {
         <h2>{t("header.subtitle")}</h2>
         <h3>
           <Trans i18nKey="header.caption" t={t}>
-            <span className="text-font-soft"></span>
+            <span className="text-soft-pink "></span>
           </Trans> 
         </h3>
       </div>
@@ -108,8 +108,8 @@ const Contact = () => {
           type="textarea" name="email_message" rows={4}
           label={t("form.message.label")} />    
 
-        <input className="px-4 py-2 rounded-lg bg-button text-white flex items-center font-bold cursor-pointer mx-auto hover:bg-button-hover focus:outline-2 focus:outline-offset-2 focus:outline-button-hover"
-          type="submit" value={t("form.buttons.submit")} />
+        <SubmitButton 
+          value={t("form.buttons.submit")} />
       </form>
 
     </WaveContainer>
@@ -119,7 +119,7 @@ const Contact = () => {
 const Input = ({ className = "", type = "", name = "", label = "", placeholder = "", rows = 1 }) => {
   return (
     <label className={`${className} flex flex-col group`} htmlFor={name}>
-      <span className="space-x-1 group-focus-within:text-font-bold">
+      <span className="space-x-1 group-focus-within:text-bold-pink ">
         <span className="inline-flex items-baseline">
           <img className="w-4 h-4 translate-y-0.5 select-none"  
             src={images.sparkles.sparkle_cyan_small} alt="" /> 
@@ -127,10 +127,10 @@ const Input = ({ className = "", type = "", name = "", label = "", placeholder =
         <span>{label}</span>
       </span>
       { type === "textarea" && 
-        <textarea className="px-1 field-sizing-fixed border-b-2 border-font-bold caret-font-bold focus:outline-none placeholder:italic"
+        <textarea className="px-1 field-sizing-fixed border-b-2 border-bold-pink  caret-bold-pink  focus:outline-none placeholder:italic"
           id={name} name={name} placeholder={placeholder} rows={rows} required />}
       { type !== "textarea" && 
-        <input className="px-1 border-b-2 border-font-bold caret-font-bold focus:outline-none placeholder:italic"
+        <input className="px-1 border-b-2 border-bold-pink  caret-bold-pink  focus:outline-none placeholder:italic"
           type={type} id={name} name={name} placeholder={placeholder} required />}
     </label>
   );
