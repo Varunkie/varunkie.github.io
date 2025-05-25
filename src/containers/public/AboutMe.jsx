@@ -10,9 +10,10 @@ import { BlobHeader } from "../../components/customs/BlobBackground";
 import { EasyButton } from "../../components/customs/CustomButton";
 import { FloatImage } from "../../components/layouts/FloatContainer";
 import WaveContainer from "../../components/layouts/WaveContainer";
-import BlobContainer from "../../components/layouts/BlobContainer";
+import NewBlobContainer from "../../components/layouts/NewBlobContainer";
 import Sparkles from "../../components/effects/Sparkles";
 import WaveText from "../../components/effects/WaveText";
+import SineText from "../../components/effects/SineText";
 import Link from "../../components/common/ExternalLink";
 
 const AboutMe = () => {
@@ -27,91 +28,124 @@ const AboutMe = () => {
   return (<>
     <BlobHeader className="w-full min-h-120" containerRef={containerRef} />
 
-    <div className="w-4/5 sm:w-2/3 md:w-5/6 xl:w-2/3 space-x-12
-      flex flex-col md:flex-row mx-auto" ref={containerRef}>
+    <div className="w-full lg:w-2/3 mx-auto" ref={containerRef}>
 
-      <div className="pt-8 md:pb-14 w-full flex justify-center items-center">
-        <img className="w-auto h-70 md:w-auto md:h-auto md:max-h-100"
-          src={images.logos.suulore_chibi} alt="" />
+      <div className="pt-4 px-4 w-full flex flex-col md:flex-row mx-auto relative">
+        <div className="flex justify-center items-center md:relative mx-auto 
+          w-1/2 md:w-[400px] md:max-w-[400px] md:min-w-[400px]">
+
+          <SineText 
+            className="above-me font-lilita-one text-div font-outline text-6xl lowercase select-none absolute left-5 md:left-0 top-0 lg:top-auto"
+            startRotation={-3} rotation={2.75} minRotation={-5} maxRotation={1.25}
+            startDelta={3.5} delta={1.5} amplitude={2} 
+            value={t("header.title")} />
+
+          <img className="w-full h-auto select-none"
+            src={images.logos.suulore_chibi} alt="" />
+
+          <NewBlobContainer className="absolute hidden md:block fill-olive"
+            style = {{ translate: "250px 290px" }}
+            content="px-2 text-sm"
+            type="MyGoal"
+          >
+            <Trans i18nKey="main.contents.goal" t={t}>
+              <span className="font-bold"></span>
+            </Trans>
+          </NewBlobContainer>
+        </div>
+
+        <div className="md:ml-4 grow flex flex-col items-center relative">
+          <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
+          <WaveText className="w-full h-18 font-extrabold fill-bold-pink text-5xl" id="c1" 
+            viewport="0.625 -46.35607147216797 225 66.15290069580078" hardcoded
+            alignment="middle" anchor="middle" size="1" offset="0px"
+            value={t("main.title")} />
+
+          <div className="px-8 md:px-2 pt-4 w-full text-sm space-y-4">
+            <p className="">
+              <Trans i18nKey="main.contents.sumii" t={t}>
+                <span className="font-bold"></span>
+                <span className="font-bold"></span>
+                <span className="font-bold"></span>
+              </Trans>
+            </p>
+
+            <div className="w-full">
+              <p className="">
+                <Trans i18nKey="main.contents.languages" t={t}>
+                  <span className="bg-light-cyan font-bold px-1 mr-2"></span>
+                </Trans>
+              </p>
+              <p className="">
+                <Trans i18nKey="main.contents.country" t={t}>
+                  <span className="bg-light-cyan font-bold px-1 mr-2"></span>
+                </Trans>
+              </p>
+            </div>
+
+            <p className="md:hidden">
+              <Trans i18nKey="main.contents.goal" t={t}>
+                <span className="font-bold"></span>
+              </Trans>
+            </p>
+          </div>
+
+          <div className="px-8 md:px-0 pt-8 md:pt-0 pb-8 
+            w-full grid grid-cols-2 sm:grid-cols-3 gap-2">
+
+            <BlobLink className="fill-blob-pink" type="AboutMeOne"
+              title={t("main.contents.links.art.title")}
+              links={[
+                { 
+                  text: t("main.contents.links.art.items.twitter"),
+                  href: "",
+                },
+                { 
+                  text: t("main.contents.links.art.items.vgen"),
+                  href: "",
+                },
+                { 
+                  text: t("main.contents.links.art.items.queue"),
+                  href: "",
+                },
+              ]} 
+            />
+
+            <BlobLink className="fill-blob-cyan" type="AboutMeTwo"
+              title={t("main.contents.links.vtuber.title")}
+              links={[
+                { 
+                  text: t("main.contents.links.vtuber.items.twitch"),
+                  href: "",
+                },
+                { 
+                  text: t("main.contents.links.vtuber.items.youtube"),
+                  href: "",
+                },
+              ]} 
+            />
+
+            <BlobLink className="fill-blob-olive col-span-2 sm:col-span-1" type="AboutMeThree"
+              title={t("main.contents.links.others.title")}
+              links={[
+                { 
+                  text: t("main.contents.links.others.items.kofi"),
+                  href: "",
+                },
+                { 
+                  text: t("main.contents.links.others.items.throne"),
+                  href: "",
+                },
+              ]} 
+            />
+          </div>
+        </div>
       </div>
 
-      <div className="md:pt-8 pb-14 grow flex flex-col items-center relative">
-        <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
-        <WaveText className="w-full h-18 font-extrabold fill-bold-pink text-5xl" id="c1" 
-          viewport="0.625 -46.35607147216797 225 66.15290069580078" hardcoded
-          alignment="middle" anchor="middle" size="1" offset="0px"
-          value={t("main.title")} />
-
-        <div className="w-full mt-2">
-          <p className="text-sm">
-            <Trans i18nKey="main.contents.sumii" t={t}>
-              <span className="font-bold"></span>
-              <span className="font-bold"></span>
-              <span className="font-bold"></span>
-            </Trans>
-          </p>
-        </div>
-
-        <div className="w-full pt-4 pb-12">
-          <p className="text-sm">
-            <Trans i18nKey="main.contents.languages" t={t}>
-              <span className="bg-light-cyan font-bold px-1 mr-2"></span>
-            </Trans>
-          </p>
-          <p className="text-sm">
-            <Trans i18nKey="main.contents.country" t={t}>
-              <span className="bg-light-cyan font-bold px-1 mr-2"></span>
-            </Trans>
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 xs:grid-cols-3 gap-4 md:gap-12">
-          <BlobLink className="fill-blob-pink" type="AboutMeOne"
-            title={t("main.contents.links.art.title")}
-            links={[
-              { 
-                text: t("main.contents.links.art.items.twitter"),
-                href: "",
-              },
-              { 
-                text: t("main.contents.links.art.items.vgen"),
-                href: "",
-              },
-              { 
-                text: t("main.contents.links.art.items.queue"),
-                href: "",
-              },
-            ]} 
-          />
-
-          <BlobLink className="fill-blob-cyan" type="AboutMeTwo"
-            title={t("main.contents.links.vtuber.title")}
-            links={[
-              { 
-                text: t("main.contents.links.vtuber.items.twitch"),
-                href: "",
-              },
-              { 
-                text: t("main.contents.links.vtuber.items.youtube"),
-                href: "",
-              },
-            ]} 
-          />
-
-          <BlobLink className="fill-blob-olive col-span-2 xs:col-span-1" type="AboutMeThree"
-            title={t("main.contents.links.others.title")}
-            links={[
-              { 
-                text: t("main.contents.links.others.items.kofi"),
-                href: "",
-              },
-              { 
-                text: t("main.contents.links.others.items.throne"),
-                href: "",
-              },
-            ]} 
-          />
-        </div>
+      <div className="w-1/3 pb-8 px-12 hidden md:block md:invisible">
+        <Trans i18nKey="main.contents.goal" t={t}>
+          <span className="font-bold"></span>
+        </Trans>
       </div>
     </div>
 
@@ -238,11 +272,12 @@ const AboutMe = () => {
 
 const BlobLink = ({ className = "", title = "", links = [], type = "AboutMeOne" }) => {
   return (
-    <BlobContainer className={`px-2 ${className}`} type={type}
-      content="px-8 space-y-2 w-fit space-y-1"
-      background="scale-125" ratio="meet">
+    <NewBlobContainer className={`${className} relative`} 
+      content="py-2 flex flex-col items-center"
+      type={type} ratio="meet"
+    >
 
-      <h3 className="mt-2 uppercase font-bold relative text-xs">
+      <h3 className="uppercase font-bold relative text-xs">
         <span className="absolute w-full h-full flex items-center">
           <FloatImage left
             width={10} height={10} 
@@ -253,13 +288,13 @@ const BlobLink = ({ className = "", title = "", links = [], type = "AboutMeOne" 
         {title}
       </h3>
 
-      <div className="mb-4 flex flex-col space-y-1 text-center">
+      <div className="flex flex-col space-y-1 text-center">
         { links && links.map((item, i) => 
           <Link className="bg-div text-bold-pink  hover:font-medium px-1 text-sm"
             href={item.href} key={`${title}.${i}`}>{item.text}</Link>
         )}
       </div>
-    </BlobContainer>
+    </NewBlobContainer>
   );
 };
 

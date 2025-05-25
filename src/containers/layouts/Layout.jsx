@@ -36,7 +36,7 @@ const Layout = ({ children, transitionStage, displayLocation, ...rest }) => {
   }, [transitionStage]);
 
   return (
-    <Context className={`text-font font-base relative flex flex-col ${fill.context ? "bg-div" : ""} selection:bg-select selection:text-select-bold`}>
+    <Context className={`text-font outfit relative flex flex-col ${fill.context ? "bg-div" : ""} selection:bg-select selection:text-select-bold`}>
       <Header className="bg-div-bold px-8 py-2 h-14 font-bold" t={t} ready={ready} />
 
       <Modal className="overflow-visible" id="bg-home">

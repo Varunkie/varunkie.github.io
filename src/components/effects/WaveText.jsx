@@ -33,8 +33,10 @@ const WaveText = ({ className = "", id = "", children, visible,
         <div className={`${className} relative`}>
             <svg className="w-full h-full absolute overflow-visible" ref={svgElement}
                 style={{ scale: `${size} ${size}` }}>
-                <path id={id} d={d} className={`absolute ${visible ? "" : "fill-transparent"}`} ref={pathElement}
-                    style={{ transform: `translateX(${getTranslate(anchor, offset)})` }}  />
+                <def>
+                    <path id={id} d={d} className={`absolute ${visible ? "" : "fill-transparent"}`} ref={pathElement}
+                        style={{ transform: `translateX(${getTranslate(anchor, offset)})` }}  />
+                </def>
                 <text className="" x={getTextPosition(anchor)} ref={textElement}>
                     <textPath xlinkHref={`#${id}`} textAnchor={anchor} startOffset={getOffset(anchor, offset)}>
                         <tspan>{value}</tspan>

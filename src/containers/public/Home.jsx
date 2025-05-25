@@ -78,7 +78,7 @@ const Home = () => {
               <FloatSparkles className="hidden xs:flex xs:w-14 xs:h-14 sm:w-16 sm:h-16" 
                 stars={2} width={100} height={100} xOffset={-115} yOffset={0} />
               <FloatSparkles className="hidden xs:flex xs:w-14 xs:h-14 sm:w-16 sm:h-16" 
-                stars={3} width={100} height={100} xOffset={150} yOffset={0} />
+                stars={3} width={100} height={100} xOffset={175} yOffset={0} />
             </div>
           </WaveText>
         </div>
