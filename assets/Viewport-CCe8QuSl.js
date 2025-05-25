@@ -1,1 +1,0 @@
-import{j as s,M as t}from"./index-BBhCuSM3.js";const r=({image:e,setImage:o})=>s.jsx(t,{className:"p-8 md:p-16 items-center overflow-y-auto",id:"modal",onClose:o,children:s.jsx("div",{className:"w-fit h-fit cursor-default",children:s.jsx("img",{className:"object-contain select-none",alt:e.alt,src:e.src})})});export{r as P};
