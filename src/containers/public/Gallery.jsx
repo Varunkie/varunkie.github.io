@@ -85,9 +85,9 @@ const Gallery = () => {
         <PhotoCollage className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" 
           content="gap-4" rows={4}>
           { photos && photos.map((item, i) => 
-            <GalleryItem 
+            <GalleryItem key={`photos_${i}`} 
               thumbnail={item.meta.thumbnail} fullart={item.src} alt={item.alt}
-              onClick={(e) => handleZoom(item, e)} key={`photos_${i}`} 
+              onClick={(e) => handleZoom(item, e)} 
               selectable />
           )}
         </PhotoCollage>

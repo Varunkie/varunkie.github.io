@@ -20,7 +20,7 @@ const AboutMe = () => {
   const containerRef = useRef(null);
   const navigate = useNavigate();
 
-  const handleGallery = useCallback(() => {
+  const handleNavigate = useCallback(() => {
     navigate(`/${routes.gallery}`);
   }, []);
 
@@ -226,7 +226,7 @@ const AboutMe = () => {
         </div>
         
         <EasyButton 
-          onClick={handleGallery}>
+          onClick={handleNavigate}>
 
           {t("page.buttons.gallery")}
         </EasyButton>

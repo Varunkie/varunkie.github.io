@@ -89,16 +89,19 @@ const Contact = () => {
         <div className="grid sm:grid-cols-2 gap-4">
           <Input className="space-y-1"
             type="text" name="first_name" 
-            label={t("form.name.label")} />
+            label={t("form.name.label")} 
+            autocomplete="given-name" />
 
           <Input className="space-y-1"
             type="text" name="last_name" 
-            label={t("form.last-name.label")} />
+            label={t("form.last-name.label")}
+            autocomplete="family-name" />
         </div>
 
         <Input className="space-y-1"
           type="email" name="user_email" 
-          label={t("form.email.label")} />
+          label={t("form.email.label")} 
+          autocomplete="email" />
 
         <Input className="space-y-1"
           type="text" name="email_subject" 
@@ -116,7 +119,7 @@ const Contact = () => {
   </>);
 };
 
-const Input = ({ className = "", type = "", name = "", label = "", placeholder = "", rows = 1 }) => {
+const Input = ({ className = "", type = "", name = "", label = "", placeholder = "", autocomplete = "off", rows = 1 }) => {
   return (
     <label className={`${className} flex flex-col group`} htmlFor={name}>
       <span className="space-x-1 group-focus-within:text-bold-pink ">
@@ -131,7 +134,7 @@ const Input = ({ className = "", type = "", name = "", label = "", placeholder =
           id={name} name={name} placeholder={placeholder} rows={rows} required />}
       { type !== "textarea" && 
         <input className="px-1 border-b-2 border-bold-pink  caret-bold-pink  focus:outline-none placeholder:italic"
-          type={type} id={name} name={name} placeholder={placeholder} required />}
+          type={type} id={name} name={name} placeholder={placeholder} autoComplete={autocomplete} required />}
     </label>
   );
 };

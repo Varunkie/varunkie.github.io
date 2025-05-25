@@ -5,14 +5,15 @@ import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
 import { Carousel } from 'react-responsive-carousel';
 import React from 'react';
 
-const GalleryCarousel = ({ id = "", className = "", children }) => {
+const GalleryCarousel = ({ id = "", className = "", children, autoplay = false }) => {
     const array = React.Children.toArray(children); 
     const elements = mapElements(array, 5);
 
     return (
         <Carousel 
-          emulateTouch infiniteLoop autoPlay 
-          showStatus={false} showIndicators={false}
+          emulateTouch infiniteLoop autoPlay={autoplay}
+          showStatus={false} showIndicators={false} showThumbs={false}
+          swipeScrollTolerance={10}
           renderArrowPrev={(clickHandler) => <CarouselButton type="prev" onClick={clickHandler} />}
           renderArrowNext={(clickHandler) => <CarouselButton type="next" onClick={clickHandler} />}
         >

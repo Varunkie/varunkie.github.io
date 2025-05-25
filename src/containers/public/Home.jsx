@@ -1,6 +1,4 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-
-import photos from "../../resources/content/gallery.json";
+import photos from "../../resources/content/carousel.json";
 import routes from "../../settings/routes/frontend.routes";
 import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
@@ -16,12 +14,19 @@ import WaveContainer from "../../components/layouts/WaveContainer";
 import Carousel from '../../components/common/GalleryCarousel';
 import WaveText from "../../components/effects/WaveText";
 
+import Viewport from "../modals/Viewport";
+
 const Home = () => {
   const { t } = useTranslation([ns.home, ns.common]);
   const [image, setImage] = useState(false);
   const navigate = useNavigate();
 
-  const handleEmail = useCallback(() => {
+  const handleZoom = useCallback((value, e) => {
+    e.preventDefault();
+    setImage(value);
+  }, []);
+
+  const handleNavigate = useCallback(() => {
     navigate(`/${routes.contact}`);
   }, []);
 
@@ -45,10 +50,13 @@ const Home = () => {
       content="bg-div-bold px-8 py-12 relative">
 
       <div className="w-full h-full relative">
-        <Carousel className="w-full h-[75vh] xs:h-[80vh] grid md:grid-cols-5 gap-2 p-2">
+        <Carousel className="w-full h-[75vh] xs:h-[80vh] grid md:grid-cols-5 gap-2 p-2"
+          autoplay={image === null}>
+
           { photos && photos.map((item, i) => 
             <CarouselItem key={`photos_${i}`}
               thumbnail={item.thumbnail} fullart={item.src} alt={item.alt} 
+              onClick={(e) => handleZoom(item, e)} 
               selectable />
           )}
         </Carousel>
@@ -103,7 +111,7 @@ const Home = () => {
         <div className="relative flex justify-center py-5">
           <EmailButton className="relative" 
             label={t("common.email", { ns: ns.common })}
-            onClick={handleEmail}>
+            onClick={handleNavigate}>
 
             <FloatImage className="cursor-default" left
               width={413} height={272} 

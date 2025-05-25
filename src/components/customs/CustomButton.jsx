@@ -13,8 +13,8 @@ export const EmailButton = ({ className = "", label = "", children, onClick = ()
             onClick={onClick}>
             {children}
             
-            <TbMailHeart className="ml-4 sm:ml-7 mr-1 w-7 h-7" />
-            <label className={`cursor-pointer ml-1 mr-4 sm:mr-7 ${selectable ? "select-all" : ""}`}>{label}</label>
+            <TbMailHeart className="ml-4 sm:ml-7 mr-1 w-7 h-7 pointer-events-none" />
+            <span className={`cursor-pointer ml-1 mr-4 sm:mr-7 ${selectable ? "select-all" : ""}`}>{label}</span>
         </button>  
     );
 };

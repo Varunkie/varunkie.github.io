@@ -9,13 +9,15 @@
   --color-font: #473944;
   --color-div: #fff2f2;
   --color-div-bold: #f3e3ec;
-  --color-nav-item: #f884a1;
-  --color-icon: #eb3677;
   --color-line: #f96589;
   --color-button: #f474ba;
   --color-button-hover: #e247a3;
   --color-select: #F9D0F9;
   --color-select-bold: #C471CD;
+  --color-icon: #eb3677;
+  --color-icon-hover: #e247a3;
+  --color-nav-item: #f884a1;
+  --color-nav-item-hover: #f884a1;
 
   --color-blob-cyan: #DBEEF3;
   --color-blob-pink: #FFE9EF;
