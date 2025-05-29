@@ -41,7 +41,9 @@ const AboutMe = () => {
             value={t("header.title")} />
 
           <img className="w-full h-auto select-none"
-            src={images.logos.suulore_chibi} alt="" />
+            src="https://ik.imagekit.io/varunkie/sumii/SumiiChibi_9HtTYHPEW.png" 
+            //src={images.logos.suulore_chibi} 
+            alt="" />
 
           <NewBlobContainer className="absolute hidden md:block fill-olive"
             style = {{ translate: "250px 290px" }}

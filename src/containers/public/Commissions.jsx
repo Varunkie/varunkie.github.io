@@ -9,6 +9,7 @@ import { useCallback, useRef } from "react";
 import { BlobHeader } from "../../components/customs/BlobBackground";
 import { FloatImage } from "../../components/layouts/FloatContainer";
 import BlobContainer from "../../components/layouts/BlobContainer";
+import NewBlobContainer from "../../components/layouts/NewBlobContainer";
 import WaveContainer from "../../components/layouts/WaveContainer";
 import Sparkles from "../../components/effects/Sparkles";
 import WaveText from "../../components/effects/WaveText";
@@ -141,8 +142,8 @@ const Commissions = () => {
       </div>
     </div>
 
-    <div className="w-full mt-2">
-      <div className="lg:w-[75vw] grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-0 md:gap-6 mx-auto">
+    <div className="w-full mt-6">
+      <div className="lg:w-[75vw] grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-2 md:gap-6 mx-auto">
 
         <MiniBlob id="c3" type="WillDo" className="fill-blob-cyan"
           viewport="0.625 -69.89789581298828 225 96.0047607421875" hardcoded
@@ -151,11 +152,11 @@ const Commissions = () => {
             <div className="flex w-full h-full absolute items-end">
               <FloatImage left
                 width={70} height={70} 
-                xOffset={-40} yOffset={70}
+                xOffset={-40} yOffset={65}
                 src={images.flowers.flower_pink_1} />
               <FloatImage left
                 width={45} height={45} 
-                xOffset={60} yOffset={20}
+                xOffset={60} yOffset={15}
                 src={images.flowers.flower_green_5P} />
             </div>
 
@@ -168,13 +169,13 @@ const Commissions = () => {
         </MiniBlob>
 
         <MiniBlob id="c4" type="WontDo" className="fill-blob-pink"
-          viewport="0.625 -69.89789581298828 225 96.0047607421875" hardcoded
+          viewport="0.625 -69.89789581298828 225 98.0047607421875" hardcoded
           title={t("page.wont-do.title")}>
 
             <div className="flex w-full h-full absolute">
               <FloatImage right
                 width={70} height={70} 
-                xOffset={-20} yOffset={-85}
+                xOffset={-25} yOffset={-85}
                 src={images.flowers.flower_green_beeg} />
             </div>
 
@@ -185,7 +186,7 @@ const Commissions = () => {
         </MiniBlob>
       </div>
 
-      <div className="md:w-[75vw] px-8 mt-6 sm:mt-0 md:mt-6 mb-12 mx-auto">
+      <div className="md:w-[75vw] px-8 mt-6 sm:mt-12 mb-12 mx-auto">
         <BeegBlob id="c5" className="fill-blob-olive" title={t("page.rules.title")}
           viewport="0.625 -57.97426223754883 225 80.87842559814453" hardcoded>
 
@@ -355,19 +356,19 @@ const MiniBlob = ({  id = "c1", className = "", title = "", children,
     viewport, hardcoded, type = "WillDo" }) => {
 
   return (
-    <BlobContainer className={`px-2 py-6 ${className}`} 
-      content="pt-12 pb-18 space-y-2 w-fit"
+    <NewBlobContainer className={`${className} relative`} 
+      content="w-fit pt-2 pb-4 space-y-2 flex flex-col items-center mx-auto"
       type={type} ratio="meet">
 
       <WaveText className="w-full h-10 font-extrabold fill-bold-pink  text-6xl" id={id} 
-        viewport={viewport} hardcoded={hardcoded}
-        alignment="middle" anchor="middle" size="1" offset="0" 
+        viewport={viewport} hardcoded={hardcoded} 
+        alignment="middle" anchor="middle" size="1" offset="-1" 
         value={title} />
 
       <div className="w-2/3 sm:w-4/5 md:w-2/3 flex flex-col items-center text-center text-sm relative">
         {children}
       </div>
-    </BlobContainer>
+    </NewBlobContainer>
   );
 };
 
@@ -375,22 +376,22 @@ const BeegBlob = ({ id = "beeg_c5", className = "", title = "", children,
     viewport = "0.625 -57.97426223754883 225 80.87842559814453", hardcoded }) => {
 
   return (
-    <BlobContainer className={`${className} w-full`} 
+    <NewBlobContainer className={`${className} w-full relative`} 
       content="px-2 pt-18 pb-28 space-y-2"
-      type="GreenBeeg" ratio="slice">
+      type="GreenBeeg">
 
       <div className="w-full flex flex-col items-center">
-        <Sparkles className="w-8 h-8 z-10 fill-olive translate-y-2" stars={2} />
-        <WaveText className="w-full h-12 font-extrabold fill-bold-pink  text-6xl" id={id} 
+        <Sparkles className="w-8 h-8 z-10 fill-olive -translate-y-2" stars={2} />
+        <WaveText className="w-full h-8 font-extrabold fill-bold-pink text-8xl" id={id} 
           viewport={viewport} hardcoded={hardcoded}
-          alignment="middle" anchor="middle" size="1" offset="-25px"
+          alignment="middle" anchor="middle" size="1" offset="0px"
           value={title} />
       </div>
 
       <div className="px-4 py-2 flex flex-col text-lg text-sm space-y-2 relative">
         {children}
       </div>
-    </BlobContainer>
+    </NewBlobContainer>
   );
 };
 

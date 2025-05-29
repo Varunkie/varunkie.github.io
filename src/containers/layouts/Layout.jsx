@@ -40,7 +40,7 @@ const Layout = ({ children, transitionStage, displayLocation, ...rest }) => {
       <Header className="bg-div-bold px-8 py-2 h-14 font-bold" t={t} ready={ready} />
 
       <Modal className="overflow-visible" id="bg-home">
-        <Background src="https://ik.imagekit.io/varunkie/sumii/Sumii_t89RnkVpk.png?updatedAt=1747092582889" 
+        <Background src="https://ik.imagekit.io/varunkie/sumii/Sumii_t89RnkVpk.png" 
           naturalWidth={4134} naturalHeight={3862} 
           parallaxSpeed={0.25} />
       </Modal>

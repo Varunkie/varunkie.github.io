@@ -32,7 +32,7 @@ const Gallery = () => {
 
     <div className="pt-8 pb-14 relative flex flex-col items-center" ref={containerRef}>
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
-      <WaveText className="w-full h-18 font-extrabold fill-bold-pink  text-6xl" id="c1" 
+      <WaveText className="w-full h-18 font-extrabold fill-bold-pink text-6xl" id="c1" 
         viewport="0.625 -57.95635986328125 225 80.91878509521484" hardcoded
         alignment="middle" anchor="middle" size="1" offset="0px"
         value={t("header.title")} />

@@ -17,8 +17,19 @@ const Contact = () => {
   const containerRef = useRef(null);
   const formRef = useRef(null);
 
-  const handleSubmit = () => {
-    console.log("Send!");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(formRef.current);
+    const { user_email, first_name, last_name, email_subject, email_message } = Object.fromEntries(formData);
+    const parameters = `cc=${user_email}&subject=${first_name} ${last_name} - ${email_subject}&body=${email_message}`;
+
+    sendEmail(parameters);
+  };
+
+  const sendEmail = (parameters) => {
+    const target_email = t("common.email", { ns: ns.common });
+    window.open(`mailto:${target_email}${parameters ? `?${parameters}` : ''}`, '_blank')?.focus();
   };
 
   return (<>
@@ -31,8 +42,9 @@ const Contact = () => {
         alignment="middle" anchor="middle" size="1" offset="0px"
         value={t("header.title")} />
 
-      <EmailButton className="mt-6 mb-8" selectable
-        label={t("common.email", { ns: ns.common })} />
+      <EmailButton className="mt-6 mb-8" 
+        label={t("common.email", { ns: ns.common })} 
+        onClick={() => sendEmail()}/>
 
       <div className="w-2/3 md:w-1/3 flex flex-col text-center text-sm space-y-4">
         <h2>{t("header.subtitle")}</h2>

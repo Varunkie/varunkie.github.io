@@ -71,14 +71,14 @@ const Home = () => {
         <div className="w-full pb-4 flex relative z-10 justify-center">
           <WaveText className="w-full h-20 flex justify-center font-extrabold fill-bold-pink  text-6xl" id="c1" 
             viewport="0.625 -53.44183349609375 225 70.94506072998047" hardcoded
-            alignment="middle" anchor="middle" size="1" offset="10px" 
+            alignment="middle" anchor="middle" size="1" offset="0px" 
             value = {t("main.title")}>
 
             <div className="w-0 h-full absolute flex jusitfy-center items-center fill-light-cyan">
               <FloatSparkles className="hidden xs:flex xs:w-14 xs:h-14 sm:w-16 sm:h-16" 
-                stars={2} width={100} height={100} xOffset={-115} yOffset={0} />
+                stars={2} width={100} height={100} xOffset={-120} yOffset={0} />
               <FloatSparkles className="hidden xs:flex xs:w-14 xs:h-14 sm:w-16 sm:h-16" 
-                stars={3} width={100} height={100} xOffset={175} yOffset={0} />
+                stars={3} width={100} height={100} xOffset={155} yOffset={0} />
             </div>
           </WaveText>
         </div>

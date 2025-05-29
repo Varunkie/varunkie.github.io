@@ -9,6 +9,7 @@ import { GalleryItem } from "../../components/customs/ImagePreview";
 import { FloatImage } from "../../components/layouts/FloatContainer";
 import { BlobBackground } from "../../components/customs/BlobBackground";
 import BlobContainer from "../../components/layouts/BlobContainer";
+import NewBlobContainer from "../../components/layouts/NewBlobContainer";
 import Sparkles from "../../components/effects/Sparkles";
 import WaveText from "../../components/effects/WaveText";
 
@@ -208,7 +209,7 @@ const BeegBlob = ({ id = "beeg_c5", className = "", title = "", children,
     viewport, hardcoded }) => {
 
   return (
-    <BlobContainer className={`${className} w-full`} 
+    <NewBlobContainer className={`${className} w-full relative`} 
       content="px-2 pt-18 pb-28 space-y-2"
       type="GreenBeeg" ratio="slice">
 
@@ -242,7 +243,7 @@ const BeegBlob = ({ id = "beeg_c5", className = "", title = "", children,
 
         {children}
       </div>
-    </BlobContainer>
+    </NewBlobContainer>
   );
 };
 
