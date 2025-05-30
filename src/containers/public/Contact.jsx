@@ -1,4 +1,3 @@
-import routes from "../../settings/routes/frontend.routes";
 import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
 
@@ -8,9 +7,10 @@ import { useRef } from 'react';
 import { EmailButton, SubmitButton } from "../../components/customs/CustomButton";
 import { BlobHeader } from "../../components/customs/BlobBackground";
 import { FloatImage } from "../../components/layouts/FloatContainer";
-import WaveContainer from "../../components/layouts/WaveContainer";
+import { WaveContainer } from "../../components/layouts/WaveContainer";
+import { HardText as WaveText } from "../../components/effects/WaveText";
+
 import Sparkles from "../../components/effects/Sparkles";
-import WaveText from "../../components/effects/WaveText";
 
 const Contact = () => {
   const { t } = useTranslation([ns.contact, ns.common]);
@@ -37,9 +37,10 @@ const Contact = () => {
 
     <div className="pt-8 pb-14 relative flex flex-col items-center" ref={containerRef}>
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
-      <WaveText className="w-full h-18 font-extrabold fill-bold-pink  text-6xl" id="c1" 
-        viewport="0.625 -58.86821746826172 225 81.77326965332031" hardcoded
-        alignment="middle" anchor="middle" size="1" offset="0px"
+      <WaveText id="c1"
+        className="w-full h-18 font-extrabold fill-bold-pink text-6xl" 
+        viewport="0.625 -58.86821746826172 225 81.77326965332031" 
+        alignment="middle" anchor="middle" offset="0px"
         value={t("header.title")} />
 
       <EmailButton className="mt-6 mb-8" 

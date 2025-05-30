@@ -3,16 +3,16 @@ import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
 
 import { useTranslation, Trans } from "react-i18next";
-import React, { useCallback, useState, useRef } from 'react';
+import { useCallback, useState, useRef } from 'react';
 
 import { GalleryItem } from "../../components/customs/ImagePreview";
 import { BlobHeader } from "../../components/customs/BlobBackground";
 import { FloatImage } from "../../components/layouts/FloatContainer";
-import WaveContainer from "../../components/layouts/WaveContainer";
+import { WaveContainer } from "../../components/layouts/WaveContainer";
+import { HardText as WaveText } from "../../components/effects/WaveText";
+
 import PhotoCollage from "../../components/common/PhotoCollage";
 import Sparkles from "../../components/effects/Sparkles";
-import WaveText from "../../components/effects/WaveText";
-
 import Viewport from "../modals/Viewport";
 
 const Gallery = () => {
@@ -32,9 +32,10 @@ const Gallery = () => {
 
     <div className="pt-8 pb-14 relative flex flex-col items-center" ref={containerRef}>
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
-      <WaveText className="w-full h-18 font-extrabold fill-bold-pink text-6xl" id="c1" 
+      <WaveText id="c1" 
+        className="w-full h-18 font-extrabold fill-bold-pink text-6xl" 
         viewport="0.625 -57.95635986328125 225 80.91878509521484" hardcoded
-        alignment="middle" anchor="middle" size="1" offset="0px"
+        alignment="middle" anchor="middle" offset="0px"
         value={t("header.title")} />
 
       <div className="grid grid-cols-3 font-bold text-sm justify-items-center items-center">

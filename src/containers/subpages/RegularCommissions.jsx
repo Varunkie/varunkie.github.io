@@ -1,4 +1,3 @@
-import routes from "../../settings/routes/frontend.routes";
 import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
 
@@ -8,11 +7,10 @@ import { useTranslation, Trans } from "react-i18next";
 import { BlobBackground } from "../../components/customs/BlobBackground";
 import { GalleryItem } from "../../components/customs/ImagePreview";
 import { FloatImage } from "../../components/layouts/FloatContainer";
-import BlobContainer from "../../components/layouts/BlobContainer";
-import NewBlobContainer from "../../components/layouts/NewBlobContainer";
-import Sparkles from "../../components/effects/Sparkles";
-import WaveText from "../../components/effects/WaveText";
+import { BlobContainer } from "../../components/layouts/BlobContainer";
+import { HardText as WaveText } from "../../components/effects/WaveText";
 
+import Sparkles from "../../components/effects/Sparkles";
 import Viewport from "../modals/Viewport";
 
 const RegularCommissions = () => {
@@ -149,9 +147,10 @@ const WorkType = ({ i18n = "regular", t, viewport, hardcoded, children }) => {
   return (<>
     <div className="px-2 pt-8 w-full flex flex-col items-center overflow-hidden">
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-4" stars={3} />
-      <WaveText className="w-full h-20 font-extrabold fill-bold-pink  text-xl md:text-2xl" id={`${i18n}_wave`}
-        alignment="middle" anchor="middle" size="1" offset="0px"
-        viewport={viewport} hardcoded={hardcoded}
+      <WaveText id={`${i18n}_wave`}
+        className="w-full h-20 font-extrabold fill-bold-pink text-xl md:text-2xl" 
+        alignment="middle" anchor="middle" offset="0px"
+        viewport={viewport} 
         value={t(`main.${i18n}.title`)} />
     </div>
 
@@ -244,15 +243,16 @@ const BeegBlob = ({ id = "beeg_c5", className = "", title = "", children,
     viewport, hardcoded }) => {
 
   return (
-    <NewBlobContainer className={`${className} w-full relative`} 
+    <BlobContainer className={`${className} w-full relative`} 
       content="px-2 pt-18 pb-28 space-y-2"
       type="GreenBeeg" ratio="slice">
 
       <div className="w-full flex flex-col items-center">
         <Sparkles className="w-8 h-8 z-10 fill-olive translate-y-2" stars={2} />
-        <WaveText className="w-full h-12 font-extrabold fill-bold-pink  text-4xl" id={id} 
-          viewport={viewport} hardcoded={hardcoded}
-          alignment="middle" anchor="middle" size="1" offset="0px"
+        <WaveText id={id}
+          className="w-full h-12 font-extrabold fill-bold-pink text-4xl" 
+          alignment="middle" anchor="middle" offset="0px"
+          viewport={viewport} 
           value={title} />
       </div>
 
@@ -278,7 +278,7 @@ const BeegBlob = ({ id = "beeg_c5", className = "", title = "", children,
 
         {children}
       </div>
-    </NewBlobContainer>
+    </BlobContainer>
   );
 };
 

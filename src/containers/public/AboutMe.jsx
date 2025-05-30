@@ -9,10 +9,11 @@ import { useCallback, useRef } from "react";
 import { BlobHeader } from "../../components/customs/BlobBackground";
 import { EasyButton } from "../../components/customs/CustomButton";
 import { FloatImage } from "../../components/layouts/FloatContainer";
-import WaveContainer from "../../components/layouts/WaveContainer";
-import NewBlobContainer from "../../components/layouts/NewBlobContainer";
+import { WaveContainer } from "../../components/layouts/WaveContainer";
+import { BlobContainer } from "../../components/layouts/BlobContainer";
+import { HardText as WaveText } from "../../components/effects/WaveText";
+
 import Sparkles from "../../components/effects/Sparkles";
-import WaveText from "../../components/effects/WaveText";
 import SineText from "../../components/effects/SineText";
 import Link from "../../components/common/ExternalLink";
 
@@ -45,7 +46,7 @@ const AboutMe = () => {
             //src={images.logos.suulore_chibi} 
             alt="" />
 
-          <NewBlobContainer className="absolute hidden md:block fill-olive"
+          <BlobContainer className="absolute hidden md:block fill-olive"
             style = {{ translate: "250px 290px" }}
             content="px-2 text-sm"
             type="MyGoal"
@@ -53,14 +54,15 @@ const AboutMe = () => {
             <Trans i18nKey="main.contents.goal" t={t}>
               <span className="font-bold"></span>
             </Trans>
-          </NewBlobContainer>
+          </BlobContainer>
         </div>
 
         <div className="md:ml-4 grow flex flex-col items-center relative">
           <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
-          <WaveText className="w-full h-18 font-extrabold fill-bold-pink text-5xl" id="c1" 
-            viewport="0.625 -46.35607147216797 225 66.15290069580078" hardcoded
-            alignment="middle" anchor="middle" size="1" offset="0px"
+          <WaveText id="c1"
+            className="w-full h-18 font-extrabold fill-bold-pink text-5xl" 
+            viewport="0.625 -46.35607147216797 225 66.15290069580078" 
+            alignment="middle" anchor="middle" offset="0px"
             value={t("main.title")} />
 
           <div className="px-8 md:px-2 pt-4 w-full text-sm space-y-4">
@@ -192,9 +194,10 @@ const AboutMe = () => {
         </div> 
 
         <div className="space-y-2">
-          <WaveText className="w-4/5 sm:w-1/2 h-20 font-extrabold fill-bold-pink text-2xl" id="c1" 
-            viewport="0.625 -29.11968231201172 225 36.61968231201172" hardcoded
-            alignment="bottom" anchor="start" size="1" offset="2px" 
+          <WaveText id="c2"
+            className="w-4/5 sm:w-1/2 h-20 font-extrabold fill-bold-pink text-2xl" 
+            viewport="0.625 -29.11968231201172 225 36.61968231201172" 
+            alignment="bottom" anchor="start" offset="0px" 
             value={t("page.curriculum.academics.title")} />
 
           <div className="pt-2 sm:pt-4">
@@ -206,8 +209,9 @@ const AboutMe = () => {
         </div>
 
         <div className="space-y-2">
-          <WaveText className="w-4/5 sm:w-1/2 h-20 font-extrabold fill-bold-pink  text-2xl" id="c1" 
-            viewport="0.625 -29.36648178100586 225 36.86648178100586" hardcoded
+          <WaveText id="c3"
+            className="w-4/5 sm:w-1/2 h-20 font-extrabold fill-bold-pink text-2xl" 
+            viewport="0.625 -29.36648178100586 225 36.86648178100586" 
             alignment="bottom" anchor="start" size="1" offset="0px" 
             value={t("page.curriculum.experience.title")} />
 
@@ -274,7 +278,7 @@ const AboutMe = () => {
 
 const BlobLink = ({ className = "", title = "", links = [], type = "AboutMeOne" }) => {
   return (
-    <NewBlobContainer className={`${className} relative`} 
+    <BlobContainer className={`${className} relative`} 
       content="py-2 flex flex-col items-center"
       type={type} ratio="meet"
     >
@@ -296,7 +300,7 @@ const BlobLink = ({ className = "", title = "", links = [], type = "AboutMeOne" 
             href={item.href} key={`${title}.${i}`}>{item.text}</Link>
         )}
       </div>
-    </NewBlobContainer>
+    </BlobContainer>
   );
 };
 

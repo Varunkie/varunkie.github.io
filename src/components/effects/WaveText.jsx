@@ -3,11 +3,11 @@ import { useRef, useEffect } from "react";
 export const d = "M.625 0l12.5 1.6719c12.5 1.6094 37.5 5.0469 62.5 5 25 .0469 50-3.3906 75-4.1719s50 .7813 62.5 1.6719l12.5.8281v2.5h-225Z";
 
 const WaveText = ({ hardcoded, ...rest }) => {
-    if (hardcoded) return <HardcodedText {...rest} />
+    if (hardcoded) return <HardText {...rest} />
     else return <MathText {...rest} />
 };
 
-export const HardcodedText = ({ className = "", id = "", style = {}, children,
+export const HardText = ({ className = "", id = "", style = {}, children,
     anchor = "middle", viewport = "0 0 100 100",
     offset = "0px", value = "" }) => {
 

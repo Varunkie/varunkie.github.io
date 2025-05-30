@@ -10,10 +10,10 @@ import { useCallback, useState } from "react";
 import { EmailButton } from "../../components/customs/CustomButton";
 import { CarouselItem } from "../../components/customs/ImagePreview";
 import { FloatSparkles, FloatImage } from "../../components/layouts/FloatContainer";
-import WaveContainer from "../../components/layouts/WaveContainer";
-import Carousel from '../../components/common/GalleryCarousel';
-import WaveText from "../../components/effects/WaveText";
+import { WaveContainer } from "../../components/layouts/WaveContainer";
+import { HardText as WaveText } from "../../components/effects/WaveText";
 
+import Carousel from '../../components/common/GalleryCarousel';
 import Viewport from "../modals/Viewport";
 
 const Home = () => {
@@ -69,9 +69,10 @@ const Home = () => {
       <div className="w-9/12 sm:w-2/3 py-6 px-0 lg:px-12 space-y-3 mx-auto z-10">
 
         <div className="w-full pb-4 flex relative z-10 justify-center">
-          <WaveText className="w-full h-20 flex justify-center font-extrabold fill-bold-pink  text-6xl" id="c1" 
-            viewport="0.625 -53.44183349609375 225 70.94506072998047" hardcoded
-            alignment="middle" anchor="middle" size="1" offset="0px" 
+          <WaveText id="c1"
+            className="w-full h-20 flex justify-center font-extrabold fill-bold-pink text-6xl" 
+            viewport="0.625 -53.44183349609375 225 70.94506072998047"
+            alignment="middle" anchor="middle" offset="0px" 
             value = {t("main.title")}>
 
             <div className="w-0 h-full absolute flex jusitfy-center items-center fill-light-cyan">

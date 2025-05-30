@@ -8,11 +8,11 @@ import { useCallback, useRef } from "react";
 
 import { BlobHeader } from "../../components/customs/BlobBackground";
 import { FloatImage } from "../../components/layouts/FloatContainer";
-import BlobContainer from "../../components/layouts/BlobContainer";
-import NewBlobContainer from "../../components/layouts/NewBlobContainer";
-import WaveContainer from "../../components/layouts/WaveContainer";
+import { WaveContainer } from "../../components/layouts/WaveContainer";
+import { BlobContainer } from "../../components/layouts/BlobContainer";
+import { HardText as WaveText } from "../../components/effects/WaveText";
+
 import Sparkles from "../../components/effects/Sparkles";
-import WaveText from "../../components/effects/WaveText";
 
 const Commissions = () => {
   const { t } = useTranslation(ns.commissions);
@@ -28,9 +28,10 @@ const Commissions = () => {
 
     <div className="pt-8 pb-14 relative flex flex-col items-center" ref={containerRef}>
       <Sparkles className="w-16 h-16 z-10 fill-font translate-y-3" stars={3} />
-      <WaveText className="w-full h-20 font-extrabold fill-bold-pink  text-3xl xs:text-4xl" id="c1" 
-        viewport="0.625 -34.98773193359375 225 51.59220504760742" hardcoded
-        alignment="middle" anchor="middle" size="1" offset="0px"
+      <WaveText id="c1"
+        className="w-full h-20 font-extrabold fill-bold-pink text-3xl xs:text-4xl"  
+        viewport="0.625 -34.98773193359375 225 51.59220504760742" 
+        alignment="middle" anchor="middle" offset="0px"
         value={t("header.title")} />
         
       <div className="grid grid-cols-3 font-bold text-sm justify-items-center items-center">
@@ -74,9 +75,10 @@ const Commissions = () => {
     <div className="w-[75vw] h-full flex flex-col items-center space-y-4 py-4 mx-auto">
       <div className="flex flex-col items-center">
         <Sparkles className="w-8 h-8 z-10 fill-olive" stars={2} />
-        <WaveText className="w-full h-10 font-extrabold fill-bold-pink  text-xl" id="c2" 
-          viewport="0.625 -17.61100196838379 225 29.448198318481445" hardcoded
-          alignment="middle" anchor="middle" size="1" offset="0px"
+        <WaveText id="c2"
+          className="w-full h-10 font-extrabold fill-bold-pink text-xl"
+          viewport="0.625 -17.61100196838379 225 29.448198318481445" 
+          alignment="middle" anchor="middle" offset="0px"
           value={t("page.tos.title")} />
         <h2 className="text-base xs:text-lg">{t("page.tos.subtitle")}</h2>
       </div>
@@ -352,46 +354,48 @@ const TermItem = ({ id = "", title = "", items = [] }) => {
   );
 };
 
-const MiniBlob = ({  id = "c1", className = "", title = "", children, 
-    viewport, hardcoded, type = "WillDo" }) => {
+const MiniBlob = ({  id = "c1", className = "", children,
+    title = "", viewport = "", type = "WillDo" }) => {
 
   return (
-    <NewBlobContainer className={`${className} relative`} 
+    <BlobContainer className={`${className} relative`} 
       content="w-fit pt-2 pb-4 space-y-2 flex flex-col items-center mx-auto"
-      type={type} ratio="meet">
+      type={type}>
 
-      <WaveText className="w-full h-10 font-extrabold fill-bold-pink  text-6xl" id={id} 
-        viewport={viewport} hardcoded={hardcoded} 
-        alignment="middle" anchor="middle" size="1" offset="-1" 
+      <WaveText id={id}
+        className="w-full h-10 font-extrabold fill-bold-pink text-6xl" 
+        alignment="middle" anchor="middle" offset="-1px" 
+        viewport={viewport}
         value={title} />
 
       <div className="w-2/3 sm:w-4/5 md:w-2/3 flex flex-col items-center text-center text-sm relative">
         {children}
       </div>
-    </NewBlobContainer>
+    </BlobContainer>
   );
 };
 
-const BeegBlob = ({ id = "beeg_c5", className = "", title = "", children,
-    viewport = "0.625 -57.97426223754883 225 80.87842559814453", hardcoded }) => {
+const BeegBlob = ({ id = "beeg_c5", className = "", children,
+  title = "", viewport = "" }) => {
 
   return (
-    <NewBlobContainer className={`${className} w-full relative`} 
+    <BlobContainer className={`${className} w-full relative`} 
       content="px-2 pt-18 pb-28 space-y-2"
       type="GreenBeeg">
 
       <div className="w-full flex flex-col items-center">
         <Sparkles className="w-8 h-8 z-10 fill-olive -translate-y-2" stars={2} />
-        <WaveText className="w-full h-8 font-extrabold fill-bold-pink text-8xl" id={id} 
-          viewport={viewport} hardcoded={hardcoded}
-          alignment="middle" anchor="middle" size="1" offset="0px"
+        <WaveText id={id} 
+          className="w-full h-8 font-extrabold fill-bold-pink text-8xl" 
+          alignment="middle" anchor="middle" offset="0px"
+          viewport={viewport} 
           value={title} />
       </div>
 
       <div className="px-4 py-2 flex flex-col text-lg text-sm space-y-2 relative">
         {children}
       </div>
-    </NewBlobContainer>
+    </BlobContainer>
   );
 };
 
