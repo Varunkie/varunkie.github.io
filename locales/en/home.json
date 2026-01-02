@@ -1,17 +1,19 @@
 {
   "header": {
-    "title": "SuuLore"
+    "title": "SuuLore",
+    "subtitles": {
+      "name": "Yayi",
+      "age": "22",
+      "party": "Party"
+    }
   },
 
   "main": {
-    "title": "Hello!",
+    "title": "Hola!",
     "contents": {
-      "about-me": "I'm Sumii, a freelance artist who does <0>illustration</0>, <1>character design</1>, <2>stream assets</2> and more for clients all over the world. I love to illustrate colorful and eye catching compositions but also enjoy exploring various other themes!",
-      "business": "For business inquiries, I accept work for games, illustration books, albums/EP art, music videos, official merch, promotional art and more.",
-      "caption": "Please provide the following information in your email <0>//Project Name,  Project Materials, Schedule and Budget//</0>",
-      "commission": "I accept individual and personal commission as well, you can order through <0>vgen</0>, <1>email</1> or <2>twitter DMs.</2>",
-      "thank-you": "Thank you for the opportunity!",
-      "languages": "English/Spanish - OK!"
+      "explication": "Has sido seleccionado entre una gran lista de personas para ser un <0>PINGUINO</0> en la <1>GRAN FIESTA</1> que se avecina, pero para confirmar tu participación es necesario determinar tu <2>pinguino interior</2>. Ten a mano tu invitación y preparate para una serie de preguntas que determinará <3>TODO</3>.",
+      "caption": "Este proceso es <0>irreversible</0> y no prometo que no haya trampa, pero ya estas acostumbrado a estas cosas. <0>¡Ni se te ocurra hacer trampa! ¿eh?</0>",
+      "thanks": "¡Espero disfrutes este test de personalidad!"
     }
   }
 }
