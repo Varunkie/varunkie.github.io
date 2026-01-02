@@ -24,11 +24,7 @@ import sparkle_cyan_small from "./sparkles/SparkleCyanSmall.svg";
 import sparkle_cyan_aboutme_cyan from "./sparkles/Sparkle_AboutMe_Cyan.svg";
 import sparkle_cyan_aboutme_black from "./sparkles/Sparkle_AboutMe_Black.svg";
 
-import menu from './icons/menu.svg';
-import contact from './icons/ContactHome.svg';
-
-import suulore from './logos/Logo.svg';
-import suulore_outline from './logos/LogoOutline.svg';
+import logo from "./pages/logo.svg";
 
 export const blobs = { 
     footer_bottom_left, footer_top_right, 
@@ -46,9 +42,7 @@ export const sparkles = {
     sparkle_cyan_big, sparkle_cyan_small, 
     sparkle_cyan_aboutme_cyan, sparkle_cyan_aboutme_black };
 
-export const icons = { menu, contact };
+export const pages = { logo };
 
-export const logos = { suulore, suulore_outline }; 
-
-const images = { icons, logos, flowers, sparkles, blobs };
+const images = { flowers, sparkles, blobs, pages };
 export default images;

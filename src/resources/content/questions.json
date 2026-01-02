@@ -1,0 +1,1045 @@
+[
+    {
+        "title": "¿Cuál canción vas a cantar a pleno pulmón en el karaoke?",
+        "options": [
+            { 
+                "label": "Ninguna, me da verguenza o flojera",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "1",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "¡Un karaoke no es karaote sin cantar un opening de anime!",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "1",
+                    "cosplayers": "2",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "No me sé ninguna canción, no escucho música",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Una de BTS, de Stray Kids, de New Jeans... tengo demasiadas",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "1",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            },
+            { 
+                "label": "Tengo una canción muy buena que no muchos conocen",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "2",
+                    "hipsters": "3",
+                    "emo": "1",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Por favor que nadie vaya a ponerse a cantar vallenato",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            },
+            { 
+                "label": "Si me dan un poco de alcohol puedo cantar lo que sea",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "3",
+                    "hipsters": "1",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            }
+        ]
+    },
+
+     {
+        "title": "¿Quién crees que gane el rey del baile?",
+        "options": [
+            { 
+                "label": "Seguramente yo, soy de los mejores bailando",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            },
+            { 
+                "label": "Yo no, me quedaré en una esquina sentado viendoles bailar",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Depende de la canción, yo no bailo cualquier cosa",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "2",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "No sé, no me interesa ese tipo de competencias",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "No soy bueno bailando pero lo intentaré con ganas",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "1",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            }
+        ]
+    },
+    
+    {
+        "title": "¿De qué tipo de pinguino te ven los demás?",
+        "options": [
+            { 
+                "label": "Estoy seguro que soy un pinguino simpatico",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "No me importa lo que los demás piensen de mi",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "3",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Seguro me ven mal por mis gustos unicos y diferentes",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "2",
+                    "hipsters": "3",
+                    "emo": "1",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Es muy obvio saber que tipo de pinguino soy por como suelo vestir",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Espero que un pinguino normal, me mato si saben que tipo de pinguino soy",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "2",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Piensan que soy un engreido o antipatico o algo por el estilo",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Les suelo caer bien a todo el mundo",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            }
+        ]
+    },
+
+    {
+        "title": "¿Con quién te vas a juntar en el cumpleaños?",
+        "options": [
+            { 
+                "label": "Solo con los que conozco, hay mucha gente rara",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "¡Con todo el mundo! Quiero conocerles a todos",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Con nadie, estaré por mi cuenta en una esquina",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Primero debo ver quien tiene gustos parecidos",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Me quedaré con la cumpleañera, no conozco a nadie",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Conozco a casi todos de la fiesta, iré por donde sea divertido",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            },
+            { 
+                "label": "La cumpleañera invita siempre gente muy rara... estaré con los mios",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "1",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            }
+        ]
+    },
+
+    {
+        "title": "Camians con tres pinguinos cuando de repente se dan cuenta que el sol ha explotado, ¿Qué deberían hacer los pinguinos?",
+        "options": [
+            { 
+                "label": "¡No puede ser! Debo estar soñando...",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "1",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Tengo mas o menos ocho minutos antes de morir, ¡debo aprovecharlo cuanto puedas!",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Reviso mi outfit rapidamente, ¡Si voy a morir tengo que estar bien vestido!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Abrazo a los demás pinguinos, hay que recibir la muerte en paz",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "1",
+                    "cosplayers": "0",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "De todos los momentos que pudo explotar el sol me tiene que tocar a mi",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Al menos finalmente podré morir tranquilo",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "1",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Les diré a compañeros pinguinos si quieren hacer un baile de despedida",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "2",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+
+    {
+        "title": "¿Cuántos amigos pinguinos tienes?",
+        "options": [
+            { 
+                "label": "Tengo pocos amigos pero los aprecio",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Los suficientes, no me interesa hablar con muchos",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Tengo demasiados amigos, ¡Cuanto más mejor!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "La amistad es un constructo social, todos podemos ser pinguinos juntos",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "1",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "¡No necesito tantos amigos! Estoy bien por mi cuenta",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "1",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Sin amigos, literalmente, moriría",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "No sé si tengo muchos amigos, pero me alegro de tenerlos a todos",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "1",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+
+    {
+        "title": "¡Has ganado la loteria! ¿Qué haras con tanto dinero?",
+        "options": [
+            { 
+                "label": "Compraré todo lo que quiera, podré gastar todo en mi hobby",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "No hay que gastar el dinero como un bobo, podemos invetirlo o usarlo poco a poco",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "¡Podré dejar de comprar ropa de pobre! Me luciré como un pinguino rico",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "0",
+                    "hipsters": "1",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "No haría nada distinto, lo usaría para lo de siempre",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "¡Al fin podre pagar mis gustos! Con lo raro que son suele ser muy caros",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "¡Gstaré todo en mis artistas favoritos!",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "1",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+
+    {
+        "title": "Dos pinguinos se te han declarado al mismo tiempo... ¿Qué haces?",
+        "options": [
+            { 
+                "label": "¡Un triángulo amoroso como en mis series! Yo si escogeré al correcto",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Deja de preguntarme situaciones imaginarias, me lastimas...",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "No es nada inusual, tengo muchos pinguinos detrás mio",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "0",
+                    "hipsters": "1",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Salgamos todos juntos, podemos fluir a ver que tal",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Obviamente solo aceptaría al pinguino mas distinguido",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Estaría con cualquiera que me acepte como soy, que suele ser dificil",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Aceptaría al que tuviera gustos parecidos al mio",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+
+    {
+        "title": "¿Sueles vestir como un pinguino normal?",
+        "options": [
+            { 
+                "label": "No, pero porque no hay que avergorzanse de tus gustos",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Supongo que si, me visto como todos",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "No, ¿pero sabes que? ¡soy feliz así!",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "No me importa como uno viste, con tal sea comodo",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Obvio que no, mi estilo no se lo puede permitir la mayoría",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "1",
+                    "hipsters": "3",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Me suelen juzgar por mi ropa, pero es mi forma de expresarme",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Yo creo que si, solo llevo un par de accesorios y cositas que me gustan",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+
+    {
+        "title": "Si no fueras invitado a una fiesta... ¿te sentirías mal?",
+        "options": [
+            { 
+                "label": "La verdad es que no, suelen ignorarme en esas cosas",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Si es de mis amigos cercanos si me sentiría mal",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "2",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "No realmente, tengo muchas fiestas a la que ir",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Siempre es una lastima perderse una buena fiesta",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "¿A quién le interesa una fiesta de un don nadie?",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "1",
+                    "cosplayers": "2",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Supongo que me toca quedarme en casa",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "1",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Me dolería, pero no importa, ¡haré mi propia fiesta!",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "2",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+
+    {
+        "title": "¡Es momento de golpear la piñata! ¿Cuál es tu plan?",
+        "options": [
+            { 
+                "label": "Me reservaré mi ataque especial para el mejor momento, ¡Destruiré esa piñata!",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Si le doy a la piñata con un buen ángulo seguro que la rompo más rapido",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Es mi momento de brillar... seré la estrella del espectaculo",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Lo importante es participar, quiero divertirme con mis amigos",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "No me interesa mucho una piñata",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "1",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Todos me van a ver fallando los golpes... que verguenza",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "1",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "¡La parte divertida es ver a los demás golpearla!",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+
+    {
+        "title": "No encuentras nada que hacer en la fiesta y te estas aburriendo un poco, ¿qué haces?",
+        "options": [
+            { 
+                "label": "Me quedaría en mi telefono hasta que pase algo",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "1",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Me quedaría hablando con mis amigos cercanos",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "¡Hay que animarse! Propondría jugar algo todos juntos",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Preguntaría si hay algo de alcohol, ¡así se anima cualquiera!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "3",
+                    "hipsters": "2",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "No haría nada, estos pinguinos no saben divertirse de verdad",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Me quedaría viendo a los demás a ver si encuentro algo que hacer",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Pondría buena música y me pondría a bailar, seguro se me unen rápido",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    }
+]

@@ -11,11 +11,14 @@
   --font-lilita-one: "Lilita One", sans-serif;
 
   --color-font: #473944;
-  --color-div: #fff2f2;
-  --color-div-bold: #f3e3ec;
+  --color-font-bold: #473944;
+  --color-div: #DBEEF3;
+  --color-div-bold: #37d8d8;
+  
   --color-line: #f96589;
-  --color-button: #f474ba;
-  --color-button-hover: #e247a3;
+  --color-line-hover: #f96589;
+  --color-button: #448EE4;
+  --color-button-hover: #448EE4;
   --color-select: #F9D0F9;
   --color-select-bold: #C471CD;
   --color-icon: #eb3677;
@@ -23,15 +26,10 @@
   --color-nav-item: #f884a1;
   --color-nav-item-hover: #f884a1;
 
-  --color-blob-cyan: #DBEEF3;
-  --color-blob-pink: #FFE9EF;
-  --color-blob-olive: #EAEFDC;
-
-  --color-soft-pink: #e869b3;
-  --color-bold-pink: #e247a3;
-  --color-light-pink: #f9a0d5;
   --color-light-cyan: #37d8d8;
-  --color-olive: #cdd83a;
+  --color-dark-cyan: #448EE4;
+  --color-light-sky: #DBEEF3;
+  --color-dark-sky: #448EE4;
 }
 
 /* Customs */

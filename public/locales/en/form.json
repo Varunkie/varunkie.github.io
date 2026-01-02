@@ -1,0 +1,57 @@
+{
+  "header": {
+    "title": "Registro",
+    "subtitle": "Primero necesitamos verificar que seas un pinguino veridico. ¡Danos tu codigo <0>(tal cual en la invitación porfis)</0> para ver si estas en la lista!",
+    "contents": {
+      "welcome_male": "¡Bienvenido {{name}}! A ti especificamente te queremos en la fiesta, asi que no faltes ¿eh? ¡Vamos a empezar con el test de pinguinalidad!",
+      "welcome_female": "¡Bienvenida {{name}}! A ti especificamente te queremos en la fiesta, asi que no faltes ¿eh? ¡Vamos a empezar con el test de pinguinalidad!"
+    }
+  },
+
+  "form": {
+    "header": {
+      "title": "Mira {{name}}, esto es lo que vamos a hacer. Tenemos una lista de preguntas (unas {{count}} exactamente) y tendras que responder unas {{number}} de ellas. ¿Empezamos?",
+      "contents": {
+        "starting": "Bien, piensa muy bien tus respuestas porque no hay forma alguna (de verdad, creeme) de cambiarlas. ¿Qué clase de pinguino serás?",
+        "midway": "¡Ya casi {{name}}! Vamos por la mitad del trayecto, viendo tus respuestas ya estoy seguro que tipo de pinguino te tocará pero ¿quién sabe?",
+        "ending_male": "¡Unas cuantas mas! ¿Estas nervioso? Responde las que faltan para que podamos terminar",
+        "ending_female": "¡Unas cuantas mas! ¿Estas nerviosa? Responde las que faltan para que podamos terminar"
+      }
+    },
+
+    "results": {
+      "title": "¡Ya está! ¿Te cansaste? Ahora mismo todas tus respuestas estan siendo entregadas al dios de los pinguinos para determinar <0>TODO</0> sobre ti.",
+      "subtitle_male": "En este momento cuantico puedes ser <0>CUALQUIER PINGUINO</0> pero en el momento que le des al boton... se ha decidido todo. ¿Estas listo?",
+      "subtitle_female": "En este momento cuantico puedes ser <0>CUALQUIER PINGUINO</0> pero en el momento que le des al boton... se ha decidido todo. ¿Estas lista?",
+      "contents": {
+        "descriptions": {
+          "otakus": "Eres un <0>pinguino otaku</0>, tienes una obseción obseviva por el anime/manga y tiene pinta que no te bañas desde tiempo. Como parte de esta tribu tendras que defender a tu waifu/husbando de los otros malvados pinguinos, y ganar ante todos para poder demostrar que tu oshi es el/la mejor. ¡No dejes que esos normies te ganen! ¡Somos los más kawaii desu ne!",
+          "nerds_male": "Eres un <0>pinguino nerd</0>, se supone que eres muy inteligente y estudioso, pero a saber si tus notas de la escuela lo representan. Tu tribu sostiene a toda la sociedad, posiblemente seas furro pero eso solo quiere decir que eres de los mejores. Demuestrales a todos que eres el mayor sabelotodo de todos.",
+          "nerds_female": "Eres un <0>pinguino nerd</0>, se supone que eres muy inteligente y estudioso, pero a saber si tus notas de la escuela lo representan. Tu tribu sostiene a toda la sociedad, posiblemente seas furra pero eso solo quiere decir que eres de las mejores. Demuestrales a todos que eres la mayor sabelotodo de todos.",
+          "emos_male": "Eres un... ya va, ¿un emo en pleno 2026?, eres una especie casi extinta. Como <0>pinguino emo</0> tienes prohibido vestir de algo que no sea color de negro. Aunque sea tu forma de expresarte, tienes prohibido autolesionarte, ¡Aqui te queremos como un pinguino bien sano! Sé que la depresión no te permite ver tu valor, pero eres de los mejores pinguinos que hay, ¡y hay que demostrarlo en esa fiesta!",
+          "emos_female": "Eres un... ya va, ¿un emo en pleno 2026?, eres una especie casi extinta. Como <0>pinguino emo</0> tienes prohibido vestir de algo que no sea color de negro. Aunque sea tu forma de expresarte, tienes prohibido autolesionarte, ¡Aqui te queremos como un pinguino bien sana! Sé que la depresión no te permite ver tu valor, pero eres de los mejores pinguinos que hay, ¡y hay que demostrarlo en esa fiesta!",
+          "hippies": "Eres un <0>pinguino hippie</0>, representas la paz y el amor, te gusta tener una vida relajada espero no a base de consumo de drogas. Como una de las tribus mas viejas debes enseñarle al resto quienes son los mejores pinguinos, que por mucha paz que prediques tampoco hay que dejarse pisotear, ¿eh? ¡Que tus colores brillantes reinen en la fiesta pinguinal!",
+          "hipsters": "Eres un <0>pinguino hipster</0>, posiblemente esperas que nadie más sea un pinguino hipster, porque eso sería que se vuelva mainstream, y tu detestas eso. Te toca cambiar tus gustos cada tantos porque si le gusta a la mayoría entonces ya no serías hipster. Te consideras de lo mejor, y puede que lo seas... ¡Si humillas al resto de pinguinos en la fiesta!",
+          "cosplayers_male": "Lo lamento mucho, de verdad. Eres un <0>pinguino cosplayer</0> y espero con toda corazon que tengas dinero. Te prometo que nadie se reira de ti si vienes con ropa de carton, o quizas te subestimo y eres el rey del cosplayer, ¡dejaras atontados a todos en la fiesta! Vé con tu disfraz de pinguino favorito y sé la envidia de todas las demás tribus.",
+          "cosplayers_female": "Lo lamento mucho, de verdad. Eres un <0>pinguino cosplayer</0> y espero con toda corazon que tengas dinero. Te prometo que nadie se reira de ti si vienes con ropa de carton, o quizas te subestimo y eres la reina del cosplayer, ¡dejaras atontados a todos en la fiesta! Vé con tu disfraz de pinguino favorito y sé la envidia de todas las demás tribus.",
+          "kpopers": "Eres un <0>pinguino kpoper</0>, te encanta todo lo que venga de korea, y espero que sea de la buena, que sería la del sur, en estos tiempos hay que aclarar. Como kpoper tienes que stanear a ti tribu como si fuera tu propio idol, no puedes dejar que los demás ganen o sería una deshonra para todo lo que BTS representa. ¡Demuestra como sos del mejor FANDOM que existe!"
+        },
+        "explication_male": "Como parte de tu tribu, tienes que vestir de acuerdo a tu grupo para representar tu identidad en la fiesta. <0>¡Tu grupo son tus aliados! ¡Los demas son enemigos! ¡Sé el mejor pinguino para poder ganar innumerable premios!</0> Bueno, no tantos, pero esfuerzate que así es diveritdo.",
+        "explication_female": "Como parte de tu tribu, tienes que vestir de acuerdo a tu grupo para representar tu identidad en la fiesta. <0>¡Tu grupo son tus aliados! ¡Los demas son enemigos! ¡Sé la mejor pinguino para poder ganar innumerable premios!</0> Bueno, no tantos, pero esfuerzate que así es diveritdo.",
+        "caption": "Por favor envia tus datos a traves del boton de enviar para confirmar tu registro. <0>¡Si no lo haces puedes perder tu pinguino!</0>",
+        "warning": "Hay un maximo de cupos por tribu asi que si llegas tarde te tocara cambiar de tribu, ¡Gana el mas rapido! Si te quedaste sin cupo el administrador te pasará una clave para volver a determinar",
+        "thanks": "¡Muchas gracias por participar y nos vemos en la fiesta!"
+      }
+    },
+
+    "buttons": {
+      "submit": "DETERMINAR",
+      "send": "ENVIAR",
+      "again": "Determinar otra vez..."
+    },
+
+    "errors": {
+      "nolist": "Esto es incomodo... o escribiste mal el codigo, o no estas en la lista. Se siente, no podras entrar, eres un muy mal pinguino, tan malo que no fuiste invitado ¡Ups!"
+    }
+  }
+}
