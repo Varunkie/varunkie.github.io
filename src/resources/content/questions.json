@@ -5,7 +5,7 @@
             { 
                 "label": "Ninguna, me da verguenza o flojera",
                 "points": {
-                    "otakus": "3",
+                    "otakus": "0",
                     "nerds": "3",
                     "cosplayers": "0",
                     "hippies": "0",
@@ -30,10 +30,10 @@
                 "label": "No me sé ninguna canción, no escucho música",
                 "points": {
                     "otakus": "0",
-                    "nerds": "3",
+                    "nerds": "2",
                     "cosplayers": "0",
                     "hippies": "0",
-                    "hipsters": "2",
+                    "hipsters": "3",
                     "emo": "1",
                     "kpopers": "0"
                 }
@@ -42,8 +42,8 @@
                 "label": "Una de BTS, de Stray Kids, de New Jeans... tengo demasiadas",
                 "points": {
                     "otakus": "1",
-                    "nerds": "1",
-                    "cosplayers": "0",
+                    "nerds": "0",
+                    "cosplayers": "2",
                     "hippies": "0",
                     "hipsters": "0",
                     "emo": "0",
@@ -56,10 +56,10 @@
                     "otakus": "1",
                     "nerds": "0",
                     "cosplayers": "0",
-                    "hippies": "2",
-                    "hipsters": "3",
-                    "emo": "1",
-                    "kpopers": "1"
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "3",
+                    "kpopers": "0"
                 }
             },
             { 
@@ -69,9 +69,9 @@
                     "nerds": "0",
                     "cosplayers": "0",
                     "hippies": "0",
-                    "hipsters": "3",
+                    "hipsters": "2",
                     "emo": "0",
-                    "kpopers": "3"
+                    "kpopers": "1"
                 }
             },
             { 
@@ -131,25 +131,49 @@
             { 
                 "label": "No sé, no me interesa ese tipo de competencias",
                 "points": {
-                    "otakus": "1",
-                    "nerds": "3",
+                    "otakus": "0",
+                    "nerds": "1",
                     "cosplayers": "0",
-                    "hippies": "0",
+                    "hippies": "3",
                     "hipsters": "2",
-                    "emo": "1",
+                    "emo": "0",
                     "kpopers": "0"
                 }
             },
             { 
                 "label": "No soy bueno bailando pero lo intentaré con ganas",
                 "points": {
-                    "otakus": "1",
+                    "otakus": "3",
                     "nerds": "0",
-                    "cosplayers": "1",
-                    "hippies": "1",
+                    "cosplayers": "2",
+                    "hippies": "0",
                     "hipsters": "0",
                     "emo": "0",
                     "kpopers": "1"
+                }
+            },
+            { 
+                "label": "¿No es esta una pregunta muy obvia? Estoy seguro que puedo hacer trampa para escoger el pinguino que quiero",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "5",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "La cumpleañera, ¡nadie baila mejor que ella!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "1",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "2"
                 }
             }
         ]
@@ -336,7 +360,7 @@
     },
 
     {
-        "title": "Camians con tres pinguinos cuando de repente se dan cuenta que el sol ha explotado, ¿Qué deberían hacer los pinguinos?",
+        "title": "Caminas con tres pinguinos cuando de repente se dan cuenta que el sol ha explotado, ¿Qué deberían hacer los pinguinos?",
         "options": [
             { 
                 "label": "¡No puede ser! Debo estar soñando...",
@@ -552,6 +576,18 @@
                     "hipsters": "1",
                     "emo": "0",
                     "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Le daría todo el dinero a quien diseño este test de personalidad",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "5",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "0"
                 }
             },
             { 
@@ -1035,6 +1071,718 @@
                     "nerds": "0",
                     "cosplayers": "1",
                     "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+    {
+        "title": "Si tuvieramos que eliminar a un tipo de pinguino de la existencia... ¿Cuál escogerias?",
+        "options": [
+            { 
+                "label": "A los normies, sería mas feliz con mas gente como yo",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "1",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "El genocidio nunca es una opción... pero a los bullies.",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "A todos lo que me caen mal, sería mas feliz así",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "No eliminaría a nadie, tenemos que convivir todos en paz",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "A todos los que no sean como yo, quien les necesita",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "A mi mismo, prefiero eliminarme a mi antes que eliminar a alguien más",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Eliminaría a los pinguinos empresarios, son muy tóxicos para nuestra sociedad",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "2",
+                    "hipsters": "1",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+    {
+        "title": "¿Qué tipo de pinguino DEFINITIVAMENTE no quieres ser? Te prometo que esta pregunta no es trampa",
+        "options": [
+            { 
+                "label": "No quiero ser ningún pinguino que sea pobre",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "3",
+                    "hipsters": "1",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Aceptaría cualquier pinguino que tenga un poco de dignididad",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Quiero uno que no sea muy complicado, mi guardaropa es muy limitado",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Ningún pinguino que sea de raritos, ya me basta conmigo mismo",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Nada que utilice accesorios, no quiero parecer un transformer",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "3",
+                    "cosplayers": "2",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "No tengo mucho dinero por favor ten piedad de mi",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Cualquier tipo de pinguino me sirve, ¡No le tengo miedo a nada!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+    {
+        "title": "Entras al club penguin pero te equivocaste de dirección y entraste a un sitio para mayores de edad, ¿Qué haces?",
+        "options": [
+            { 
+                "label": "Premio doble, a ver esos pinguinos prohibidos",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Cierro inmediatamente, ¡no es momento para cochinadas!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "1",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Saco mi libreta para anotar todo lo que vea como referencia para el futuro",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Dejo la puerta abierta para que pase todo el mundo, ¡pinguorgia!",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Me burló de todo lo que vea, este sitio solo van los perdedores",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "1",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Me quedo en una esquina sin hacer nada como voyeur",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "1",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "¡Qué cochinada! Voy a demandar este sitio y a todos los que lo visitan",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "1",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+    {
+        "title": "Te vas de viaje a otro país, ¿A cuál te vas?",
+        "options": [
+            { 
+                "label": "Voy a corea (la buena) a visitar a mis idolos de toda la vida",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            },
+            { 
+                "label": "No sabría decirte, busco primero donde se harán los conciertos de mi banda favorita",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "1",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Hay una convención importantisima en ese país, ¡Siempre he querido ir!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "3",
+                    "cosplayers": "2",
+                    "hippies": "1",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Mientras sea un país con buen café, no me importa cual sea",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Iría a un país con buenas playas, disfruto mucho del mar",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "3",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "PINGUINO FINALMENTE PUDE CONTACTARTE ES TODO UNA TRAMPA NO RESPONDAS MÁS ESTAS EN PEL",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "5",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "¡A japón obviamente! ¡Es el sueño de todo pinguino!",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "1",
+                    "cosplayers": "2",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            }
+        ]
+    },
+    {
+        "title": "Has sido engañado para participar en una prueba de personalidad pero la verdad es que solo quieren robarte tus datos. Si esto fuera cierto y no una completa falsa como OBVIAMENTE es, ¿Cuál sería tu reacción?",
+        "options": [
+            { 
+                "label": "Me sentiría traicionado, tomaría el camino de la venganza para eliminar a quien me engaño",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "1",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Es imposible que me esten robando mis datos, yo nunca entraría en un sitio que pueda robarme mis datos",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Puedes robarme todos los datos que quieras mientras no me des el pinguino cosplayer",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "5",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Si mis datos valieran de algo los vendería yo mismo",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "¡Cómo te atreves! Voy con mi abogado y te va a llegar una demanda por atreverte a robar mis datos",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "Me daría igual, ya en todos lados roban mis datos",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "3",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "No sería la primera vez, siempre hago este tipo de tests",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+    {
+        "title": "¡Hay un pinguino traidor entre todos ustedes! Han asesinado a Franklin y ahora están votando para encontrar al asesino",
+        "options": [
+            { 
+                "label": "Necesito que me digan donde estuvo cada quien y que estuvieron haciendo, ¡Sin mentiras!",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Yo no fui, yo estaba con la cumpleañera bailando, ¡Estaba a la vista de todos!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "1",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Eso de matar esta muy mal, no puede ser que nos estemos matando entre amigos pinguinos",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Esto es como el juego ese de amogos que se hizo muy famoso ¿no?",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "1",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "¿Quién es Franklin? ¿No pudieron escoger mejores nombres para este test?",
+                "points": {
+                    "otakus": "5",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Ojala me hubieran asesinado a mi, así podría irme a descansar tranquilo",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "1",
+                    "hipsters": "2",
+                    "emo": "3",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "¿Quién fue el primero en encontrar el cuerpo? ¡Seguramente él es el asesino!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "2",
+                    "cosplayers": "1",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "3"
+                }
+            }
+        ]
+    },
+    {
+        "title": "¿Eres más de gato o de perros?",
+        "options": [
+            { 
+                "label": "Me gustan mas los gatos, se cuidan solos y ni hay que bañarlos tan seguido",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Me gustan mas los perros, siento que me representan",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "A mi me gustan ambos, ¡Adoro a mis mascotas!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "2",
+                    "hipsters": "0",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Amo a todos los animales, no puedo escoger a uno",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "No me gustan los animales, prefiero que esten alejados de mi",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "1",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "2",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Me gustan mas los lagartos o tortugas, son mas geniales",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "1",
+                    "hipsters": "2",
+                    "emo": "3",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "¿Como diablos conseguiste siete respuestas para esta pregunta?",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "5"
+                }
+            }
+        ]
+    },
+    {
+        "title": "¿Qué te gustaría decirle a la cumpleañera desde el anonimato? Te prometo que no lo va a saber",
+        "options": [
+            { 
+                "label": "Me gustaría decirle que es la amiga perfecta para ir de aventuras, no escogería a cualquier otra",
+                "points": {
+                    "otakus": "3",
+                    "nerds": "0",
+                    "cosplayers": "1",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Si puedo ser totalmente sincero, es un poco bobita pero la quiero igual",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "3",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "2",
+                    "emo": "1",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Le diría que estoy muerto de ganas de ir matching con ella... ¡Seremos las mas divas!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "3",
+                    "hippies": "1",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "2"
+                }
+            },
+            { 
+                "label": "Si escoges esta opción te prometo que te dejaré ser un pinguino emo (nota: es mentira pero el que toma esta prueba no lo va a saber) (nota2: recordar borrar las notas antes de publicar la prueba)",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "0",
+                    "emo": "5",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "Que la quiero mucho, ella es un pan dulce, llena de amor y ternura para regalar",
+                "points": {
+                    "otakus": "2",
+                    "nerds": "0",
+                    "cosplayers": "0",
+                    "hippies": "3",
+                    "hipsters": "0",
+                    "emo": "0",
+                    "kpopers": "1"
+                }
+            },
+            { 
+                "label": "La verdad es que me cae mal, solo voy para ver a su hermano, el si es chido",
+                "points": {
+                    "otakus": "1",
+                    "nerds": "2",
+                    "cosplayers": "0",
+                    "hippies": "0",
+                    "hipsters": "3",
+                    "emo": "0",
+                    "kpopers": "0"
+                }
+            },
+            { 
+                "label": "No me importa que lo sepa, ¡ella es la mejor amiga que pudiese tener!",
+                "points": {
+                    "otakus": "0",
+                    "nerds": "0",
+                    "cosplayers": "2",
+                    "hippies": "1",
                     "hipsters": "0",
                     "emo": "0",
                     "kpopers": "3"

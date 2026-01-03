@@ -25,6 +25,7 @@ import sparkle_cyan_aboutme_cyan from "./sparkles/Sparkle_AboutMe_Cyan.svg";
 import sparkle_cyan_aboutme_black from "./sparkles/Sparkle_AboutMe_Black.svg";
 
 import logo from "./pages/logo.svg";
+import penguin from "./pages/penguin.png";
 
 export const blobs = { 
     footer_bottom_left, footer_top_right, 
@@ -42,7 +43,7 @@ export const sparkles = {
     sparkle_cyan_big, sparkle_cyan_small, 
     sparkle_cyan_aboutme_cyan, sparkle_cyan_aboutme_black };
 
-export const pages = { logo };
+export const pages = { logo, penguin };
 
 const images = { flowers, sparkles, blobs, pages };
 export default images;

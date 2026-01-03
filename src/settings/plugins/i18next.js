@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
 import i18n from 'i18next';
 
-export const languages = { availables: ['en', 'es'], default: 'en' };
+export const languages = { availables: ['en'], default: 'en' };
 
 i18n
   .use(Backend) // load translations using http default public/assets/locales)

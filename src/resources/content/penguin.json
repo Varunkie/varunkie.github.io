@@ -1,7 +1,128 @@
 {
-    "admin": {
-        "code": "admin",
+    "A4M1N": {
+        "code": "A4M1N",
         "name": "Admin",
         "gender" : "male"
+    },
+    "N1N": {
+        "code": "admin",
+        "name": "Nina",
+        "gender" : "female",
+        "cantEmo": "1"
+    }, 
+    "L3A": {
+        "code": "l3a",
+        "name": "Lea",
+        "gender" : "female"
+    }, 
+    "D4N": {
+        "code": "D4N",
+        "name": "Dani",
+        "gender" : "female"
+    }, 
+    "A41": {
+        "code": "A41",
+        "name": "Ari",
+        "gender" : "female"
+    }, 
+    "SH3": {
+        "code": "SH3",
+        "name": "Sher",
+        "gender" : "female"
+    }, 
+    "M4N": {
+        "code": "M4N",
+        "name": "Manu",
+        "gender" : "female"
+    }, 
+    "R4F": {
+        "code": "R4F",
+        "name": "Rafa",
+        "gender" : "male"
+    }, 
+    "AD3": {
+        "code": "AD3",
+        "name": "Andrew",
+        "gender" : "male"
+    }, 
+    "M4R": {
+        "code": "M4R",
+        "name": "Mariana",
+        "gender" : "female"
+    }, 
+    "CH1": {
+        "code": "CH1",
+        "name": "China",
+        "gender" : "female"
+    }, 
+    "ML4": {
+        "code": "ML4",
+        "name": "Maria Laura",
+        "gender" : "female"
+    }, 
+    "P4U": {
+        "code": "P4U",
+        "name": "Paula",
+        "gender" : "female"
+    }, 
+    "F4L": {
+        "code": "F4L",
+        "name": "Felix",
+        "gender" : "male"
+    }, 
+    "G3B": {
+        "code": "G3B",
+        "name": "Gabriel",
+        "gender" : "male"
+    }, 
+    "JU4": {
+        "code": "JU4",
+        "name": "Juan",
+        "gender" : "male"
+    }, 
+    "MC1": {
+        "code": "MC1",
+        "name": "Marcia",
+        "gender" : "female"
+    }, 
+    "L90": {
+        "code": "L90",
+        "name": "Lu",
+        "gender" : "male"
+    }, 
+    "V1C": {
+        "code": "V1C",
+        "name": "Vinchenzo",
+        "gender" : "male"
+    }, 
+    "H3L": {
+        "code": "H3L",
+        "name": "Helen",
+        "gender" : "female"
+    }, 
+    "F3R": {
+        "code": "F3R",
+        "name": "Fer",
+        "gender" : "male"
+    }, 
+    "C3S": {
+        "code": "C3S",
+        "name": "Cesar",
+        "gender" : "male"
+    }, 
+    "V1R": {
+        "code": "V1R",
+        "name": "Viry",
+        "gender" : "female"
+    },
+    "F4R": {
+        "code": "F4R",
+        "name": "Franco",
+        "gender" : "male"  
+    },
+    "Y4Y": {
+        "code": "Y4Y",
+        "name": "Yayi",
+        "gender" : "female"  
     }
 }
