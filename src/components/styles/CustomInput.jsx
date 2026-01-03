@@ -19,7 +19,7 @@ export const BaseInput = ({ className = "", type = "text", name = "", label = ""
         <div className="flex flex-col grow space-y-1">
             { options && options.map((item, i) => 
             <div key={`${name}_${i}_key`} className="flex grow space-x-3">
-                <input type="radio" id={`${name}_${i}`} name={name} value={i} onChange={onChange} />
+                <input type="radio" id={`${name}_${i}`} name={name} value={i} onChange={() => { onChange({ target: { value: i }}) }} />
                 <label className={`grow ${className} text-left h-min w-full focus:outline-none placeholder:italic`}
                 htmlFor={`${name}_${i}`}>{item.label}</label>   
             </div>

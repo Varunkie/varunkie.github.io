@@ -9,7 +9,7 @@ import ns from '../../settings/routes/locales.routes';
 import images from "../../resources/images";
 
 import { useTranslation, Trans } from "react-i18next";
-import { useState, useContext, useCallback } from 'react';
+import { useState, useContext, useCallback, useEffect } from 'react';
 
 import { WaveContainer } from "../../components/layouts/WaveContainer";
 import Sparkles from "../../components/effects/Sparkles";
@@ -20,9 +20,9 @@ import { WindowWithBorder } from "../../components/styles/CustomWindow";
 
 export const NUMBER_OF_QUESTIONS = 10;
 
-const generateQuestions = () => {
+const generateQuestions = (limit = 10) => {
     const array = [];
-    for (let i = 0; i < NUMBER_OF_QUESTIONS; i++) {
+    for (let i = 0; i < limit; i++) {
       let initial_index = Math.floor(Math.random() * questions.length);
       let current_index = initial_index;
       while (array.some(value => value === current_index))
@@ -59,28 +59,29 @@ const calculateResults = (data, retry = 0) => {
   score.sort((a, b) => b.points - a.points);
 
   let group = score[retry].id;
-  if (data.data.cantEmo && group === 1 && retry < 6)
-    group = score[retry + 1].id;
-
   const secret = score[retry].points + score[0].points - score[6].points * score[3].points;
   return { group, secret };
 };
 
 export const NewForm = () => {
   const { t } = useTranslation([ns.form, ns.common]);
-
   const { localData, setLocalData } = useContext(Context);
-  const [data, setData] = useState({});
 
+  useEffect(() => {
+    if (localData && !localData.token) {
+      setLocalData(temp => ({ ...temp, data: penguins[temp.data.code], token: "v1" }));
+    }
+  }, [setLocalData]);
+  
   return (<>
-      { data && data.values && data.values.index >= NUMBER_OF_QUESTIONS ? 
+      { localData && localData.values && localData.values.index >= localData.indexes.length ? 
         <>
           <div className="absolute w-full h-full overflow-hidden select-none -z-10">
             <img className="w-full h-full min-h-screen object-cover select-none pointer-events-none"
               src="https://clubpenguinmountains.com/wp-content/uploads/2016/06/backgrounds-custom.png" alt="" />
           </div>
 
-          <FormWithResults t={t} data={data} setData={setData} />
+          <FormWithResults t={t} data={localData} setData={setLocalData} />
         </>
           :
         <>
@@ -89,12 +90,12 @@ export const NewForm = () => {
               src="https://clubpenguinmountains.com/wp-content/uploads/2016/06/backgrounds-custom.png" alt="" />
           </div>
 
-          <FormWithCode t={t} data={data} setData={setData} />
+          <FormWithCode t={t} data={localData} setData={setLocalData} />
 
           <WaveContainer className="bg-div-bold relative" fill="fill-div-bold" height="50" top>
             <div className="w-4/5 sm:w-2/3 py-8 space-y-8">
-              {data && data.data && <FormWithQuestion t={t} data={data} setData={setData} />}
-              <FormWithError t={t} data={data} />
+              {localData && localData.data && <FormWithQuestion t={t} data={localData} setData={setLocalData} />}
+              <FormWithError t={t} data={localData} />
             </div>
           </WaveContainer>
           <div className="grow bg-div-bold z-10"></div>
@@ -109,8 +110,8 @@ const FormWithCode = ({ t, data, setData }) => {
 
   const checkCode = useCallback(() => {
     if (penguins[code]) {
-      const array = generateQuestions();
-      setData({ data: penguins[code], indexes: array, values: { index: 0, options: [] }});
+      const array = generateQuestions(penguins[code].done ? questions.length : NUMBER_OF_QUESTIONS);
+      setData({ data: penguins[code], indexes: array, values: { index: 0, options: [] }, token: "v1" });
     } else {
       setData({ error: { type: "no-list" }});
     }
@@ -145,10 +146,10 @@ const FormWithCode = ({ t, data, setData }) => {
 };
 
 const FormWithQuestion = ({ t, data, setData }) => {
-  const [option, setOption] = useState("");
+  const [option, setOption] = useState(null);
 
   const checkOption = useCallback(() => {
-    if (option >= 0) {
+    if (option === 0 || option > 0) {
       document.getElementById('scroll').scrollIntoView({ behavior: 'smooth' });
       setData(temp => ({ ...temp, values: { ...temp.values, index: temp.values.index + 1, options: [...temp.values.options, option] }}));
       setOption(undefined);
@@ -164,7 +165,7 @@ const FormWithQuestion = ({ t, data, setData }) => {
       <div className="w-full bg-div flex relative mx-auto justify-center items-center px-4 py-2
         border-t-olive border-b-olive border-t-8 border-b-8 rounded-2xl overflow-hidden">
           { data.values.index == 0 ? 
-            t("form.header.title", { name: data.data.name, number: NUMBER_OF_QUESTIONS, count: questions.length, context: data.data.gender })
+            t("form.header.title", { name: data.data.name, number: data.indexes.length, count: questions.length, context: data.data.gender })
           : data.values.index <= 3 ?
             t("form.header.contents.starting", { name: data.data.name, context: data.data.gender })
           : data.values.index <= 6 ?
@@ -235,6 +236,10 @@ const FormWithResults = ({ t, data, setData}) => {
     }
   }, [password, setPaswsword, data, setData]);
 
+  const handleRepeat = () => {
+    setData({});
+  };
+
   return (<>
     <WindowWithBorder className="w-9/10 xs:w-3/4 md:w-1/2 space-y-4 my-12 px-4">
       { data.results ?
@@ -260,10 +265,24 @@ const FormWithResults = ({ t, data, setData}) => {
             </Trans> 
           </p>
 
-          <SubmitButton className="px-4 py-2 mx-auto"
-            onClick={resendEmail}>
-              {t("form.buttons.send")}
-          </SubmitButton>
+
+          <div className="flex mx-auto space-x-4">
+            <SubmitButton className="px-4 py-2"
+              onClick={resendEmail}>
+                {t("form.buttons.send")}
+            </SubmitButton>
+            { data.data.done && 
+              <SubmitButton className="px-4 py-2"
+                onClick={handleRepeat}>
+                  Repetir
+              </SubmitButton>
+            }
+          </div>
+
+          <p className="text-center">
+            <span className="font-bold">Actualizacion: </span> si el boton del correo no funciona por favor enviar de forma manual los siguientes datos a <span className="font-bold">edbg97@gmail.com</span>
+          </p>
+          <p className="text-center">{`PENGUIN CODE: ${data.data.code}. GROUP ID: ${groups[data.results.group].code}. SECRET ID: ${data.results.secret}`}</p>
 
           <p className="text-center">
             <Trans i18nKey="form.results.contents.warning" name={data.data.name} context={data.data.gender} t={t}>
@@ -275,6 +294,25 @@ const FormWithResults = ({ t, data, setData}) => {
             type="text" name="user_password" 
             value={password} onChange={(e) => setPaswsword(e.target.value)}
             onClick={checkPassword} />
+
+          { data.data.done && false && <>
+            <p className="text-center">
+              <span className="font-bold">Actualizacion:</span> usa las siguientes contraseñas para ver tus otros resultados! 
+            </p>
+            <ol className="text-center">
+              <li>000000000000</li>
+              <li>203294529151</li>
+              <li>212398583653</li>
+              <li>150932952390</li>
+              <li>439528532985</li>
+              <li>663493984834</li>
+              <li>321459815853</li>
+            </ol>
+            <p className="text-center">
+              <span className="font-bold">Como usar:</span> la primera contraseña es tu primer resultado, la segunda tu segundo resultado, y así...
+              <span className="font-bold">Como usar:</span> la primera contraseña es tu primer resultado, la segunda tu segundo resultado, y así...
+            </p>
+          </>}
 
           <p className="text-center">
             <Trans i18nKey="form.results.contents.thanks" name={data.data.name} context={data.data.gender} t={t}>
@@ -293,10 +331,18 @@ const FormWithResults = ({ t, data, setData}) => {
             </Trans> 
           </p>
 
-          <SubmitButton className="px-4 py-2 mx-auto"
-            onClick={handleSubmit}>
-              {t("form.buttons.submit")} 
-          </SubmitButton>
+          <div className="flex mx-auto space-x-4">
+            <SubmitButton className="px-4 py-2"
+              onClick={handleSubmit}>
+                {t("form.buttons.submit")} 
+            </SubmitButton>
+            { data.data.done && 
+              <SubmitButton className="px-4 py-2"
+                onClick={handleRepeat}>
+                  Repetir
+              </SubmitButton>
+            }
+          </div>
 
           <p className="text-center">
             <Trans i18nKey="form.results.subtitle" context={data.data.gender} t={t}>
