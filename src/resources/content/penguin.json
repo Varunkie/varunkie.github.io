@@ -14,7 +14,8 @@
     "L3A": {
         "code": "l3a",
         "name": "Lea",
-        "gender" : "female"
+        "gender" : "female",
+        "done": "1"
     }, 
     "D4N": {
         "code": "D4N",
@@ -49,12 +50,14 @@
     "AD3": {
         "code": "AD3",
         "name": "Andrew",
-        "gender" : "male"
+        "gender" : "male",
+        "done": "1"
     }, 
     "M4R": {
         "code": "M4R",
         "name": "Mariana",
-        "gender" : "female"
+        "gender" : "female",
+        "done": "1"
     }, 
     "CH1": {
         "code": "CH1",
@@ -65,7 +68,8 @@
     "ML4": {
         "code": "ML4",
         "name": "Maria Laura",
-        "gender" : "female"
+        "gender" : "female",
+        "done": "1"
     }, 
     "P4U": {
         "code": "P4U",
@@ -94,7 +98,8 @@
     "MC1": {
         "code": "MC1",
         "name": "Marcia",
-        "gender" : "female"
+        "gender" : "female",
+        "done": "1"
     }, 
     "L90": {
         "code": "L90",
@@ -129,16 +134,19 @@
     "V1R": {
         "code": "V1R",
         "name": "Viry",
-        "gender" : "female"
+        "gender" : "female",
+        "done": "1"
     },
     "F4R": {
         "code": "F4R",
         "name": "Franco",
-        "gender" : "male"  
+        "gender" : "male"  ,
+        "done": "1"
     },
     "Y4Y": {
         "code": "Y4Y",
         "name": "Yayi",
-        "gender" : "female"  
+        "gender" : "female" ,
+        "done": "1" 
     }
 }
