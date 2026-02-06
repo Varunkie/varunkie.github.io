@@ -15,5 +15,10 @@
       "caption": "Este proceso es <0>irreversible</0> y no prometo que no haya trampa, pero ya estas acostumbrado a estas cosas. <0>¡Ni se te ocurra hacer trampa! ¿eh?</0>",
       "thanks": "¡Espero disfrutes este test de personalidad!"
     }
+  },
+
+  "charts": {
+    "title": "Ranking",
+    "subtitle": "¡Revisemos los datos! ¿Qué tribu esta siendo la <0>MEJOR</0>?"
   }
 }

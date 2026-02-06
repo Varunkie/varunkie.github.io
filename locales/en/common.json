@@ -1,7 +1,10 @@
 {
   "forms": {
     "actions": {
-      "start": "Empezar"
+      "start": "Empezar",
+      "submit": "Agregar",
+      "back": "Regresar",
+      "again": "Enviar otra"
     }
   }
 }
